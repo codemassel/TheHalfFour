@@ -60,6 +60,7 @@ public class Customer {
         this.emailId = emailId;
     }
 
+
     @Override
     public String toString() {
         return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + "]";
