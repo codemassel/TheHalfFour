@@ -1,5 +1,5 @@
-Repository/MyRunner.class
-Main/MainApplication.class
-Repository/CustomerRepository.class
-Controller/CustomerController.class
-Model/Customer.class
+ShopApp/MainApplication.class
+ShopApp/Model/Customer.class
+ShopApp/Repository/CustomerRepository.class
+ShopApp/Repository/MyRunner.class
+ShopApp/Controller/CustomerController.class
