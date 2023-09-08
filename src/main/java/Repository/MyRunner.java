@@ -1,50 +1,48 @@
+package Repository;
+
 import Model.Customer;
-import Repository.CustomerRepository;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.util.Iterator;
-
 @Component
 public class MyRunner implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(MyRunner.class);
 
-    //Autowired = holt Bean aus CustomerRepository
     @Autowired
     private CustomerRepository customerRepository;
 
     @Override
-    public void run(String...args) {
-
+    @Transactional
+    public void run(String... args) {
+        // Kunden erstellen und in die Datenbank speichern
         customerRepository.save(new Customer("Hans", "Sarpei", "sarpei@gmail.com"));
         customerRepository.save(new Customer("Daniel", "Blijad", "blijad@gmail.com"));
         customerRepository.save(new Customer("Mike", "Rohsoft", "rohsoft@gmail.com"));
-        customerRepository.save(new Customer("tony", "stark", "stark@gmail.com"));
+        customerRepository.save(new Customer("Tony", "Stark", "stark@gmail.com"));
 
-        //Abfragen der Employees
-        //Anzahl der Employees mit count
-        logger.info("# of customer: {}", customerRepository.count());
+        // Abfragen der Kunden
+        long customerCount = customerRepository.count();
+        logger.info("# of customers: {}", customerCount);
 
         logger.info("All customers:");
-        Iterable <Customer> customers = customerRepository.findAll();
-
-        Iterator<Customer> iterator = customers.iterator();
-        while(iterator.hasNext()) {
-            logger.info("{}", iterator.next().toString());
-        }
+        Iterable<Customer> customers = customerRepository.findAll();
+        customers.forEach(customer -> logger.info("{}", customer.toString()));
 
         logger.info("------------------------");
 
-        logger.info("Deleting employee with id 1");
-        customerRepository.deleteById(1L);
+        // Löschen eines Kunden mit einer bestimmten ID
+        long customerIdToDelete = 1L;
+        customerRepository.deleteById(customerIdToDelete);
 
-        logger.info("# of customers: {}", customerRepository.count());
+        logger.info("Deleted customer with ID {}", customerIdToDelete);
 
-        customerRepository.existsById(2L);
-        customerRepository.findById(2L);
+        // Abfragen der verbleibenden Kundenanzahl
+        long remainingCustomerCount = customerRepository.count();
+        logger.info("# of remaining customers: {}", remainingCustomerCount);
     }
 }

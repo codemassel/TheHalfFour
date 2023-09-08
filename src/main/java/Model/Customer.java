@@ -2,16 +2,11 @@ package Model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "employees")
+@Entity(name = "customers")
 public class Customer {
 
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String emailId;
-
     public Customer() {
-        //empty constructor für spring
+        //empty Constructor für Spring JPA
     }
 
     public Customer(String firstName, String lastName, String emailId) {
@@ -22,41 +17,21 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public long getId() {
-        return id;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
+    private long id;
 
     @Column(name = "first_name", nullable = false)
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    private String firstName;
 
     @Column(name = "last_name", nullable = false)
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    private String lastName;
 
     @Column(name = "email_address", nullable = false)
-    public String getEmailId() {
-        return emailId;
-    }
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
+    private String emailId;
+
+    // Getter und Setter für die Felder
 
     @Override
     public String toString() {
-        return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
-                + "]";
+        return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + "]";
     }
-
 }
