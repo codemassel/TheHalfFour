@@ -24,6 +24,7 @@ public class CustomerController {
         return new ResponseEntity<>(allCustomers, HttpStatus.OK);
     }
 
+    //Kunde ersstellen
     @PostMapping("/create")
     public ResponseEntity<Customer> createCustomer(
             @RequestParam String firstName,
@@ -38,4 +39,15 @@ public class CustomerController {
 
         return new ResponseEntity<>(savedCustomer, HttpStatus.CREATED);
     }
+
+    /*Waren hinzufügen
+    @PostMapping("/createShopItem")
+    public ResponseEntity<ShopItem> createShopItems(
+            @RequestParam String shopItem,
+            @RequestParam long price) {
+
+        //business logic
+    }
+    */
+
 }
