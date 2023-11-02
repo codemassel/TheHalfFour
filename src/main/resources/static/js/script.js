@@ -1,0 +1,5 @@
+
+function registerUser(){
+    var formatedData = "";
+
+}

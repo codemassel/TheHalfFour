@@ -1,6 +1,5 @@
 package ShopApp.Repository;
 
-import ShopApp.Model.Customer;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +19,7 @@ public class MyRunner implements CommandLineRunner {
     @Transactional
     public void run(String... args) {
         // Kunden erstellen und in die Datenbank speichern
-        customerRepository.save(new Customer("Hans", "Sarpei", "sarpei@gmail.com"));
+       /* customerRepository.save(new Customer("Hans", "Sarpei", "sarpei@gmail.com"));
         customerRepository.save(new Customer("Daniel", "Blijad", "blijad@gmail.com"));
         customerRepository.save(new Customer("Mike", "Rohsoft", "rohsoft@gmail.com"));
         customerRepository.save(new Customer("Tony", "Stark", "stark@gmail.com"));
@@ -47,6 +46,6 @@ public class MyRunner implements CommandLineRunner {
 
         logger.info("All remaining customers:");
         Iterable<Customer> remaining = customerRepository.findAll();
-        customers.forEach(customer -> logger.info("{}", remaining.toString()));
+        customers.forEach(customer -> logger.info("{}", remaining.toString()));*/
     }
 }

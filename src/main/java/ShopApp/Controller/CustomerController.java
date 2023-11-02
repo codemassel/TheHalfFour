@@ -2,26 +2,45 @@ package ShopApp.Controller;
 
 import ShopApp.Model.Customer;
 import ShopApp.Repository.CustomerRepository;
+import ShopApp.Service.CustomerService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
 @Transactional
+@RequestMapping("/index")
 public class CustomerController {
 
     @Autowired
     private CustomerRepository rep;
 
+    private final CustomerService customerService;
+
+    public CustomerController(CustomerService customerService){
+        this.customerService = customerService;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String getCustomers(Model model) {
+        List<Customer> customers = customerService.getCustomers();
+        model.addAttribute("customers", customers);
+        model.addAttribute("customer", new Customer());
+        return "index";
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String createUser(Model model, @ModelAttribute Customer customer) {
+        System.out.println("ssssss");
+        Customer foundCustomer = customerService.createCustomer(customer);
+        System.out.println("hhhhhhh");
+        return "redirect:/index/";
+    }
+/*
     @GetMapping("/")
     public String showIndex() {
         return "index";
@@ -57,7 +76,7 @@ public class CustomerController {
 
         //business logic
     }
-    */
+
     @GetMapping("/customer/{id}")
     public String getCustomer(@PathVariable Long id, Model model) {
         Customer customer = rep.findById(id).orElse(null);
@@ -71,5 +90,7 @@ public class CustomerController {
     public List<Customer> getCustomersByName(@RequestParam String firstName, @RequestParam String lastName) {
         return rep.findByFirstNameAndLastName(firstName, lastName);
     }
+    */
+
 
 }

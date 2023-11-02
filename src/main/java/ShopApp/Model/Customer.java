@@ -9,10 +9,11 @@ public class Customer {
         //empty Constructor für Spring JPA
     }
 
-    public Customer(String firstName, String lastName, String emailId) {
+    public Customer(String firstName, String lastName, String emailId, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
+        this.password = password;
     }
 
     @Id
@@ -25,8 +26,11 @@ public class Customer {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "email_address", nullable = false)
+    @Column(name = "email_address")
     private String emailId;
+
+    @Column(name = "password")
+    private String password;
 
     public long getId() {
         return id;
@@ -60,6 +64,13 @@ public class Customer {
         this.emailId = emailId;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     @Override
     public String toString() {
