@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*body {
+body {
+    min-height: 100vh; /* Mindesthöhe des gesamten Viewports */
+    background-color: #333; /* Dunkelgrauer Hintergrund */
+    color: #fff; /* Textfarbe auf Weiß ändern */
+}
+.product-section {
+    border: 2px solid cyan; /* Umrandung in Cyan */
+    padding: 20px; /* Abstand um die Produkte herum */
+    margin-top: 20px; /* Oberer Abstand für die Produktsektion */
+}

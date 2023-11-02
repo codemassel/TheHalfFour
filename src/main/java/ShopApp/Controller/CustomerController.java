@@ -6,17 +6,26 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+import java.util.List;
+
+@Controller
 @Transactional
 public class CustomerController {
 
     @Autowired
     private CustomerRepository rep;
+
+    @GetMapping("/")
+    public String showIndex() {
+        return "index";
+    }
 
     @GetMapping("/customers")
     public ResponseEntity<Iterable<Customer>> getCustomers() {
@@ -49,5 +58,18 @@ public class CustomerController {
         //business logic
     }
     */
+    @GetMapping("/customer/{id}")
+    public String getCustomer(@PathVariable Long id, Model model) {
+        Customer customer = rep.findById(id).orElse(null);
+        if (customer != null) {
+            model.addAttribute("customer", customer);
+        }
+        return "index"; // Name der HTML-Vorlage
+    }
+
+    @GetMapping("/customersByName/{firstName}{lastName}")
+    public List<Customer> getCustomersByName(@RequestParam String firstName, @RequestParam String lastName) {
+        return rep.findByFirstNameAndLastName(firstName, lastName);
+    }
 
 }

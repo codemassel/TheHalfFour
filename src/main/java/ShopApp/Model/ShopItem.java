@@ -48,4 +48,13 @@ public class ShopItem {
     public void setItemPrice(String itemPrice) {
         this.itemPrice = itemPrice;
     }
+
+    @Override
+    public String toString() {
+        return "ShopItem{" +
+                "id=" + id +
+                ", itemName='" + itemName + '\'' +
+                ", itemPrice='" + itemPrice + '\'' +
+                '}';
+    }
 }

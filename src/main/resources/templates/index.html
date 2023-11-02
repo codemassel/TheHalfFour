@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link type="text/css" rel = "stylesheet" href="src/main/resources/templates/styles.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>The Half Four - Luxus-Jachten Shop</title>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 10px; padding-bottom: 10px; margin-right: 10px;">
+    <a class="navbar-brand" href="#">
+        <img src="/path/to/your/logo.png" alt="The Half Four" width="150">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <form class="form-inline ml-auto">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Suche" aria-label="Search">
+                <button class="btn btn-dark border border-light">
+                    <i class="material-icons" style="color: white; background-color: transparent; padding: 5px;">search</i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="ml-auto">
+        <a class="btn btn-outline-light" href="#" data-toggle="modal" data-target="#loginModal">
+            <i class="material-icons" style="vertical-align: middle;">account_circle</i>
+        </a>
+        <a class="btn btn-outline-light" href="#">
+            <i class="material-icons" style="vertical-align: middle;">shopping_cart</i>
+        </a>
+    </div>
+</nav>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Hier können Sie das Formular für den Login mit Benutzername oder E-Mail und Passwort hinzufügen -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                <button type="button" class="btn btn-primary">Einloggen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Product Section (Left Image, Right Description) -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://boote.de/wp-content/uploads/2011/11/Luxusyacht-Insel.jpg"
+                 alt="Product 1" class ="img-fluid" style="width: 100%; height: 100%;">
+        </div>
+        <div class="col-md-6">
+            <h3>Billoyacht mit Insel für Klimakleber</h3>
+            <p>Wer es grün bevorzugt hehehehehehe</p>
+        </div>
+    </div>
+</div>
+
+<!-- Product Section (Right Image, Left Description) -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Bornheim 385 Ghetto-Bitchgrabbler</h3>
+            <p>Yacht ist Yacht. Wenn ihr einfach nur flexen wollt um heiße Frauen klarzumachen interessiert euch vielleicht der einzig wahre<br>
+                <b>385 Ghetto-Bitchgrabbler</b><br>
+                Egal was sie kompensieren müssen, diese Yacht trägt maßgeblich dazu bei.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgWFRYZGRgaGhocHBoZHBwcGhoeHBgaGhoZHBwcIS4lHB4rHxoYJjgmLC8xNjU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJCs0NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA/EAABAwIDBQQHBwIGAwEAAAABAAIRAyEEEjEFQVFhcSKBkaEGEzKxwdHwFEJSYnKS8YLhIzNDU8LSFaKyY//EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACMRAAICAQQCAwEBAAAAAAAAAAABAhEhAxIxQQRRE2GhFCL/2gAMAwEAAhEDEQA/APUwnCjKdAiYCcwoZki6bFAE4CaEgUkAIBShRCeUAPlUC1SToCiEJsqIkSmKgeVMFMkpG6LCiJKgVItUSxAMZEDVDKpAoYIRUMydzkJxQhNicZVepTRUTISPcnwTVmc6Ak2qzQi6sPw0KLqAOgTtE7WiNJ+4Kb2z/KdlOOSkEmUlgDA3qD6Tf4U65vcpMe3QJhSK32ed6h6uDa6tOF9VBwA1S3C2odhOhCrYsgWCL6yFB8OFzCBvKM590MURwV57AAYuUNg7lW4iij9lCSturFJFsW2J1KkCqFPGhwnREGJ37uKxydGCySpgILHg70YIsZIJ4TJJiHhJJJMB1EuTpigBw5RKUJIAk4QFFxSgJFMBZk+ZRlRcgAiiVAPSLkgHLUNzE5elnTFgaOITl53KL3cEP1iBA3NJ1KQpxo7xUy9RD0xYGLeCCRvzQjEIb27kxNFar+pADgFaLG71HI3giyaZBuJTvryoPCYhGAyTAG9SZTBk6oQT9/ggaBOpnMQ0aKL+5HqvGjdN54qu4oCqI5eQSTZkkCOMw223t0dI4LSoekbwNbrh/tUbj7kantBm8kJEqz0LDelcQHsBHLVbuD2/TeRkeBxY6x7p17l5ZRxjD9+08QDysVdGQ+y4+8A9QjailKSPXBjmCM1p0O7xGnerLXgiQZHFeW4XaFamIFS06EyP/bRXsJteq1xLXEGZIA7J7tJRQ9/tHo2ZKVy2F9KNM7AebbHwPzWtR2zTf7MzwsD70trL3xNQFMqjcazn4KbcUzj70Uwtew6ZM14OhlQfVaNSB3pDsInlZ+I2kxu/MeA/us6ptSq+SxpAGsDMe8lUoslzijfc6NUB9QEgzpPfZctW2hUd99/cSPII7MY1rGh73Z3Tl7VzESDwIkeIRKNCjPc8G5XxrG/e+XiqztrMiQZ7x81zOOe8gZ3SJMacYmwWdUYeCqEVJWZaupKEmmjram22zbLHX4oD9tEHRscLrlqphrep+CF9oyiBrvPyWi00YPXdnYs28w6ktP1vU37WbuE94XFDFT9fJFZX5kdEOCBa7eDr2bTadQR5jyVj7S2JzDxC4sYw8ZUvtROhScClrHZfaB+IeKBUx7Rq74rlTijud5fJO+udzu8Ao2lfLfB1NPGsd94d9vejF4IkQuLdUcR7bp4BrfnKrPoNdvfPMwPFLYvY/ll6O1dimTBewH9QU9V59iMGInQfqDvIhV2Yuozste8N4NcQOVuKa074Zm/IcXlHpMpZ156zbFZolr3TrDoI81bo+lVSO01h8R7kPSkWvKj2dq4oD3LlW+ljgYewR+Un4q5T9JaThcuaeBE//Mqdkl0UtaEuzXzpLI/83Q/3B4H5JI2v0L5I+0dZlH0Esg4DwUGv04+fcFNr1znSN6hn4GftHyUm4dg+4z9o+SlnSa/+6pAL7Kw6sZ+0fJL7Gz/bZ+0fJSa9SzwmBA4Gmf8ATZ+0fJMMBT/AzuaFP1nJSFTxTsVITaYGgUSzkpComdVARYUiltLG06DQ+qS1pOUGHETwkAx3qWGYyqwPZLmneCfBTxdJlVuSoxr2GJY4BzSZtINirdLCeoYBTZBNmsYIa3mYsEbmhKKZU+wN3w39TgDfkbqxhyymILxEzo436gcl556bNxBcG0cLiajiQ5z206pa6JEFwGlzYdTujnWUMb97ZtQ8zRrfJQ5SZahFHrTDRa8uFeJmQ3M3WeSVSlhnOJzm/DMf+JXm+x9nV6tUMqYB9NhiXmk8RcD7zY3z3LqnehLCJyn9n90t0vX6G2KNatsqk4yx8Dg4OjdxbZaGLwzHUhTY5lmgABw149ZuuTd6IU23c4NH6CCegzXKnT2bSZ7Lqp5+sewdwabeJSeq1yNaSd0WsR6OugQ6AN5Fr81Rq+jztz2/XRaOExXq3AtdUiRYvzA3kglwJg6K3UxzHmQCydRqO6L+S0j5H2ZS8WPo5p2wH7nt803/AId43g966R+kyCOIKC5bfI2YPQiujBOzH74PgoN2a+Ru46EeE/NbpKijcw+OJhnBPEmfG3mFX2q59JgL5OeS1rQXTAB1Gmq6R0oT1LlJ8P8AC1CCWV+nIsx4yhzeyct8xAdMS6xOvRU6G2Gvbme7IImDY6mw46LsqlJrvaaCOYBVWrgKZ/02Ru7DfkmpS+iHpxfs50VnPBLWktacuhjdvUDTO4E8Y071ujBMGjAOgj3KFDCspzkYGzrlsDPLTgqU5Izlopu7MVmNY2xzz/THuQvtDC4GfER7pW5VANiwEX1APXdyVOpRZH+W3l2QrU0Q9N8WU6rmO08nSfBUs8f3Wg6kzcyDyEKq+m3XKfE/NUpESg3krZ+XvSVn1nId6Se4jYerhwJm45Gw80+cE6eGs8FXa+wnebfwnz8D5E8+K889cO4mbHmTa/WVJh6eO5VW1J3npH18FLNPEDeTAnwKaAthw4i+l1KCeB4fV1RZUabDMeYBI8dFIYgx7MXsLSRxvoqAvEgbwDyUXOMQLnoLczdVG1TB0nkZ06D3BQdEXcGzobzPfF/mgRccTpv6c+E/FQf3GdNJ6yqwcRoYHIS7v3Dqp4dpe8Ma5wJ3xbmZ+aYi2yp6sZyQJBDc0QIu95O4NG/mruIxDvV52vdcAgwN/Ihcntqv6+oymx4DHZRl1Jotf2iRGj4fe2oC6plWWxaYB8TYeSi7yXxgxn7RxJMNqPPRjD/wVh2Lrj779Pws/wCiKylfUSbold5iFeCcrsrtxVcuA9Y4T+Rmn7fqULEbRrtqspioT7ReSxlmiNIGu7qQnxzi1ma4II05rN2/telQptfUd23jKAAM77+y1o1k79LBRLCsqH+nQXG4ovcXON/dyCpOqhc5Xq4yuJH+Aw6AAOeRzcRA6Ad6ou2O+ZdWqk/rcPIGFxtrtnaoy6R12YJ1yGXEUrsql4/DUGYfu9oHvV7ZfpGx7hTqDI86Sey79LuPI+apK1gUk48nRsqFtwY+t/FGFTN18v7KsFJpVQm4synBSQTPzSL0F7hPeUN7xMf3967jgLLqnJCdV4yPrkUAVG79Bx+AQ6lQHTu+oQFlh9a3uVf1pGo+t3RCc4bwTfUSf4Q3PHA/W9MTYarUItu3GLdFXe83TsqcQefH+VF7mkaHvsOgQSCe9xHy69FWeXHf5jvRnPndPGDfyVR1SJBPSDr1mVSEwdVxvfzEKtUa6bHXn5QjvcJ1HSboNSoJItPMwPMQU0Zsr34pKRy/iH7x8klRB6VWxQAIfIubtA7MxYNF55xOinhnwAAXRFy4kkiJJM8uKC+qM0sdMjtEN36ESLeamGRBygSDBiLW4nT5riPSCPcJmOpJhEpVg7R0x37ggF5cIEQNT94mTwEgckwYHAcd2bMPKxTQEqocT2XFuvbvxsA0dn93gi5Gmz5dvEwR4Cw70IEA6Cd0j3A6XRaT5kgadw75sExCpVcxMNgNgSbzawF4jkph5Fy6OQAJ7oklRe6NSCesNHKN6rioC7OSTA1mGjkANUwCNrjMRDnHfDTHIyLHxPRXqWGIYYnNUljZtlZ98gCwn2bfBU6LBUcxrWgyQBZxibknSBF12IpNyhsCAIAISeVgqKON+wZKj6jruMMZ+RjdGj9TpceoG5W8LUGUubczljnrfuIPRb1TZtJ2tNn7QPcs3CejNKnVe8ZiKl8uZwDTfSDfXfuASSoGinWrRMa7zw5BUXYx8zNvFdHU2HRP3Xjo9/8A2hCd6P0Tbt8Pbdpw14+KpCcWcvtTFPLDLpuCLARHRYmy9gnEbRq1KgllFtNjSRYuDGl0f1F3ivQXejVEiCXkc3z7wsjBVnMZisgGdmIqNGbTtZXhx4wHjwWOtNqODXQj/q2W8Ts9obf5LGfhGXnRcl6Q4x9QiX4h8GSR2KfcY0W76O031cO8kEZYiTNonxXK1i2dyfRQ2ljsM0lheA4dbLmtqYVlZpLHAkXkckd1J5qFxYwuBN3gx4hpV2nhi9xc+m1rtMzDZw4EQPirSUcomVyw+Cx6H7UdWpFrzL6ZyuO9w+6487Edy6GoXNZnykjMGzuBO89wPkuV9AdnOOOr0SYlofMWLQ7UcT2xbrwXqmJ2Mw03sYwAuAubyWewTPA+8rojFOV9HJNtRrs44QdJngfnofJRdItpxFgqr3icrmEHQggyI8hfkimpAAIzN3HQjkDcjpccl0nENUmwkjpEecoL3D2cwnXUSpvYHew7NvI++P6byOY74VNwJ0lNEsKZN8zo5Gx8yhmdCWkbp/gShZBftEHkfiouLtbnvE+74piCl43gTyt7jdDfXjQmeEz/APRNukILgdc0GI0J90wgsaToAY3zE9LEoFY1SpqHi3CbdImVF9abNaQOMn/ifgg4mZAjumfj8FM1XCARroBJPdYQmSwTATZrHX0Fj/fxVao08Dv0B8ZhatNwa2TckQZMTOrRNwRG/oszFYmSTmPKCG9LHRNEyQKSPr+6SH9odxP7v7JKiD1F5FN+R4JtYXBM+zOUGLblKmxxY7N2nBwDoIy9NdZPkq7GOcXhwl5Es9Xcd8zqAOHS8ILMWxrh25IAsO0Z8ZnpyXCnZ6bwbFLEAMGYwL9CRfxghDY0GYa4SbAN1ndeNyC+kGkOeezZwEf4hJExl1BneY96zcNtF7i9r35WZiWyQHBuYtyueB2rsJ/qA3KllCZpZ2sfftOOrWNnoHv07hdQxOOd2muLadO2V0gGTE9kTbdMzbuVd9YNbaco1dOVo0AJeTvndKr0n0xUlriXkQO097e8C09SnVkt0WfUBg7DcziZL6ji5vGQC69tCLI9Fj6pDWFsuMTDnTzi0DvR8DQfUzMy5ouI0bIJJO6CRpJJJ6rqsBg2sADPE6k7zyA0AQpFbSOx9nCk0kmXmQToAAdGiSAFpJgE6CxJnFCr4gNtBJ9yF68zbTmk5JDplmFIBVGVzy+v4T+vdy8EbkPay0sl9Bpc8Fo7T5dwccjQDH6Q0dyueudx8lTx9UgTy+vesdZpxNdLEjE2psehOYwOR08NAtDB0mU6BgQ0iRznRcl6RY8gtbclx8hHzVSrtWoyDna5sBuTO0BsaEAmAVzWdVFrIxrzIgE2PPgrlTCsiQuLxO0H53ONRgB+7nzX5AE3W1sbaD3sOeLaEb5VNNILRr+j+Ac/EDJENc1zzawaZ8Tp48F6GB9fFc16ENGWqd7nx3Bo39/kumNl06KqN+zk1pOUq9HOekmwPXdunAd94ESDbdwK4eu9rSWTBBuTLbjdB77r1vcuY9Jdgsq9oAB5iDoHflcY8Ct4y9nJOF5RwRq5e1fkQTJO6Du6pn4plW1RuU7qjRN/ztEZhzF/1KpjmFjyx9MNc22WS0tG6C3QX5zO9AqWv2oPkecRdaJGDYbEYVzJu14tDmO7J6GDeNxvxVGqwu/EeWYA+Zg9wlLDbUNN7sp7JADmOhzHjXtNdE9ZkTYrQ7FePVEMf/tPcO1ypvDr7uw4g8CU7E0ujGqvixyyNQ9xB+QQ2PdctDo3gOzgeFwrVellcQ+WuFix2YOHc8lDLqYu05fyumPG4TIoGKhsJLepBE9DcKyHw0gSXSA60AzcggdoCBrN1Omxr2mAwmAQAdZ1OoAAVerWhsCA2wBLoJGsTvEosKojXxQIi5BuTEBx4xB007lTcL2v3GfruUntJ3yOUH5IJgTLCedx9eKoVWT7h5/JJC9aOB8T80kWLaer06VQsJY+Gy0AOIENyNAc8NkE5Ytc68UJ7hQIDCJdcVHxB/Q1to5yqOI2gS2XEMAy5AwgBmsxuJMhVm4wsbDIDTeKhLgf6ANeY0XEkz0HJFyrVc4EOeYmZtPnp4oNCoGOs6A4vBcbnUPse52+EmUmVTMvYeDi71ZPJ7gD3OtzQcdR9U45mGc7HAAjLDmtb7U3Nzv3bk/oX2FfiXvOUNzNkHtSbjiBAW3snZ1SpAHZabF8WEa5QD2iNOAVHYeBrVjmFL/DabhhDOcZnb+MSu1wmHOYF3Zj7rfZDWnsxwAnxhNusBGN5LeGw7KbQymMrdSd5/E48SrlNtvqw3BAptnvv0A9kfFWUI0HTEpJnncmIytoNqF3YLRYTmnWTw7lWbRxH4mf+yvB0kniZ7tB5AKYWDyzRIoswtbfUaOjCfe5T+xv31XdzQPmrikgZRdgiIHrXyf08P0oeLwmVhOd7v1EQOdgFoPNx+U/C6TgDINwR4gpNWqGnTs8/wBusY8NBGrsp3WN0PH4ZlKnFKixpH5B8lH0mpvw9T2SWZpaddDOU8I+Srv9JgWAagjTfroudJrg6VJDYF5c0l7Wi+4Aeaz/ALU1r3sNryOdtPriquI2mMpJ7I94MW6wqWzaLq1TM6zNSN5A911qo4bZEp20keq+idCoMOHns53F4aRcCwb0kNn+pda0yAeIVJgECNIEI2FeLsm4uOn8raDrBzTzksIdamHNLSiJitSDkvSTZLK9MtqdmoyAypvgmMruIk+fj5ltGg+g+HPgFoc113U6jToQSCCOS9s2jRkZo6zvHNcrj/RlmKAZ61zA0uLGFrXNDiIgz2osLA89TKqMq5MpwvK5PKi1zgXtLHAkkskZhukE6i3XrqgsYZsxwB3NDr+Eyth/o4+k9za7RTyGM7HF2Yjexou7de0TeEVxaAW0iWE6uI7b7byLNPTVVu9GOx9juxrAz1eNJeYAYGEGvTH5n2blA+46TwyrOx2znU2CqwipROlVjSCCdG1G2cx3WZ3EqvXY4TdruXsu71XwOPr0H56bi0mzgRLXj8LgbObyKpfQsPDGZizudM7iGn3ifNCe7fDR3ZfKVvHC08WJpBtGuR/kuI9XUP8A+L3ew4/gdbgVz2IoPY9zHtcx7TDmlsEHmNyaYnEeAbS3663Ue79rvgVEFu8jvB94TEAXuOYuEColn5nwCShHMeCSYUek7Je4PL3sD6rmxTzAudmk5iGZ4PZJEezDdNZrVX5HxrEXDRfkHncLidOqjg2VKLnFoLXvaWgyCSxwEwYmbXcDxAA3bOAwbyzI+mwNc1uZ5m+sQQZAcLECxXG5JOzsUbVGe5/rD2HgaAMJMuMgTmENAubGwym94W3sDZj68tcJogdpzu0C/gwFxuCAZEDqj7M9HS95bIaxp7WRsCZ9hs8o8Z5Lq6lRrGBjAA1oiAhtNWOMWmCbU9XSYyB2QAA0RJ5BEaAwAP1eQXngNzek28ULA087i9+g0HD69/RW2DMb/eOY/pHsj496I5yW8YLFIWk6m/yCImSWgh1R2kHEDKYc0gi8AmCIPK5PcrsqlXdJ8/H+PNTJ4GuShSZWFi5hH6XfNWRn/J4H5q3Sw+93giuDRuCzUGynJFNlOo7Qs6wfmpuw7xHab+0/9kf7S1SZiATE6+9aKCJ3MqNw7/xN/af+yKzCuuS4ExEBsabtUejUzAkdPBSaPmjYh7mc7iaQqMh4uCRfloe8Qe9cXtb0WpEl12u/KYvyXpeOwebtAwd/A9eBXG7dY5ju2CG7jHZ6TouOUJQZ0xlGSOLPo+wG8nqZWlTptptgamVYa8OkgiAhYbZ1Wu4kNLWaZny0RvIGp+rpxU5Y5Kk4Rybfohtp72PY4k+rLS0m/ZdMCeWU9xC3mYgteH/eykZjcwSCR0sPBU9lbOZh2ZW3m7nHVx07gBYDcEZ4ghehCCUVfJ585XJ1wazdpO3gFP8A+TIuWiOF5WawSQNymWAm9/cFVIjczYo4ltRpDdY0KycXTLDmG6JHEbiOY07lJlMAy2xG+6nVqF3tAHUGBuKlx9FbsZK+0Nl08ZTvDajbtqAX7+INpC872nhTSc5lRsPbaDv4EEat5rvcPXNN++N08Ofx8eKtekOxWY2lIIbUAOR/A72u4tPlqs06eRtWsHjmNyPkOEO3O0ngHSbcj4rGc7KcuYiDBBBBB0jkVobVFSk99Oo1zXsMEENt0jURod4VH7QH2eBOjXmY/S7lwO7ppusHM8sg+Y1B8CT3ha9DbbKjRSxoe9oEMrM/zqf9R9tn5TPIrBq2JDmlpGo1Q84iA4jkdEPIJNGxtPYz6LWva5tWi/2KrbsP5Xb2O/KVkusdI/SVe2Vtl+HJyZSx9n039qnUHB7TY9RdaT9k0sU0vwQh4EvwrndsDe6i777fym4SuuSqvg523LwPzSQ3mDBMEWIMgg75CSdhtPWMBUe97SXXcLGoQWxBFgbDVbGA2Maj8pd2GGHFsQ6NwO9FZshhIL5sABG4clq/amsAY0QB9eK83ertnoKDNF72sbkYIA4LNLXPffstHnzVV+MjeVXfjilLWsqOkdDUrsa3KNNO7ekzaLQSd5+oXN/bSovxZCn530V8K7OmdtUcESjtNjjBt1XHHF80IY0ymteVg9GJ6C+oI1CrNqAEnU7uAtC5ijtKAAdFdZjwd6uWq2StNI2XY0jgq1bFhwtY8OPRZ78UOKpYnEcCnDWknnIS0otBquLcjYPFmSZ0Ej3fFZbq2cTv0PXio4Ktr0A8Qu+LTVnJJNYOp2fiuyJ3z8/+yuMxQNtCdOv8ghcvhq3Zb1+CssxBvxDpHjKTiCkbrcWHQdM1uhGoScA5u8HQrKL/AGgOTx36q9TrSf1Ce9S1RSZVrYdupcJ6XVJzwNAT1Wo+DM6hZFV0kpwFJEg8kojm3Hd70PDsuiuPa7gtDMkxJrrn6329yg59j0nwQm1JI5gJBRqUsO52g5ojsOBq5vSU5qw0MB3CTxJEoZYuSfkbXSR1R0FJWypi8M1w1E7rp9l4osdkdYHT6+rdFZNJCfhGnl0Wb8i+UV/PXDM3079EWY6nnZDcQwdl1oeNcjjw4HcTwJXhGIpPY9zHtLXtJa5pEEEWII4r6PpYpzAAe0B3FY21dlYetWbXdSGcCMxjtcJG8gWngtF5EVEyl47cjx3B7MrVQG5HOiMrw32eDXH8PmJtwNyj6EYt2rGtHNwsvXKdICAAABuFgiELF+W+karxF2zx2v6F4pujAehnyWbW2XXpODsj2ObcOAiCN4I0XuZpzqhVMOwi4BRHy5doT8RdM8mHpXV/1aGHqP0c99MF7osC47zEJL012z6f4G/tCSv+pev0n+Z+/wAIPx3chVMUd5WK7FHeVF2KhcNs7UkaT8ZzTMrZpj566LNY/MbED64fFSq4sMi3G0iBb2fzNPFNRvkGzQbXgIVXE81jnFbk4qHVG0LNEPnVMHqhnKkyod6tREaXrLJ6NYqobiEaiYF1QkXTVSdVsqj3ouHYXEACXHQfEqoLJMnSCUswY8wbxFtTf5hPhXQXHi/3AD4K9isEWMA1vJ4mLknvCpMuL6zbnG4r0IYSRxTdybL1F1iFaYb9VQpuurDHLYxLjX6crHoUehUgjkbd6ok+Y80+fQhS0NM1sVUieYWUDdHxFTMxp6jw/lVabpUpYKbNDD0iRICE89t31uWjh3Zco+rqhjnRWdzI9wQpWwccFX1lwONvGypitkLJP3nN8ifeIRnPy35+PIzoOayNqvJYSNWPDhx7JB+EJiOtw9bMZV1q5nZmLix+pXQUqk3Xm6sakzv05XFFghDe6EQuQKpWLNUAcZKE9HDUN7VLGgbZTkcAnbvU2U83RTVjsG5QcFN7Y1CRYkICknyp0Wx0eYHFHepUsWDrMcU6S6aRlbCVq5DbnQyABqCOyBwGs71XOILjJ/jkOSSStpCRJjkZlRJJQUEa6UWmbpJJgXaTlB79ySSBBKDS4gDeu72VsFrGtLz246xeY9ySS30kjLVeCntEkuLYiNTyPJZWJygQ0RFid6ZJdUTlZDNojMfqnSWqMwjX2B5pNdqEkkCDh/YI4OB8QfkhUnwQmSS9j9Gm6vvQsc//ABcw3hs94t3aJJLNcmj4MHG1faA096DiL5v1JJK+iOyzsSjndTaTqQD03+S36jTRfkNwbtPLnzTpLl8hKjp0Wy2ypZQzSkkuE6xOKA8pJKGUhmn3KbK8DSUkkIRJ5Au4STu3BBLkkkpchEFmSSSUFn//2Q=="
+                 alt="Product 2" class="img-fluid" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Kontakt</h5>
+                <p>Email: info@thehalffour.com</p>
+                <p>Telefon: +123456789</p>
+                <p>Fax: +987654321</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Impressum</h5>
+                <p>Angaben gemäß § 5 TMG</p><br>
+
+                <p style ="font-size:75%"> Name: Massel Dadon<br>
+                    Telefon: 01234-789456
+                    Fax: 1234-56789
+                    E-Mail: masseldadon@gmail.com<br>
+                <br>
+                    Registereintrag:
+                    Eintragung im Registergericht Bornheim
+                    Registernummer: 12345<br>
+                    <br>
+                    Haftungsausschluss:<br>
+                    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+                    <br>
+                    <br>
+                    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Folgen Sie uns</h5>
+                <a href="#">Facebook</a><br>
+                <a href="#">Twitter</a><br>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
+</html>
