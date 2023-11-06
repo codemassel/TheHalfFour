@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_3_1_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring6_3_1_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/PriorityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ZipcodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Zipcode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/PriorityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ZipcodeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheHalfFour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TheHalfFour.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/IndexController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/MyRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/MyRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
@@ -40,8 +37,8 @@
       <list>
         <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,30 +48,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
   <component name="ProjectId" id="2V6PVfRCYcKNNyhDQdwfDX7D8ke" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/danie/Desktop/School/TheHalfFour/src/main/resources/static/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "ae2c8ef034c770bb6cf94a20f27fd483",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
@@ -182,6 +160,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleine Anpassungen" />
@@ -189,6 +168,7 @@
     <MESSAGE value="Setting up Spring&#10;&#10;Created project structure, added Model and Controllerclasses.&#10;&#10;Changelog: added" />
     <MESSAGE value="Landing Page created&#10;&#10;Created a landing page with a responsive login-form + background&#10;&#10;Changelog: added" />
     <MESSAGE value="Frontend Startseite, Controller gefixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Frontend Startseite, Controller gefixed" />
+    <MESSAGE value="restlichen entities, controller und repositories hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="restlichen entities, controller und repositories hinzugefügt" />
   </component>
 </project>

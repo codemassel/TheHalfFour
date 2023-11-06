@@ -1,8 +1,9 @@
-ShopApp/Controller/ShopItemController.class
-ShopApp/MainApplication.class
-ShopApp/Model/ShopItem.class
-ShopApp/Repository/CustomerRepository.class
 ShopApp/Controller/CustomerController.class
 ShopApp/Model/Customer.class
-ShopApp/Repository/ShopItemRepository.class
+ShopApp/Controller/ShopItemController.class
+ShopApp/MainApplication.class
+ShopApp/Repository/CustomerRepository.class
 ShopApp/Repository/MyRunner.class
+ShopApp/Repository/ShopItemRepository.class
+ShopApp/Service/CustomerService.class
+ShopApp/Model/ShopItem.class

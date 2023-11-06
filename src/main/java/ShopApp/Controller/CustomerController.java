@@ -25,6 +25,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+    // localhost:8888/index/
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getCustomers(Model model) {
         List<Customer> customers = customerService.getCustomers();
