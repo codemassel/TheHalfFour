@@ -9,7 +9,7 @@ public class Priority {
         //empty constructor für Spring
     }
 
-    public Priority (Customer customer, Order order) {
+    public Priority (Customer customer, Orders order) {
         this.customer = customer;
         this.order = order;
     }
@@ -21,7 +21,7 @@ public class Priority {
     private Customer customer;
 
     @OneToOne
-    private Order order;
+    private Orders order;
 
     public long getId() {
         return id;
@@ -39,11 +39,11 @@ public class Priority {
         this.customer = customer;
     }
 
-    public Order getOrder() {
+    public Orders getOrder() {
         return order;
     }
 
-    public void setOrder(Order order) {
+    public void setOrder(Orders order) {
         this.order = order;
     }
 }

@@ -1,7 +1,8 @@
 package ShopApp.Repository;
 
 import ShopApp.Model.Zipcode;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ZipcodeRepository extends CrudRepository<Zipcode, Long> {
+public interface ZipcodeRepository extends JpaRepository<Zipcode, Long> {
+    Zipcode findByZipcode(String zipcode);
 }

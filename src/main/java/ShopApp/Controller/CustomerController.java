@@ -1,13 +1,19 @@
 package ShopApp.Controller;
 
 import ShopApp.Model.Customer;
+import ShopApp.Model.Zipcode;
 import ShopApp.Repository.CustomerRepository;
+import ShopApp.Repository.ZipcodeRepository;
 import ShopApp.Service.CustomerService;
+import ShopApp.Service.ZipcodeService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -19,11 +25,31 @@ public class CustomerController {
     @Autowired
     private CustomerRepository rep;
 
-    private final CustomerService customerService;
+    @Autowired
+    private ZipcodeRepository zipRep;
 
-    public CustomerController(CustomerService customerService){
+    private final CustomerService customerService;
+    private final ZipcodeService zipcodeService;
+
+    public CustomerController(CustomerService customerService, ZipcodeService zipcodeService){
         this.customerService = customerService;
+        this.zipcodeService = zipcodeService;
     }
+/*
+    public void createCustomer(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
+        Zipcode zipcode = new Zipcode();
+        zipcode.setZipcode(zipcodeValue);
+        zipcode.setCity(city);
+        zipRep.save(zipcode);
+
+        Customer customer = new Customer();
+        customer.setFirstName(firstName);
+        customer.setLastName(lastName);
+        customer.setEmailId(emailId);
+        customer.setPassword(password);
+        customer.setZipcode(zipcode);
+        rep.save(customer);
+    }*/
 
     // localhost:8888/index/
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -36,9 +62,20 @@ public class CustomerController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String createUser(Model model, @ModelAttribute Customer customer) {
-        System.out.println("ssssss");
-        Customer foundCustomer = customerService.createCustomer(customer);
-        System.out.println("hhhhhhh");
+        customerService.createCustomer(customer);
+        Zipcode zipcode = customer.getZipcode();
+        zipRep.save(zipcode);
+
+        // Konvertiere das Zipcode-Objekt in ein JSON-String
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            String json = objectMapper.writeValueAsString(customer);
+            System.out.println("JSON-Inhalt: " + json);
+        } catch (Exception e) {
+            // Behandele etwaige Ausnahmen hier
+            e.printStackTrace();
+        }
+
         return "redirect:/index/";
     }
 /*

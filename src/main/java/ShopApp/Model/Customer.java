@@ -2,14 +2,14 @@ package ShopApp.Model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "customers")
+@Entity
 public class Customer {
 
     public Customer() {
         //empty Constructor für Spring JPA
     }
 
-    public Customer(String firstName, String lastName, String emailId, String password, long zipcode) {
+    public Customer(String firstName, String lastName, String emailId, String password, Zipcode zipcode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
@@ -33,8 +33,9 @@ public class Customer {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "zipcode")
-    private long zipcode;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "zipcode")
+    private Zipcode zipcode;
 
     public long getId() {
         return id;
@@ -60,6 +61,14 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public Zipcode getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(Zipcode zipcode) {
+        this.zipcode = zipcode;
+    }
+
     public String getEmailId() {
         return emailId;
     }
@@ -76,16 +85,8 @@ public class Customer {
         this.password = password;
     }
 
-    public long getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(long zipcode) {
-        this.zipcode = zipcode;
-    }
-
     @Override
     public String toString() {
-        return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + "]";
+        return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + " password=" + password + ", emailId=" + emailId + " zipcode=" + "]";
     }
 }
