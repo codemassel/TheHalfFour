@@ -1,7 +1,7 @@
 package ShopApp.Service;
 
-import ShopApp.Model.Zipcode;
-import ShopApp.Repository.ZipcodeRepository;
+import ShopApp.Model.Cities;
+import ShopApp.Repository.CitiesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,23 +9,23 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class ZipcodeService {
-    private final ZipcodeRepository zipRep;
+    private final CitiesRepository zipRep;
 
     @Autowired
-    public ZipcodeService(ZipcodeRepository zipRep) {
+    public ZipcodeService(CitiesRepository zipRep) {
         this.zipRep = zipRep;
     }
 
-    public Zipcode createZipcode(Zipcode zipcode) {
-        // Überprüfen, ob die Zipcode bereits in der Datenbank vorhanden ist
-        Zipcode existingZipcode = zipRep.findByZipcode(zipcode.getZipcode());
+    public Cities createZipcode(Cities cities) {
+        // Überprüfen, ob die Cities bereits in der Datenbank vorhanden ist
+        Cities existingCities = zipRep.findByZipcode(cities.getZipcode());
 
-        if (existingZipcode == null) {
-            // Wenn die Zipcode nicht in der Datenbank existiert, dann speichern
-            return zipRep.save(zipcode);
+        if (existingCities == null) {
+            // Wenn die Cities nicht in der Datenbank existiert, dann speichern
+            return zipRep.save(cities);
         } else {
-            // Wenn die Zipcode bereits existiert, gib einfach die existierende Zipcode zurück
-            return existingZipcode;
+            // Wenn die Cities bereits existiert, gib einfach die existierende Cities zurück
+            return existingCities;
         }
     }
 }

@@ -5,33 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ZipcodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Order_ShopItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/CitiesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/PriorityController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Priority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Zipcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Zipcode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/OrdersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ZipcodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ZipcodeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Priority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Zipcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/PriorityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ZipcodeRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ZipcodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ZipcodeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/MainApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/MyRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,29 +44,18 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
   <component name="ProjectId" id="2V6PVfRCYcKNNyhDQdwfDX7D8ke" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "ae2c8ef034c770bb6cf94a20f27fd483",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ShopApp.Model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\js" />
@@ -184,6 +163,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleine Anpassungen" />
@@ -192,6 +172,7 @@
     <MESSAGE value="Landing Page created&#10;&#10;Created a landing page with a responsive login-form + background&#10;&#10;Changelog: added" />
     <MESSAGE value="Frontend Startseite, Controller gefixed" />
     <MESSAGE value="restlichen entities, controller und repositories hinzugefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="restlichen entities, controller und repositories hinzugefügt" />
+    <MESSAGE value="entity-fields an ER-Modell angepasst" />
+    <option name="LAST_COMMIT_MESSAGE" value="entity-fields an ER-Modell angepasst" />
   </component>
 </project>

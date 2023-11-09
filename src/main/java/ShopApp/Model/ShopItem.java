@@ -25,6 +25,10 @@ public class ShopItem {
     @Column(name = "itemPrice", nullable = false)
     private String itemPrice;
 
+    @Column(name = "description", nullable = false)
+    private String description;
+
+
     public long getId() {
         return id;
     }
@@ -47,6 +51,14 @@ public class ShopItem {
 
     public void setItemPrice(String itemPrice) {
         this.itemPrice = itemPrice;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override

@@ -1,9 +1,9 @@
 package ShopApp.Controller;
 
+import ShopApp.Model.Cities;
 import ShopApp.Model.Customer;
-import ShopApp.Model.Zipcode;
+import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
-import ShopApp.Repository.ZipcodeRepository;
 import ShopApp.Service.CustomerService;
 import ShopApp.Service.ZipcodeService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,7 +26,7 @@ public class CustomerController {
     private CustomerRepository rep;
 
     @Autowired
-    private ZipcodeRepository zipRep;
+    private CitiesRepository zipRep;
 
     private final CustomerService customerService;
     private final ZipcodeService zipcodeService;
@@ -37,7 +37,7 @@ public class CustomerController {
     }
 /*
     public void createCustomer(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
-        Zipcode zipcode = new Zipcode();
+        Cities zipcode = new Cities();
         zipcode.setZipcode(zipcodeValue);
         zipcode.setCity(city);
         zipRep.save(zipcode);
@@ -62,11 +62,12 @@ public class CustomerController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String createUser(Model model, @ModelAttribute Customer customer) {
-        customerService.createCustomer(customer);
-        Zipcode zipcode = customer.getZipcode();
-        zipRep.save(zipcode);
 
-        // Konvertiere das Zipcode-Objekt in ein JSON-String
+        customerService.createCustomer(customer);
+        Cities cities = customer.getZipcode();
+        zipRep.save(cities);
+
+        // Konvertiere das Cities-Objekt in ein JSON-String
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String json = objectMapper.writeValueAsString(customer);

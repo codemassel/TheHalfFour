@@ -5,22 +5,33 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class Zipcode {
+public class Cities {
 
-    public Zipcode() {
+    public Cities() {
         //empty constructor für Spring
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "zipcode_id")
+    private long id;
+
     @Column(name = "zipcode", nullable = false)
     private String zipcode;
 
     @Column(name ="city", nullable = true)
     private String city;
 
-
     @OneToMany(mappedBy = "zipcode")
     private List<Customer> customer;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getZipcode() {
         return zipcode;

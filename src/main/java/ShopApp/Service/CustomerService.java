@@ -1,8 +1,8 @@
 package ShopApp.Service;
 
 import ShopApp.Model.Customer;
+import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
-import ShopApp.Repository.ZipcodeRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,9 +12,9 @@ import java.util.List;
 @Transactional
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    private final ZipcodeRepository zipRep;
+    private final CitiesRepository zipRep;
 
-    public CustomerService(CustomerRepository customerRepository, ZipcodeRepository zipRep){
+    public CustomerService(CustomerRepository customerRepository, CitiesRepository zipRep){
         this.customerRepository = customerRepository;
         this.zipRep = zipRep;
     }
@@ -29,7 +29,7 @@ public class CustomerService {
     }
 /*
     public void createCustomerTestAmk(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
-        Zipcode zipcode = new Zipcode();
+        Cities zipcode = new Cities();
         zipcode.setZipcode(zipcodeValue);
         zipcode.setCity(city);
         zipRep.save(zipcode);
