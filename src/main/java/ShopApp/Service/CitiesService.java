@@ -1,6 +1,5 @@
 package ShopApp.Service;
 
-import ShopApp.Model.Cities;
 import ShopApp.Repository.CitiesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,14 +7,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class ZipcodeService {
+public class CitiesService {
     private final CitiesRepository zipRep;
 
     @Autowired
-    public ZipcodeService(CitiesRepository zipRep) {
+    public CitiesService(CitiesRepository zipRep) {
         this.zipRep = zipRep;
     }
 
+    /*
     public Cities createZipcode(Cities cities) {
         // Überprüfen, ob die Cities bereits in der Datenbank vorhanden ist
         Cities existingCities = zipRep.findByZipcode(cities.getZipcode());
@@ -28,4 +28,5 @@ public class ZipcodeService {
             return existingCities;
         }
     }
+    */
 }

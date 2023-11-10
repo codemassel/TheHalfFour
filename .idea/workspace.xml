@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Order_ShopItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/CitiesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/PriorityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ZipcodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CitiesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Priority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Zipcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/PriorityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ZipcodeRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ZipcodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ZipcodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ZipcodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CitiesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,6 +165,7 @@
     <MESSAGE value="Frontend Startseite, Controller gefixed" />
     <MESSAGE value="restlichen entities, controller und repositories hinzugefügt" />
     <MESSAGE value="entity-fields an ER-Modell angepasst" />
-    <option name="LAST_COMMIT_MESSAGE" value="entity-fields an ER-Modell angepasst" />
+    <MESSAGE value="REST-API gefixed wie Drogenkonsumenten" />
+    <option name="LAST_COMMIT_MESSAGE" value="REST-API gefixed wie Drogenkonsumenten" />
   </component>
 </project>

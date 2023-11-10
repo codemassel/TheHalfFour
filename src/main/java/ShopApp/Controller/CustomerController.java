@@ -1,11 +1,10 @@
 package ShopApp.Controller;
 
-import ShopApp.Model.Cities;
 import ShopApp.Model.Customer;
 import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
 import ShopApp.Service.CustomerService;
-import ShopApp.Service.ZipcodeService;
+import ShopApp.Service.CitiesService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,11 +28,11 @@ public class CustomerController {
     private CitiesRepository zipRep;
 
     private final CustomerService customerService;
-    private final ZipcodeService zipcodeService;
+    private final CitiesService citiesService;
 
-    public CustomerController(CustomerService customerService, ZipcodeService zipcodeService){
+    public CustomerController(CustomerService customerService, CitiesService citiesService){
         this.customerService = customerService;
-        this.zipcodeService = zipcodeService;
+        this.citiesService = citiesService;
     }
 /*
     public void createCustomer(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
@@ -54,18 +53,17 @@ public class CustomerController {
     // localhost:8888/index/
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getCustomers(Model model) {
+
         List<Customer> customers = customerService.getCustomers();
         model.addAttribute("customers", customers);
         model.addAttribute("customer", new Customer());
         return "index";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String createUser(Model model, @ModelAttribute Customer customer) {
 
         customerService.createCustomer(customer);
-        Cities cities = customer.getZipcode();
-        zipRep.save(cities);
 
         // Konvertiere das Cities-Objekt in ein JSON-String
         try {
@@ -77,6 +75,10 @@ public class CustomerController {
             e.printStackTrace();
         }
 
+        return "redirect:/index/";
+    }
+    @RequestMapping(value = "/login", method = RequestMethod.PUT)
+    public String login() {
         return "redirect:/index/";
     }
 /*

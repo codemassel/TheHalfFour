@@ -23,7 +23,7 @@ public class Customer {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "first_name", nullable = false)
@@ -40,7 +40,7 @@ public class Customer {
     private String password;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "zipcode")
+    @JoinColumn(name = "zipcode") // updatable = false, insertable = false
     private Cities zipcode;
 
     @Column(name = "street")

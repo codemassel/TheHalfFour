@@ -58,27 +58,29 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Email-Adresse</label>
-                                            <!-- Umändern PHP -->
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                   aria-describedby="emailHelp">
-                                            <div id="emailHelp6" class="form-text">Bitte geben Sie ihre Email-Adresse
-                                                ein.</div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Passwort</label>
-                                            <!-- Umändern PHP -->
-                                            <input type="password" class="form-control" id="exampleInputPassword1">
-                                            <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
+                                    <form method="post" th:action="@{/index/login}" th:object="${customer}" class="col card p-3 mb-5">
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email-Adresse</label>
+                                                <!-- Umändern PHP -->
+                                                <input type="email" class="form-control" id="exampleInputEmail1" th:field="*{emailId}"
+                                                       aria-describedby="emailHelp">
+                                                <div id="emailHelp6" class="form-text">Bitte geben Sie ihre Email-Adresse
+                                                    ein.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Passwort</label>
+                                                <!-- Umändern PHP -->
+                                                <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}">
+                                                <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <!-- Umändern PHP -->
-                                        <button type="button" class="btn btn-primary">Einloggen</button>
-                                    </div>
+                                        <div class="modal-footer">
+                                            <!-- Umändern PHP -->
+                                            <button type="submit" class="btn btn-primary">Einloggen</button>
+                                        </div>
+                                    </form>
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel2">Registrieren</h5>
                                     </div>
@@ -104,7 +106,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <!-- Umändern PHP -->
-                                <form method="post" th:action="@{/index/}" th:object="${customer}" class="col card p-3 mb-5">
+                                <form method="post" th:action="@{/index/register}" th:object="${customer}" class="col card p-3 mb-5">
                                     <div class="modal-header ps-3">
                                         <h5 class="modal-title" id="exampleModalLabel">Login</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"

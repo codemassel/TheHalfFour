@@ -1,5 +1,6 @@
 package ShopApp.Service;
 
+import ShopApp.Model.Cities;
 import ShopApp.Model.Customer;
 import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
@@ -12,11 +13,11 @@ import java.util.List;
 @Transactional
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    private final CitiesRepository zipRep;
+    private final CitiesRepository citiesRepository;
 
-    public CustomerService(CustomerRepository customerRepository, CitiesRepository zipRep){
+    public CustomerService(CustomerRepository customerRepository, CitiesRepository citiesRepository){
         this.customerRepository = customerRepository;
-        this.zipRep = zipRep;
+        this.citiesRepository = citiesRepository;
     }
 
     public List<Customer> getCustomers(){
@@ -25,7 +26,23 @@ public class CustomerService {
     }
 
     public Customer createCustomer(Customer customer){
+        Cities city = getOrCreateCityByZipcode(customer.getZipcode().getZipcode());
+        city.setCity(customer.getZipcode().getCity());
+        customer.setZipcode(city);
         return customerRepository.save(customer);
+    }
+
+    private Cities getOrCreateCityByZipcode(String zipcode) {
+        Cities existingCity = citiesRepository.findByZipcode(zipcode);
+        if (existingCity != null) {
+            return existingCity;
+        } else {
+            Cities newCity = new Cities();
+            newCity.setZipcode(zipcode);
+            // Weitere Eigenschaften der Stadt setzen, falls erforderlich
+            //citiesRepository.save(newCity);
+            return newCity;
+        }
     }
 /*
     public void createCustomerTestAmk(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
