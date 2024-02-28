@@ -1,0 +1,129 @@
+<changelist name="REST-API_gefixed_wie_Drogenkonsumenten" date="1704971931030" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/shelved.patch" />
+  <option name="DESCRIPTION" value="REST-API gefixed wie Drogenkonsumenten" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Diagrams/ERM.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/ERM.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Controller/CitiesController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/CitiesController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Controller/CustomerController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/CustomerController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Controller/OrdersController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/OrdersController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Controller/ShopItemController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/ShopItemController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/Cities.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/Cities.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/Customer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/Customer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/Order_ShopItem.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/Order_ShopItem.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/Orders.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/Orders.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/ShopItem.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/ShopItem.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/Status.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/Status.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/CitiesRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/CitiesRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/CustomerRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/CustomerRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/MyRunner.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/MyRunner.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/OrdersRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/OrdersRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/ShopItemRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/ShopItemRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Service/CitiesService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/CitiesService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Service/CustomerService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/CustomerService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/MainApplication.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/MainApplication.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/static/landingpage.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/landingpage.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/static/landingpage2.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/landingpage2.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/createdFiles.lst" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/TheHalfFour-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/TheHalfFour-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/TheHalfFour-1.0-SNAPSHOT.jar.original" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/TheHalfFour-1.0-SNAPSHOT.jar.original" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Zwischenstand_Präsentation.pptx" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten/Zwischenstand_Präsentation.pptx" />
+  </binary>
+</changelist>
