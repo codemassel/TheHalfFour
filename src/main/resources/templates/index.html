@@ -70,33 +70,19 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputPassword1" class="form-label">Passwort</label>
-                                                <!-- Umändern PHP -->
                                                 <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}">
                                                 <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <!-- Umändern PHP -->
+                                            <a class=" float-left nav-link btn btn-success" href="signin.html" tabindex="-1"
+                                               aria-disabled="true" data-bs-toggle="modal"
+                                               data-bs-target="#registerUserModal" data-bs-dismiss="modal">Registrieren</a>
                                             <button type="submit" class="btn btn-primary">Einloggen</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Abbrechen</button>
                                         </div>
                                     </form>
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel2">Registrieren</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="mb-3">
-                                            <p>Sind Sie neu hier? Dann registrieren Sie sich doch!</p>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger"
-                                                data-bs-dismiss="modal">Abbrechen</button>
-                                        <!-- Umändern PHP -->
-                                        <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1"
-                                           aria-disabled="true" data-bs-toggle="modal"
-                                           data-bs-target="#registerUserModal" data-bs-dismiss="modal">Registrieren</a>
-                                    </div>
                                 </form>
                             </div>
                         </div>
