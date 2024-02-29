@@ -1,7 +1,10 @@
 package ShopApp.Model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+
+import java.util.List;
 
 
 @Entity
@@ -12,7 +15,7 @@ public class Customer {
     }
 
     public Customer(String firstName, String lastName, String emailId, String password, Cities zipcode,
-                    String street, int houseNumber) {
+                    String street, int houseNumber, List<Orders> orders) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
@@ -20,6 +23,7 @@ public class Customer {
         this.zipcode = zipcode;
         this.street = street;
         this.houseNumber = houseNumber;
+        this.orders = orders;
     }
 
     @Id
@@ -49,10 +53,9 @@ public class Customer {
     @Column(name ="house_number")
     private int houseNumber;
 
-    /*
+    @JsonManagedReference
     @OneToMany(mappedBy = "customer")
     private List<Orders> orders;
-    */
 
     public long getId() {
         return id;
@@ -116,6 +119,14 @@ public class Customer {
 
     public void setHouseNumber(int houseNumber) {
         this.houseNumber = houseNumber;
+    }
+
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
     }
 
     @Override

@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @Transactional
@@ -51,6 +52,7 @@ public class CustomerController {
     }*/
 
     // localhost:8888/index/
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
     public String getCustomers(Model model) {
 
@@ -59,6 +61,7 @@ public class CustomerController {
         return "customersTest";
     }
 
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String createUser(Model model, @ModelAttribute Customer customer) {
 
@@ -77,6 +80,7 @@ public class CustomerController {
         return "redirect:/index";
     }
 
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String returnIndex(Model model) {
 
@@ -86,11 +90,13 @@ public class CustomerController {
         return "index";
     }
 
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "/login", method = RequestMethod.PUT)
     public String login() {
         return "redirect:/index/";
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/customer/{id}")
     public ResponseEntity<Customer> getCustomerById(@PathVariable Long id, Model model) {
         Customer customer = customerRepository.findById(id).orElse(null);
@@ -99,19 +105,23 @@ public class CustomerController {
         }
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/test")
+    public ResponseEntity<Optional<Customer>> getCustomer(@RequestParam(name = "customerId") Long customerId) {
+        Optional<Customer> customer = customerRepository.findById(customerId);
+        return new ResponseEntity<>(customer, HttpStatus.OK);
+    }
 /*
 
     /*Waren hinzufügen
     @PostMapping("/createShopItem")
-    public ResponseEntity<ShopItem> createShopItems(
-            @RequestParam String shopItem,
-            @RequestParam long price) {
-
+    public ResponseEntity<ShopItem> createShopItems(@RequestParam String shopItem,@RequestParam long price) {
         //business logic
     }
 
-    @GetMapping("/customersByName/{firstName}{lastName}")
-    public List<Customer> getCustomersByName(@RequestParam String firstName, @RequestParam String lastName) {
+    @GetMapping("/customer")
+    public List<Customer> getCustomersByName(@RequestParam (name="firstName") String firstName, @RequestParam (name = "lastName") String lastName) {
         return rep.findByFirstNameAndLastName(firstName, lastName);
     }
     */
