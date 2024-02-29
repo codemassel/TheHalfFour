@@ -74,10 +74,10 @@ public class CustomerController {
             e.printStackTrace();
         }
 
-        return "redirect:/index/";
+        return "redirect:/index";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String returnIndex(Model model) {
 
         List<Customer> customers = customerService.getCustomers();

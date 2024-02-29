@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Email;
 public class Customer {
 
     public Customer() {
-        //empty Constructor für Spring JPA
+        //empty Constructor for Spring JPA
     }
 
     public Customer(String firstName, String lastName, String emailId, String password, Cities zipcode,
@@ -48,6 +48,11 @@ public class Customer {
 
     @Column(name ="house_number")
     private int houseNumber;
+
+    /*
+    @OneToMany(mappedBy = "customer")
+    private List<Orders> orders;
+    */
 
     public long getId() {
         return id;

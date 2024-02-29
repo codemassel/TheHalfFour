@@ -2,17 +2,19 @@ package ShopApp.Model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "shopitems")
+@Entity(name = "shopitem")
 public class ShopItem {
 
     public ShopItem() {
-        //empty constructor für spring
+        //empty constructor for spring
     }
 
-    public ShopItem(long id, String itemName, String itemPrice) {
+    public ShopItem(long id, String itemName, String itemPrice, String description,  byte[] image) {
         this.id = id;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
+        this.description = description;
+        this.image = image;
     }
 
     @Id
@@ -28,6 +30,9 @@ public class ShopItem {
     @Column(name = "description", nullable = false)
     private String description;
 
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
 
     public long getId() {
         return id;
@@ -61,12 +66,13 @@ public class ShopItem {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "ShopItem{" +
-                "id=" + id +
-                ", itemName='" + itemName + '\'' +
-                ", itemPrice='" + itemPrice + '\'' +
-                '}';
+
+    public byte[] getImage() {
+        return image;
     }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
 }

@@ -1,5 +1,6 @@
 package ShopApp.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -8,57 +9,55 @@ import java.util.Date;
 public class Orders {
 
     public Orders() {
-        //empty constructor für Spring
+        //empty constructor for Spring
     }
 
-    public Orders(Customer customer) {
-        this.customer = customer;
-    }
-
-    public Orders(long id, Customer customer, int priority, Status status,
-                  double totalPrice, double discount, Date creationDate) {
+    public Orders(long id, Customer customer, ShopItem shopitems, int priority, Status status,
+                  double discount, Date creationDate, Date shipmentDate, Date completionDate) {
         this.id = id;
         this.customer = customer;
+        this.shopitems = shopitems;
         this.priority = priority;
         this.status = status;
-        this.totalPrice = totalPrice;
         this.discount = discount;
         this.creationDate = creationDate;
+        this.shipmentDate = shipmentDate;
+        this.completionDate = completionDate;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    /*
-    @ManyToOne
-    private List<ShopItem> shopitems;
-    */
+    @OneToOne
+    @JoinColumn(name = "shopitems", referencedColumnName = "id")
+    private ShopItem shopitems;
 
     @Column
     private int priority;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private Status status;
-
-    @Column
-    private double totalPrice;
 
     @Column
     private double discount;
 
     @Column
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm:ss", timezone = "UTC")
     private Date creationDate;
 
     @Column
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm:ss", timezone = "UTC")
     private Date shipmentDate;
 
     @Column
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm:ss", timezone = "UTC")
     private Date completionDate;
-
 
     public long getId() {
         return id;
@@ -68,12 +67,12 @@ public class Orders {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public ShopItem getShopitems() {
+        return shopitems;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setShopitems(ShopItem shopitems) {
+        this.shopitems = shopitems;
     }
 
     public int getPriority() {
@@ -90,14 +89,6 @@ public class Orders {
 
     public void setStatus(Status status) {
         this.status = status;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
     }
 
     public double getDiscount() {
@@ -132,4 +123,11 @@ public class Orders {
         this.completionDate = completionDate;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }
