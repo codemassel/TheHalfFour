@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,14 +28,16 @@ public class CustomerController {
     private final CustomerService customerService;
     private final CitiesService citiesService;
     private final PasswordService passwordService;
+    private final PasswordEncoder passwordEncoder;
 
     public CustomerController(CustomerRepository customerRepository, CitiesRepository citiesRepository, CustomerService customerService,
-                              CitiesService citiesService, PasswordService passwordService){
+                              CitiesService citiesService, PasswordService passwordService, PasswordEncoder passwordEncoder){
         this.customerRepository = customerRepository;
         this.citiesRepository = citiesRepository;
         this.customerService = customerService;
         this.citiesService = citiesService;
         this.passwordService = passwordService;
+        this.passwordEncoder = passwordEncoder;
     }
 /*
     public void createCustomer(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
@@ -114,7 +117,8 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 
-    @PatchMapping("/changetestpw")
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/changetestpw", method = {RequestMethod.GET, RequestMethod.PATCH})
     public ResponseEntity<Customer> encryptTestPassword(@RequestParam(name = "customerId") Long customerId) {
 
         Customer customer = customerRepository.getById(customerId);
@@ -122,9 +126,19 @@ public class CustomerController {
         String encodedPassword = passwordService.encodePassword(unencodedPassword);
         customer.setPassword(encodedPassword);
         Customer updatedCustomer = customerRepository.save(customer);
-
         return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
 
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/login")
+    public ResponseEntity<Boolean> checkifLoginDataCorrect(@RequestParam(name = "email") String email, @RequestParam(name = "pw") String pw) {
+        Customer customer = customerRepository.findByEmailId(email);
+        if (customer != null && passwordEncoder.matches(pw, customer.getPassword())) {
+            return new ResponseEntity<>(true, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(false, HttpStatus.OK);
+        }
     }
 }
 /*
