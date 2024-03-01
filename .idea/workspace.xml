@@ -4,20 +4,102 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout.">
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CitiesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/MainApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Cities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CitiesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/MyRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/OrdersRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CitiesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/IMG/Instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/IMG/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/IMG/Mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/IMG/Tel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/landingpage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/landingpage2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/customers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/customersTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/customerTable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +134,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MainApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/danie/Desktop/Original/TheHalfFour/src/main/resources/templates"
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -63,18 +142,18 @@
       <recent name="ShopApp.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates\fragment" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/IMG" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -107,17 +186,10 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-20.0.2-azul-20.0.2-4caba194b151-eb49e076" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="" />
+      <changelist id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="" />
       <created>1694153583046</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -216,15 +288,7 @@
       <option name="project" value="LOCAL" />
       <updated>1709283620738</updated>
     </task>
-    <task id="LOCAL-00013" summary="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout.">
-      <option name="closed" value="true" />
-      <created>1709298296158</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1709298296158</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +318,6 @@
     <MESSAGE value="bugfix oder halt auch net" />
     <MESSAGE value="Backend Controller, repository etc.&#10;&#10;endpoindcalcs to test in postman:&#10;/index/test?customerId=1&#10;/orders/getOrders&#10;/orders/getOrder?customerId=1" />
     <MESSAGE value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
-    <MESSAGE value="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
   </component>
 </project>

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PasswordService {
 
-    private PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
     public PasswordService(PasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;

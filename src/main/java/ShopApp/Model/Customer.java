@@ -15,7 +15,7 @@ public class Customer {
     }
 
     public Customer(String firstName, String lastName, String emailId, String password, Cities zipcode,
-                    String street, int houseNumber, List<Orders> orders) {
+                    String street, int houseNumber, List<Orders> orders, boolean isAdmin) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
@@ -24,6 +24,7 @@ public class Customer {
         this.street = street;
         this.houseNumber = houseNumber;
         this.orders = orders;
+        this.isAdmin = isAdmin;
     }
 
     @Id
@@ -52,6 +53,9 @@ public class Customer {
 
     @Column(name ="house_number")
     private int houseNumber;
+
+    @Column(name = "is_admin")
+    private boolean isAdmin;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "customer")
@@ -120,6 +124,10 @@ public class Customer {
     public void setHouseNumber(int houseNumber) {
         this.houseNumber = houseNumber;
     }
+
+    public boolean isAdmin() {return isAdmin; }
+
+    public void setAdmin(boolean admin) { isAdmin = admin; }
 
     public List<Orders> getOrders() {
         return orders;

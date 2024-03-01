@@ -1,10 +1,8 @@
 package ShopApp.Controller;
 
 import ShopApp.Model.Customer;
-import ShopApp.Model.ShopItem;
 import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
-import ShopApp.Repository.ShopItemRepository;
 import ShopApp.Service.CitiesService;
 import ShopApp.Service.CustomerService;
 import ShopApp.Service.PasswordService;
@@ -26,40 +24,24 @@ import java.util.Optional;
 public class CustomerController {
 
     private CustomerRepository customerRepository;
-    private ShopItemRepository shopItemRepository;
-    private CitiesRepository citiesRepository;
     private final CustomerService customerService;
-    private final CitiesService citiesService;
     private final PasswordService passwordService;
     private final PasswordEncoder passwordEncoder;
 
-    public CustomerController(CustomerRepository customerRepository, ShopItemRepository shopItemRepository,CitiesRepository citiesRepository, CustomerService customerService,
+    public CustomerController(CustomerRepository customerRepository, CitiesRepository citiesRepository, CustomerService customerService,
                               CitiesService citiesService, PasswordService passwordService, PasswordEncoder passwordEncoder){
         this.customerRepository = customerRepository;
-        this.shopItemRepository = shopItemRepository;
-        this.citiesRepository = citiesRepository;
         this.customerService = customerService;
-        this.citiesService = citiesService;
         this.passwordService = passwordService;
         this.passwordEncoder = passwordEncoder;
     }
-/*
-    public void createCustomer(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
-        Cities zipcode = new Cities();
-        zipcode.setZipcode(zipcodeValue);
-        zipcode.setCity(city);
-        zipRep.save(zipcode);
 
-        Customer customer = new Customer();
-        customer.setFirstName(firstName);
-        customer.setLastName(lastName);
-        customer.setEmailId(emailId);
-        customer.setPassword(password);
-        customer.setZipcode(zipcode);
-        rep.save(customer);
-    }*/
-
-    // localhost:8888/index/
+    /**
+     * Gets every Customer
+     * Endpoint: ../index/customers
+     * @param model
+     * @return
+     */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
     public String getCustomers(Model model) {
@@ -69,71 +51,76 @@ public class CustomerController {
         return "customersTest";
     }
 
+    /**
+     * Created User and posts it, password gets decrypted in the corresponding service class
+     * Endpoint: ../index/register
+     * @param model
+     * @param customer
+     * @return
+     */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String createUser(Model model, @ModelAttribute Customer customer) {
 
         customerService.createCustomer(customer);
 
-        // Konvertiere das Cities-Objekt in ein JSON-String
+        // Converts the cities-Object into json and prints it
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String json = objectMapper.writeValueAsString(customer);
             System.out.println("JSON-Inhalt: " + json);
         } catch (Exception e) {
-            // Behandele etwaige Ausnahmen hier
             e.printStackTrace();
         }
 
         return "redirect:/index";
     }
 
+    /**
+     * Open index.html if the endpoint gets requested
+     * Endpoint: ../index
+     * @param model
+     * @return
+     */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String returnIndex(Model model) {
 
         List<Customer> customers = customerService.getCustomers();
-        List<ShopItem> shopItems = shopItemRepository.findAll();
         model.addAttribute("customers", customers);
         model.addAttribute("customer", new Customer());
-        model.addAttribute("shopItems", shopItems);
         return "index";
     }
 
+    /**
+     * Method for the login
+     * @return
+     */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/login", method = RequestMethod.PUT)
-    public String login() {
-        return "redirect:/index/";
+    public String login(Model model, @ModelAttribute Customer customer) {
+
+        Customer existingCustomer = customerRepository.findByEmailId(customer.getEmailId());
+        if (existingCustomer != null && passwordEncoder.matches(customer.getPassword(), existingCustomer.getPassword())) {
+            return "redirect:/index";
+        } else {
+            return "redirect:/login?error";
+        }
     }
 
+    /**
+     * Gets the gustomer for corresponding params id and hands it to thymeleaf
+     * Endpoint: ../index/customer
+     * @param customerId
+     * @param model
+     * @return
+     */
     @CrossOrigin(origins = "*")
     @GetMapping("/customer")
-    public ResponseEntity<Customer> getCustomerById(@RequestParam(name = "customerId") Long id, Model model) {
-        Customer customer = customerRepository.findById(id).orElse(null);
-        if (customer != null) {
-            model.addAttribute("customer", customer);
-        }
-        return new ResponseEntity<>(customer, HttpStatus.OK);
-    }
-
-    @CrossOrigin(origins = "*")
-    @GetMapping("/test")
-    public ResponseEntity<Optional<Customer>> getCustomer(@RequestParam(name = "customerId") Long customerId) {
+    public ResponseEntity<Optional<Customer>> getCustomerById(@RequestParam(name = "customerId") Long customerId, Model model) {
         Optional<Customer> customer = customerRepository.findById(customerId);
+        model.addAttribute("customer", customer);
         return new ResponseEntity<>(customer, HttpStatus.OK);
-    }
-
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/changetestpw", method = {RequestMethod.GET, RequestMethod.PATCH})
-    public ResponseEntity<Customer> encryptTestPassword(@RequestParam(name = "customerId") Long customerId) {
-
-        Customer customer = customerRepository.getById(customerId);
-        String unencodedPassword = customer.getPassword();
-        String encodedPassword = passwordService.encodePassword(unencodedPassword);
-        customer.setPassword(encodedPassword);
-        Customer updatedCustomer = customerRepository.save(customer);
-        return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
-
     }
 
     @CrossOrigin(origins = "*")
