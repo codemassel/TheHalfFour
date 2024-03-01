@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
     List<Customer> findByFirstNameAndLastName(String firstName, String lastName);
-    Customer findById(long id);
+    Customer getById(Long id);
 }

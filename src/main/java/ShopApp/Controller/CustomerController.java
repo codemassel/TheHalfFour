@@ -5,9 +5,9 @@ import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
 import ShopApp.Service.CitiesService;
 import ShopApp.Service.CustomerService;
+import ShopApp.Service.PasswordService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -22,18 +22,19 @@ import java.util.Optional;
 @RequestMapping("/index")
 public class CustomerController {
 
-    @Autowired
     private CustomerRepository customerRepository;
-
-    @Autowired
     private CitiesRepository citiesRepository;
-
     private final CustomerService customerService;
     private final CitiesService citiesService;
+    private final PasswordService passwordService;
 
-    public CustomerController(CustomerService customerService, CitiesService citiesService){
+    public CustomerController(CustomerRepository customerRepository, CitiesRepository citiesRepository, CustomerService customerService,
+                              CitiesService citiesService, PasswordService passwordService){
+        this.customerRepository = customerRepository;
+        this.citiesRepository = citiesRepository;
         this.customerService = customerService;
         this.citiesService = citiesService;
+        this.passwordService = passwordService;
     }
 /*
     public void createCustomer(String firstName, String lastName, String emailId, String password, String zipcodeValue, String city){
@@ -97,8 +98,8 @@ public class CustomerController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/customer/{id}")
-    public ResponseEntity<Customer> getCustomerById(@PathVariable Long id, Model model) {
+    @GetMapping("/customer")
+    public ResponseEntity<Customer> getCustomerById(@RequestParam(name = "customerId") Long id, Model model) {
         Customer customer = customerRepository.findById(id).orElse(null);
         if (customer != null) {
             model.addAttribute("customer", customer);
@@ -112,6 +113,20 @@ public class CustomerController {
         Optional<Customer> customer = customerRepository.findById(customerId);
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
+
+    @PatchMapping("/changetestpw")
+    public ResponseEntity<Customer> encryptTestPassword(@RequestParam(name = "customerId") Long customerId) {
+
+        Customer customer = customerRepository.getById(customerId);
+        String unencodedPassword = customer.getPassword();
+        String encodedPassword = passwordService.encodePassword(unencodedPassword);
+        customer.setPassword(encodedPassword);
+        Customer updatedCustomer = customerRepository.save(customer);
+
+        return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
+
+    }
+}
 /*
 
     /*Waren hinzufügen
@@ -127,4 +142,3 @@ public class CustomerController {
     */
 
 
-}

@@ -34,6 +34,9 @@ public class ShopItem {
     @Column(name = "image")
     private byte[] image;
 
+    @Column(name = "isVisible")
+    private boolean isVisible;
+
     public long getId() {
         return id;
     }
@@ -66,7 +69,6 @@ public class ShopItem {
         this.description = description;
     }
 
-
     public byte[] getImage() {
         return image;
     }
@@ -74,5 +76,9 @@ public class ShopItem {
     public void setImage(byte[] image) {
         this.image = image;
     }
+
+    public boolean isVisible() { return isVisible; }
+
+    public void setVisible(boolean visible) { isVisible = visible; }
 
 }
