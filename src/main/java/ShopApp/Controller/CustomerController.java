@@ -1,8 +1,10 @@
 package ShopApp.Controller;
 
 import ShopApp.Model.Customer;
+import ShopApp.Model.ShopItem;
 import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
+import ShopApp.Repository.ShopItemRepository;
 import ShopApp.Service.CitiesService;
 import ShopApp.Service.CustomerService;
 import ShopApp.Service.PasswordService;
@@ -24,13 +26,15 @@ import java.util.Optional;
 public class CustomerController {
 
     private CustomerRepository customerRepository;
+    private ShopItemRepository shopItemRepository;
     private final CustomerService customerService;
     private final PasswordService passwordService;
     private final PasswordEncoder passwordEncoder;
 
-    public CustomerController(CustomerRepository customerRepository, CitiesRepository citiesRepository, CustomerService customerService,
+    public CustomerController(CustomerRepository customerRepository, ShopItemRepository shopItemRepository, CitiesRepository citiesRepository, CustomerService customerService,
                               CitiesService citiesService, PasswordService passwordService, PasswordEncoder passwordEncoder){
         this.customerRepository = customerRepository;
+        this.shopItemRepository = shopItemRepository;
         this.customerService = customerService;
         this.passwordService = passwordService;
         this.passwordEncoder = passwordEncoder;
@@ -87,7 +91,9 @@ public class CustomerController {
     public String returnIndex(Model model) {
 
         List<Customer> customers = customerService.getCustomers();
+        List<ShopItem> shopItems = shopItemRepository.findAll();
         model.addAttribute("customers", customers);
+        model.addAttribute("shopItems", shopItems);
         model.addAttribute("customer", new Customer());
         return "index";
     }
