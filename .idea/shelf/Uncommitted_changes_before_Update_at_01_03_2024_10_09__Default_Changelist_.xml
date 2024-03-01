@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]" date="1709284266687" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 01.03.2024 10:09 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/ShopApp/Repository/CustomerRepository.class" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/CustomerRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/CustomerRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/ShopApp/Model/ShopItem.class" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Model/ShopItem.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/ShopItem.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/TheHalfFour-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="target/TheHalfFour-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/TheHalfFour-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/TheHalfFour-1.0-SNAPSHOT.jar.original" />
+    <option name="AFTER_PATH" value="target/TheHalfFour-1.0-SNAPSHOT.jar.original" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/TheHalfFour-1.0-SNAPSHOT.jar.original" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/ShopApp/Controller/CustomerController.class" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Controller/CustomerController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/CustomerController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/ShopApp/Repository/ShopItemRepository.class" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Repository/ShopItemRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/ShopItemRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/ShopApp/Controller/ShopItemController.class" />
+    <option name="AFTER_PATH" value="target/classes/ShopApp/Controller/ShopItemController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09_[Default_Changelist]/ShopItemController.class" />
+  </binary>
+</changelist>
