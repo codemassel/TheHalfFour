@@ -26,8 +26,8 @@ public class ShopItemController {
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public String getShopItems(Model model) {
 
-        List<ShopItem> ShopItems = ;
-        model.addAttribute("customers", customers);
+        List<ShopItem> ShopItems = shopItemRepository.findAll();
+        model.addAttribute("shopItems", ShopItems);
         return "customersTest";
     }
 
