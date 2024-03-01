@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <div th:fragment="products">
+    <body>
+        <div th:fragment="products" method="get" th:action="@{/yachts/all}" th:object="${shopItems}">
 
-        <div class="container">
-            <div class="row">
-                <div th:each="product, iterStat : ${products}" class="col-md-4 mb-4">
-                    <div class="card cardcustom text-center custom-background-color">
-                        <a th:href="@{${product.link}}" class="custom-link">
-                            <img th:src="@{${product.image}" class="card-img-top" alt="" th:alt="${product.name}">
-                            <div class="card-body">
-                                <h5 class="card-title" th:text="${product.name}">Produktname</h5>
-                            </div>
-                        </a>
+            <div class="container">
+                <div class="row">
+                    <script>console.log("sss");</script>
+                    <div th:each="ShopItem : ${shopItems}" class="col-md-4 mb-4">
+                        <script>console.log("hhh");</script>
+                        <div class="card cardcustom text-center custom-background-color">
+                            <a th:href="@{${shopItem.link}}" class="custom-link">
+                                <img th:src="@{${shopItem.image}" class="card-img-top" alt="" th:alt="${shopItem.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title" th:text="${shopItem.itemName}">Produktname</h5>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="ShopItem : ${shopItems}">
+                                <td th:text="${ShopItem.id}"></td>
+                                <td th:text="${ShopItem.itemName}"></td>
+                                <td th:text="${ShopItem.itemPrice}"></td>
+                                <td th:text="${ShopItem.description}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
 
-        <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/css/button.css}">
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
+            <div>
+                hallo wie geht es
+                <p>
+                    hallo wssss
+                </p>
+            </div>
+
+            <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+            <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
+            <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+            <link rel="stylesheet" type="text/css" th:href="@{/css/button.css}">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
 </html>
