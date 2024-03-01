@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Logo2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Yacht9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout.">
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
@@ -78,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/danie/Desktop/Original/TheHalfFour"
+    "last_opened_file_path": "C:/Users/danie/Desktop/Original/TheHalfFour/src/main/resources/templates"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -86,11 +63,11 @@
       <recent name="ShopApp.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates\fragment" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
@@ -239,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709283620738</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout.">
+      <option name="closed" value="true" />
+      <created>1709298296158</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709298296158</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +254,7 @@
     <MESSAGE value="bugfix oder halt auch net" />
     <MESSAGE value="Backend Controller, repository etc.&#10;&#10;endpoindcalcs to test in postman:&#10;/index/test?customerId=1&#10;/orders/getOrders&#10;/orders/getOrder?customerId=1" />
     <MESSAGE value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
+    <MESSAGE value="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted products.html, included products.html-fragment into index.html. adjusted index.html-layout." />
   </component>
 </project>
