@@ -4,18 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="">
+    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="added JUnit test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopApp/Service/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopApp/Service/CustomerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Cities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Cities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -237,6 +246,7 @@
     <MESSAGE value="bugfix oder halt auch net" />
     <MESSAGE value="Backend Controller, repository etc.&#10;&#10;endpoindcalcs to test in postman:&#10;/index/test?customerId=1&#10;/orders/getOrders&#10;/orders/getOrder?customerId=1" />
     <MESSAGE value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
+    <MESSAGE value="added JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added JUnit test" />
   </component>
 </project>

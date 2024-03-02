@@ -33,7 +33,6 @@ public class CustomerController {
     private CustomerRepository customerRepository;
     private ShopItemRepository shopItemRepository;
     private final CustomerService customerService;
-    private final PasswordService passwordService;
     private final PasswordEncoder passwordEncoder;
     @Autowired
     private HttpSession httpSession;;
