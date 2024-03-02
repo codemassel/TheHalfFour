@@ -9,13 +9,18 @@ import ShopApp.Service.CitiesService;
 import ShopApp.Service.CustomerService;
 import ShopApp.Service.PasswordService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,6 +35,8 @@ public class CustomerController {
     private final CustomerService customerService;
     private final PasswordService passwordService;
     private final PasswordEncoder passwordEncoder;
+    @Autowired
+    private HttpSession httpSession;;
 
     public CustomerController(CustomerRepository customerRepository, ShopItemRepository shopItemRepository, CitiesRepository citiesRepository, CustomerService customerService,
                               CitiesService citiesService, PasswordService passwordService, PasswordEncoder passwordEncoder){
@@ -88,8 +95,9 @@ public class CustomerController {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String returnIndex(Model model) {
-
+    public String returnIndex(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession();
+        session.getAttribute("loggedInUser");
         List<Customer> customers = customerService.getCustomers();
         List<ShopItem> shopItems = shopItemRepository.findAll();
         model.addAttribute("customers", customers);
@@ -102,6 +110,7 @@ public class CustomerController {
      * Method for the login
      * @return
      */
+    /*
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/login", method = RequestMethod.PUT)
     public String login(Model model, @ModelAttribute Customer customer) {
@@ -112,7 +121,7 @@ public class CustomerController {
         } else {
             return "redirect:/login?error";
         }
-    }
+    }*/
 
     /**
      * Gets the gustomer for corresponding params id and hands it to thymeleaf
@@ -129,14 +138,25 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 
+    /**
+     * Diese Methode kann aus unerklärlichen Gründen nicht vom Frontend aufgerufen werden.
+     * Der direkte manuelle Call bspw. durch einen direkten apicall ist möglich.
+     * @param email
+     * @param password
+     * @return
+     */
     @CrossOrigin(origins = "*")
-    @GetMapping("/login")
-    public ResponseEntity<Boolean> checkifLoginDataCorrect(@RequestParam(name = "email") String email, @RequestParam(name = "pw") String pw) {
-        Customer customer = customerRepository.findByEmailId(email);
-        if (customer != null && passwordEncoder.matches(pw, customer.getPassword())) {
-            return new ResponseEntity<>(true, HttpStatus.OK);
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView checkifLoginDataCorrect(HttpServletRequest request, @RequestParam("email") String email, @RequestParam("password") String password) {
+        Customer customers = customerRepository.findByEmailId(email);
+        if (customers != null && passwordEncoder.matches(password, customers.getPassword())) {
+            HttpSession session = request.getSession();
+            session.setAttribute("loggedInUser", customers.getEmailId());
+            HttpHeaders headers = new HttpHeaders();
+            headers.add("Location", "/index");
+            return new ModelAndView("redirect:/index");
         } else {
-            return new ResponseEntity<>(false, HttpStatus.OK);
+            return new ModelAndView("redirect:/index");
         }
     }
 }
