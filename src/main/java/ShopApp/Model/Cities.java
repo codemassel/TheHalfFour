@@ -9,7 +9,6 @@ public class Cities {
         //empty constructor für Spring
     }
     @Id
-    //@GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "zipcode",unique = true, nullable = false)
     private String zipcode;
 

@@ -81,7 +81,7 @@ public class CustomerController {
     }
 
     /**
-     * Open index.html if the endpoint gets requested
+     * Opens index.html if the endpoint gets requested
      * Endpoint: ../index
      * @param model
      * @return
@@ -115,8 +115,8 @@ public class CustomerController {
     }
 
     /**
-     * Gets the gustomer for corresponding params id and hands it to thymeleaf
-     * Endpoint: ../index/customer
+     * Gets the customer for corresponding params id and hands it to thymeleaf
+     * Endpoint: /index/customer
      * @param customerId
      * @param model
      * @return

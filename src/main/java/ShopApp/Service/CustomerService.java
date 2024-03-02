@@ -17,7 +17,7 @@ public class CustomerService {
     private final CitiesRepository citiesRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public CustomerService(CustomerRepository customerRepository, CitiesRepository citiesRepository, PasswordService passwordService, PasswordEncoder passwordEncoder){
+    public CustomerService(CustomerRepository customerRepository, CitiesRepository citiesRepository, PasswordEncoder passwordEncoder){
         this.customerRepository = customerRepository;
         this.citiesRepository = citiesRepository;
         this.passwordEncoder = passwordEncoder;
@@ -60,8 +60,6 @@ public class CustomerService {
         } else {
             Cities newCity = new Cities();
             newCity.setZipcode(zipcode);
-            // Weitere Eigenschaften der Stadt setzen, falls erforderlich
-            //citiesRepository.save(newCity);
             return newCity;
         }
     }

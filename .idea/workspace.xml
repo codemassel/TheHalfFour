@@ -5,16 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3dab3c-a514-4685-871e-be1464e5e5a5" name="Changes" comment="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Logo_halffour_png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopApp/Service/CustomerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,6 +67,33 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\19mzi\IdeaProjects\TheHalfFour\src\main\resources\static\IMG" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TheHalfFour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopApp.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopApp.Service" />
+      <option name="MAIN_CLASS_NAME" value="ShopApp.Service.CustomerServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CustomerServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
@@ -61,7 +119,15 @@
       <option name="presentableId" value="Default" />
       <updated>1709374798102</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
+      <option name="closed" value="true" />
+      <created>1709375018533</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709375018533</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
