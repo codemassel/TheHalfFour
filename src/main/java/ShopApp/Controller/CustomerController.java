@@ -156,6 +156,29 @@ public class CustomerController {
             return new ModelAndView("redirect:/index");
         }
     }
+
+    @GetMapping("/adminpanel")
+    public ModelAndView getAdminPanel() {
+        return new ModelAndView("adminpanel");
+    }
+
+    @GetMapping("/agb")
+    public ModelAndView getAgb() {
+        return new ModelAndView("agb");
+    }
+
+    @GetMapping("/datenschutz")
+    public ModelAndView getDatenschutz() {
+        return new ModelAndView("datenschutz");
+    }
+
+    @GetMapping("/impressum")
+    public ModelAndView getImpressum() {
+        return new ModelAndView("impressum");
+    }
+
+
+
 }
 /*
 

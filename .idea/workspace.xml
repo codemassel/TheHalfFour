@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="improved junit, cleanup">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/agb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/datenschutz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/impressum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/productpage2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ShopItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Repository/ShopItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/IMG/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Cities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Cities.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" afterDir="false" />
@@ -19,12 +34,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/IMG/Logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +70,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/danie/Desktop/Original/TheHalfFour/src/main/resources/templates"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ShopApp.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates\fragment" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/IMG" />
@@ -111,10 +128,17 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-azul-20.0.2-4caba194b151-eb49e076" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="" />
+      <changelist id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="improved junit, cleanup" />
       <created>1694153583046</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

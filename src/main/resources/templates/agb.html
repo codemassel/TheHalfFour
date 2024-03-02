@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Adminpanel</title>
+</head>
+<body class="bg-white text-black">
+
+<!-- Navbar -->
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+
+<div th:include="fragment/header :: header"></div>
+
+<div class="container" style="padding-top: 300px;">
+    <div class="row text-with-image">
+        <div class="text-container">
+            <h2>AGB</h2>
+            </br>
+            <p>
+            <h3>
+                §1 Allgemeine Regelung
+            </h3>
+            </br>
+            Für alle Lieferungen und Leistungen der Firma Yachtshop Winke gelten die nachfolgenden Allgemeinen Geschäftsbedingungen, die der Besteller anerkennt. Davon abweichende Vereinbarungen bedürfen der schriftlichen Bestäti gung der Firma Yachtshop Winke. Der Besteller verzichtet auf die Anwendung eigener Geschäftsbedingungen. Gegenbestätigungen des Bestellers mit abweichen-den Bedingungen wird hiermit widersprochen.
+            </br>	</br>
+            <h3>
+                §2 Angebote
+            </h3>
+            </br>
+            1. Für Lieferung und Leistung der Firma Yachtshop Winke gelten die vereinbarten Preise für die Dauer von vier Monaten ab Vertragsabschluß. Danach ist die Firma Yachtshop Winke berechtigt, die vereinbarten Preise der Entwicklung der Kosten in angemessenem Umfang anzupassen.
+            </br>
+            2. Mengen-, Massenund Flächenangaben im Angebot oder in beigefügten Zeichnungen gelten nur bei ausdrücklicher Vereinbarung als verbindlich, maßgeblich allein ist das endgültige Aufmaß.
+            </br>
+            3. An allen Angebotsunterlagen einschließlich Entwürfen, Zeichnungen und Berechnungen behält sich die Firma Yachtshop Winke alle Eigentums und Urhe-berrechte vor. Sie dürfen ohne Zustimmung der Firma Yachtshop Winke weder ver-vielfältig noch an dritte Personen weitergegeben werden. Im Falle der Nichterteilung eines Auftrages sind die Unterlagen unverzüglich zurückzugeben.
+            </br>
+            4. Den Angeboten beigefügte Muster geben die durchschnittliche Qualität des Materials und der Verarbeitung wieder. Als zugesichert gelten nur Eigenschaften, die schriftlich festgelegt sind. Änderungen im Produktions-programm sind vom Besteller zu akzeptieren, sofern sie keinen Qualitäts-verlust oder technische Minderung beinhalten.
+            </br>	</br>
+            <h3>
+                §3 Lieferung und Montage
+            </h3>
+            </br>
+            1. Lieferung und Montage erfolgen innerhalb der vereinbarten Lieferzei-ten. Wird ihre Einhaltung durch unvorhergesehene Ereignisse, die außer-halb des Einflussbereiches der Firma Yachtshop Winke liegen, verzögert, so verlängert sich die Frist angemessen.
+            </br>
+            2. Lieferung und Montage erfolgen frei Baustelle. Mehrkosten, die der Firma Yachtshop Winke bei Zufahrtsbehinderung, erschwerter Entladung oder Lagerung entstehen, hat der Besteller gegen Nachweis zu ersetzen.
+            </br>
+            3. Bei Lieferung sind vom Besteller auf der Baustelle geeignete Lagermöglichkeiten zur Verfügung zu stellen, die etwaige Beschädigungen oder Entwendungen vor und während der Montagezeit ausschließen.
+            </br>
+            4. Teillieferungen sind zulässig.
+            </br>
+            5. Die Firma Yachtshop Winke ist berechtigt, für die von ihr zu erbringenden vertrag-lichen Leistungen Subunternehmer einzusetzen.
+            </br>	</br>
+            <h3>
+                §4 Preise und Zahlung
+            </h3>
+            </br>
+            1. Die Firma Yachtshop Winke kann von dem Besteller für in sich abgeschlossene Teile des Werkes Abschlagszahlungen für die erbrachten vertragsmäßigen Leistungen verlangen. Dies gilt auch für erforderliche Stoffe oder Bauteile, die eigens angefertigt oder angeliefert sind.
+            </br>
+            2. Rechnungen der Firma Yachtshop Winke sind nicht skontierfähig. Nachlässe be-dürfen der schriftlichen Vereinbarung.
+            </br>
+            3. Werden vereinbarte Zahlungstermine überschritten oder kommt der Besteller mit der Zahlung in Verzug, ist die Firma Yachtshop Winke berechtigt, Verzugszinsen gegenüber Verbrauchern in Höhe von 5 Prozentpunkten über dem Basiszins und bei Rechtsgeschäften, in denen ein Verbraucher nicht beteiligt ist, 8 Prozentpunkte über dem Basiszins zu berechnen. Die Geltend-machung eines weiteren Schadens ist nicht ausgeschlossen (§ 288 BGB).
+            </br>
+            4. Wechsel und Schecks werden nur zahlungshalber akzeptiert.
+            </br>
+            1. Die Firma Yachtshop Winke behält sich an allen gelieferten und montierten Gegenstände bis zum Eingang aller Zahlungen, auch soweit sie aus einer laufenden Geschäftsverbindung für die Vergangenheit zu leisten sind, das Eigentum vor, soweit gesetzlich möglich.
+            </br>
+            2. Ist der Besteller nicht Eigentümer des Objektes, für welches Lieferungen und Leistungen der Firma Yachtshop Winke erbracht werden, so tritt der Besteller seine Zahlungsansprüche gegen seinen Auftraggeber zur Sicherheit an die Firma Yachtshop Winke ab, die die Abtretung annimmt.
+            </br>	</br>
+            <h3>
+                §6 Abnahme
+            </h3>
+            </br>
+            1. Der Besteller ist verpflichtet, das vertragsmäßig hergestellte Werk ab-zunehmen, sofern nicht nach der Beschaffenheit des Werkes die Abnahme ausgeschlossen ist.
+            </br>
+            2. Der Abnahme steht es gleich, wenn der Besteller das Werk nicht inner-halb einer ihm von der Firma Yachtshop Winke bestimmten angemessenen Frist abnimmt, obwohl er dazu verpflichtet ist.
+            </br>
+            3. Nimmt der Besteller ein mangelhaftes Werk gemäß Ziff. 1), 2) ab, obwohl er den Mangel kennt, so stehen ihm die in § 634 Nr. 1-3 BGB bezeichneten Rechte nur zu, wenn er sich seine Rechte wegen des Mangels bei der Abnahme vorbehält.
+            </br>	</br>
+            <h3>
+                §7 Schadenpauschale
+            </h3>
+            </br>
+            Kündigt der Besteller das Vertragsverhältnis aus einem Grunde, den die Firma Yachtshop Winke nicht zu vertreten hat, so steht dieser eine Schadenpauschale von 15 % der Bruttovertragssumme zu. Die Geltendmachung höherer, gesetzlicher Schadenersatzansprüche bleibt davon unberührt. Dem Bestel-ler bleibt nachgelassen, nachzuweisen, dass ein Schaden nicht entstanden oder wesentlich niedriger ist.
+            </br>	</br>
+            <h3>
+                §8 Gewährleistung
+            </h3>
+            </br>
+            1. Erhält die Firma Yachtshop Winke vom Besteller lediglich den Auftrag zu liefern, nicht aber zu montieren, so beträgt die Gewährleistung zwei Jahre ab Gefahrübergang.
+            </br>
+            2. Bei Lieferung und Montage leistet die Firma Yachtshop Winke Gewähr nach Maß-gabe des § 634 a BGB.
+            </br>
+            3. Für die durch Bau- und Wohnfeuchtigkeit entstehenden Mängel wird keine Gewähr übernommen. Gleiches gilt, wenn Gegenstände durch unsachgemäße und falsche Behandlung seitens des Bestellers Schaden erleiden.
+            </br>
+            4. Verlangt der Besteller Nacherfüllung, so kann die Firma Yachtshop Winke nach ihrer Wahl den Mangel beseitigen oder aber ein neues Werk herstellen.
+            </br>
+            5. Der Besteller ist verpflichtet, der Firma Yachtshop Winke zur Erfüllung eventueller Nacherfüllungsansprüche eine angemessene Frist zu gewähren.
+            </br>
+            6. Der Korrosionsschutz von Metallteilen obliegt dem Besteller.
+            </br>
+            7. Glasschäden sind nach der Abnahme der Lieferung von der Gewährleistung ausgeschlossen.
+            </br>	</br>
+            <h3>
+                §9 Aufrechnung
+            </h3>
+            </br>
+            Der Besteller kann mit Gegenforderungen gegen Forderungen der Firma ÖYachtshop Winke, nur mit unbestrittenen oder rechtskräftig festgestellten Gegenfor-derungen, aufrechnen.
+            </br>	</br>
+            <h3>
+                § 10 Schlussbestimmungen
+            </h3>
+            </br>
+            1. Sollte eine Bestimmung dieser Allgemeinen Geschäftsbedingungen unwirksam sein oder werden, wird davon die Wirksamkeit der übrigen Bestimmungen nicht berührt.
+            </br>
+            2. Soweit der Besteller Kaufmann ist, ist ausschließlicher Gerichtsstand für alle Streitigkeiten aus einem Vertragsverhältnis einschließlich des Streites über das Bestehen desselben, das Amts- bzw. Landgericht in Wiesbaden.
+            </br>
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<div th:include="fragment/footer :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
+</html>

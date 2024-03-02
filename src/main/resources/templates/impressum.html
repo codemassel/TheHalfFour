@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Yachtshop Winke - Luxus-Jachten Shop</title>
+    <title>Adminpanel</title>
 </head>
 <body class="bg-white text-black">
 
@@ -14,26 +14,25 @@
 
 <div th:include="fragment/header :: header"></div>
 
-<form method="post" th:action="@{/index/login}" th:object="${customer}" class="col card p-3 mb-5">
-    <div class="modal-body">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email-Adresse</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" th:field="*{emailId}"
-                   aria-describedby="emailHelp">
-            <div id="emailHelp6" class="form-text">Bitte geben Sie ihre Email-Adresse
-                ein.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Passwort</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}">
-            <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
-            </div>
+<div class="container" style="padding-top: 300px;">
+    <div class="row text-with-image">
+        <div class="text-container">
+            <h2>Impressum</h2>
+            </br>
+            <p>
+                Yachtshop Winke GmbH</br>
+                Teststraße 61a</br>
+                55555 Bad Testheim</br>
+                </br>
+                Geschäftsführer: Max Mustermann</br>
+                Handelsregister: HRB 12345</br>
+                USt.IdNr.: Das123124d5387</br>
+                Finanzamt Bad Kreuznach</br>
+                </br>
+            </p>
+
         </div>
     </div>
-    <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Einloggen</button>
-    </div>
-</form>
 
 <div th:include="fragment/footer :: footer"></div>
 
