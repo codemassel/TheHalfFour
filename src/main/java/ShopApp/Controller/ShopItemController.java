@@ -1,13 +1,13 @@
 package ShopApp.Controller;
 
-import ShopApp.Model.Customer;
 import ShopApp.Model.ShopItem;
 import ShopApp.Repository.ShopItemRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -26,8 +26,8 @@ public class ShopItemController {
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public String getShopItems(Model model) {
 
-        List<ShopItem> ShopItems = ;
-        model.addAttribute("customers", customers);
+        List<ShopItem> shopItems = shopItemRepository.findAll();
+        model.addAttribute("shopItems", shopItems);
         return "customersTest";
     }
 
