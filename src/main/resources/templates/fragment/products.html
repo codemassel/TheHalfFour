@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <body>
-        <div th:fragment="products" method="get" th:action="@{/yachts/all}" th:object="${shopItems}">
+        <div th:fragment="products">
 
             <div class="container">
                 <div class="row">
-                    <script>console.log("sss");</script>
-                    <div th:each="ShopItem : ${shopItems}" class="col-md-4 mb-4">
-                        <script>console.log("hhh");</script>
+                    <div th:each="ShopItem, itemStat : ${shopItems}" class="col-md-4 mt-5 p-0 m-0">
                         <div class="card cardcustom text-center custom-background-color">
-                            <a th:href="@{${shopItem.link}}" class="custom-link">
-                                <img th:src="@{${shopItem.image}" class="card-img-top" alt="" th:alt="${shopItem.name}">
+                            <a th:href="@{/ssss}" class="custom-link">
+                                <div th:if="${ShopItem.id == 1L}" class="card-img-top">
+                                    <img src="/IMG/Yacht1.jpg" alt="Bild Yacht1" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 2L}" class="card-img-top">
+                                    <img src="/IMG/Yacht2.jpg" alt="Bild Yacht2" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 3L}" class="card-img-top">
+                                    <img src="/IMG/Yacht3.jpg" alt="Bild Yacht3" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 4L}" class="card-img-top">
+                                    <img src="/IMG/Yacht4.jpg" alt="Bild Yacht4" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 5L}" class="card-img-top">
+                                    <img src="/IMG/Yacht5.jpg" alt="Bild Yacht5" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 6L}" class="card-img-top">
+                                    <img src="/IMG/Yacht6.jpg" alt="Bild Yacht6" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 7L}" class="card-img-top">
+                                    <img src="/IMG/Yacht7.jpg" alt="Bild Yacht7" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div th:if="${ShopItem.id == 8L}" class="card-img-top">
+                                    <img src="/IMG/Yacht8.jpg" alt="Bild Yacht8" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                </div>
+
                                 <div class="card-body">
-                                    <h5 class="card-title" th:text="${shopItem.itemName}">Produktname</h5>
+                                    <h5 class="card-title mb-0" th:text="${ShopItem.itemName}">Produktname</h5>
+                                    <p class="card-text text-muted" th:text="${ShopItem.description}"></p>
+                                    <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr th:each="ShopItem : ${shopItems}">
-                                <td th:text="${ShopItem.id}"></td>
-                                <td th:text="${ShopItem.itemName}"></td>
-                                <td th:text="${ShopItem.itemPrice}"></td>
-                                <td th:text="${ShopItem.description}"></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
-            <div>
-                hallo wie geht es
-                <p>
-                    hallo wssss
-                </p>
-            </div>
+
 
             <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
             <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
