@@ -7,7 +7,6 @@ import ShopApp.Repository.CustomerRepository;
 import ShopApp.Repository.ShopItemRepository;
 import ShopApp.Service.CitiesService;
 import ShopApp.Service.CustomerService;
-import ShopApp.Service.PasswordService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -38,11 +37,10 @@ public class CustomerController {
     private HttpSession httpSession;;
 
     public CustomerController(CustomerRepository customerRepository, ShopItemRepository shopItemRepository, CitiesRepository citiesRepository, CustomerService customerService,
-                              CitiesService citiesService, PasswordService passwordService, PasswordEncoder passwordEncoder){
+                              CitiesService citiesService, PasswordEncoder passwordEncoder){
         this.customerRepository = customerRepository;
         this.shopItemRepository = shopItemRepository;
         this.customerService = customerService;
-        this.passwordService = passwordService;
         this.passwordEncoder = passwordEncoder;
     }
 
