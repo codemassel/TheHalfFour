@@ -4,33 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3dab3c-a514-4685-871e-be1464e5e5a5" name="Changes" comment="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/IMG/Logo_halffour_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopApp/Service/CustomerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Cities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/CustomerRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Repository/ShopItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/PasswordService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -43,6 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -54,9 +42,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2d5RWgjretHjApu60oyOqbZRbaQ" />
+  <component name="ProjectId" id="2V6PVfRCYcKNNyhDQdwfDX7D8ke" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,71 +52,166 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ShopApp.Model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
+      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates\fragment" />
+      <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
+      <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\19mzi\IdeaProjects\TheHalfFour\src\main\resources\static\IMG" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/IMG" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
+      <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MainApplication">
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ShopApp.MainApplication" />
       <module name="TheHalfFour" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopApp.Service.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopApp.Service" />
-      <option name="MAIN_CLASS_NAME" value="ShopApp.Service.CustomerServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TheHalfFour" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ShopApp.MainApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerServiceTest" />
+        <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
-      <option name="closed" value="true" />
-      <created>1709298126806</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="" />
+      <created>1694153583046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694153583046</updated>
+      <workItem from="1698932979956" duration="408000" />
+      <workItem from="1698933396541" duration="12190000" />
+      <workItem from="1699279986097" duration="13623000" />
+    </task>
+    <task id="LOCAL-00001" summary="Kleine Anpassungen">
+      <created>1694159015098</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1709298126806</updated>
+      <updated>1694159015099</updated>
     </task>
-    <task id="LOCAL-00002" summary="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
-      <option name="closed" value="true" />
-      <created>1709298182432</created>
+    <task id="LOCAL-00002" summary="REST-Controller funktioniert. Fields der Entity auf private gesetzt.">
+      <created>1694163399551</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1709298182432</updated>
+      <updated>1694163399551</updated>
     </task>
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="4b3dab3c-a514-4685-871e-be1464e5e5a5" name="Changes" comment="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
-      <created>1709374798102</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1709374798102</updated>
-    </task>
-    <task id="LOCAL-00003" summary="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
-      <option name="closed" value="true" />
-      <created>1709375018533</created>
+    <task id="LOCAL-00003" summary="REST-Controller funktioniert. Fields der Entity auf private gesetzt.">
+      <created>1694163602516</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1709375018533</updated>
+      <updated>1694163602516</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Setting up Spring&#10;&#10;Created project structure, added Model and Controllerclasses.&#10;&#10;Changelog: added">
+      <created>1694501845364</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694501845364</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Landing Page created&#10;&#10;Created a landing page with a responsive login-form + background&#10;&#10;Changelog: added">
+      <created>1694525606253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694525606254</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Hinzufügen der DATA.SQL:&#10;&#10;Hier werden aktuell nur Shopitems beim start der anwendung generiert">
+      <created>1704975908064</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704975908065</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bugfix oder halt auch net">
+      <option name="closed" value="true" />
+      <created>1709206924387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709206924387</updated>
+    </task>
+    <task id="LOCAL-00008" summary="bugfix oder halt auch net">
+      <option name="closed" value="true" />
+      <created>1709206938761</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709206938761</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bugfix oder halt auch net">
+      <option name="closed" value="true" />
+      <created>1709206948672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709206948672</updated>
+    </task>
+    <task id="LOCAL-00010" summary="bugfix oder halt auch net">
+      <option name="closed" value="true" />
+      <created>1709206965354</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709206965354</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Backend Controller, repository etc.&#10;&#10;endpoindcalcs to test in postman:&#10;/index/test?customerId=1&#10;/orders/getOrders&#10;/orders/getOrder?customerId=1">
+      <option name="closed" value="true" />
+      <created>1709211169987</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709211169987</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all">
+      <option name="closed" value="true" />
+      <created>1709283620738</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709283620738</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -142,8 +225,18 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Kleine Anpassungen" />
+    <MESSAGE value="REST-Controller funktioniert. Fields der Entity auf private gesetzt." />
+    <MESSAGE value="Setting up Spring&#10;&#10;Created project structure, added Model and Controllerclasses.&#10;&#10;Changelog: added" />
+    <MESSAGE value="Landing Page created&#10;&#10;Created a landing page with a responsive login-form + background&#10;&#10;Changelog: added" />
+    <MESSAGE value="Frontend Startseite, Controller gefixed" />
+    <MESSAGE value="restlichen entities, controller und repositories hinzugefügt" />
+    <MESSAGE value="entity-fields an ER-Modell angepasst" />
+    <MESSAGE value="REST-API gefixed wie Drogenkonsumenten" />
+    <MESSAGE value="Hinzufügen der DATA.SQL:&#10;&#10;Hier werden aktuell nur Shopitems beim start der anwendung generiert" />
+    <MESSAGE value="bugfix oder halt auch net" />
+    <MESSAGE value="Backend Controller, repository etc.&#10;&#10;endpoindcalcs to test in postman:&#10;/index/test?customerId=1&#10;/orders/getOrders&#10;/orders/getOrder?customerId=1" />
     <MESSAGE value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
-    <MESSAGE value="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
-    <option name="LAST_COMMIT_MESSAGE" value="login, password hashing check&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
   </component>
 </project>

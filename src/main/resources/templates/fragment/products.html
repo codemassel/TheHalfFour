@@ -7,7 +7,7 @@
                 <div class="row">
                     <div th:each="ShopItem, itemStat : ${shopItems}" class="col-md-4 mt-5 p-0 m-0">
                         <div class="card cardcustom text-center custom-background-color">
-                            <a th:href="@{/ssss}" class="custom-link">
+                            <a th:href="@{'/yachts/' + ${ShopItem.id}}" class="custom-link">
                                 <div th:if="${ShopItem.id == 1L}" class="card-img-top">
                                     <img src="/IMG/Yacht1.jpg" alt="Bild Yacht1" class="img-fluid" style="height: 200px; object-fit: cover;">
                                 </div>
@@ -32,7 +32,6 @@
                                 <div th:if="${ShopItem.id == 8L}" class="card-img-top">
                                     <img src="/IMG/Yacht8.jpg" alt="Bild Yacht8" class="img-fluid" style="height: 200px; object-fit: cover;">
                                 </div>
-
                                 <div class="card-body">
                                     <h5 class="card-title mb-0" th:text="${ShopItem.itemName}">Produktname</h5>
                                     <p class="card-text text-muted" th:text="${ShopItem.description}"></p>

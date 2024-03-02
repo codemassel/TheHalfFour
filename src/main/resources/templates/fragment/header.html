@@ -46,12 +46,22 @@
                     </ul>
                     <ul class="mb-2 mb-lg-0">
                         <div class="navbar-nav">
-                            <div class="align-items-center justify-content-center"><a class="nav-link" aria-current="page"
-                                                                                      href="customers">Customers</a></div>
-                            <a class="nav-link" href="birthdays.html">Geburtstage</a>
-                            <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1" aria-disabled="true"
-                               data-bs-toggle="modal" data-bs-target="#exampleModal">Anmelden</a>
-                            <!-- Modal -->
+
+                            <div th:if="${session.loggedInUser != null}">
+                                <h2>Willkommen!</h2>
+                            </div>
+
+                            <div th:unless="${session.loggedInUser != null}">
+                                <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1" aria-disabled="true"
+                                   data-bs-toggle="modal" data-bs-target="#exampleModal">Anmelden</a>
+                            </div>
+
+                            <div class="align-items-center justify-content-center">
+                                <a class="nav-link" aria-current="page" href="../productpage.html">
+                                    Produkte
+                                </a>
+                            </div>
+
                             <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                                  aria-hidden="true" data-bs-backdrop="false">
                                 <div class="modal-dialog">
@@ -62,26 +72,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                             </div>
-                                            <form method="post" th:action="@{/index/login}" th:object="${customer}" class="col card p-3 mb-5">
-                                                <div class="modal-body">
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputEmail1" class="form-label">Email-Adresse</label>
-                                                        <input type="email" class="form-control" id="exampleInputEmail1" th:field="*{emailId}"
-                                                               aria-describedby="emailHelp">
-                                                        <div id="emailHelp6" class="form-text">Bitte geben Sie ihre Email-Adresse
-                                                            ein.</div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputPassword1" class="form-label">Passwort</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}">
-                                                        <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-primary">Einloggen</button>
-                                                </div>
-                                            </form>
+
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel2">Registrieren</h5>
                                             </div>
@@ -142,14 +133,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 mt-2">
-                                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                    <label  class="form-label">Email address</label>
                                                     <input type="email" class="form-control" id="emailId"
                                                            aria-describedby="emailHelp" th:field="*{emailId}">
                                                     <div id="emailHelp" class="form-text">We'll never share your email with
                                                         anyone else.</div>
                                                 </div>
                                                 <div class="mb-3 mt-2">
-                                                    <label for="exampleInputPassword1" class="form-label">Passwort</label>
+                                                    <label class="form-label">Passwort</label>
                                                     <input type="password" class="form-control" id="password" th:field="*{password}">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Registrieren</button>
@@ -186,6 +177,25 @@
             <div id="triangle1" class="triangle"></div>
             <div id="triangle2" class="triangle"></div>
         </div>
+
+        <div th:if="${session.loggedInUser != null}">
+            <h2>Welcome, <span th:text="${session.loggedInUser}"></span>!</h2>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div th:unless="${session.loggedInUser != null}">
+            <h4>You are not logged in</h4>
+            <form action="/index/login" method="get">
+                <label for="email">Data:</label>
+                <input type="text" id="email" name="email">
+
+                <label for="password1">Data:</label>
+                <input type="text" id="password1" name="password">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
