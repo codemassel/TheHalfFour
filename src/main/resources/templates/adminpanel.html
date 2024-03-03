@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Adminpanel</title>
+</head>
+<body class="bg-white text-black">
+
+<!-- Navbar -->
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+
+<div th:include="fragment/header :: header"></div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Dummy-Benutzerliste -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    Dummy-Benutzerliste
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Daniel Zajcev</li>
+                        <li class="list-group-item">Massl Massl</li>
+                        <li class="list-group-item">Max Mustermann</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Benutzerverwaltungsform -->
+            <div class="card">
+                <div class="card-header">
+                    Benutzer bearbeiten
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="firstName">Vorname</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Vorname eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Nachname</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Nachname eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailId">E-Mail-Adresse</label>
+                            <input type="email" class="form-control" id="emailId" placeholder="E-Mail-Adresse eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode">PLZ</label>
+                            <input type="text" class="form-control" id="zipcode" placeholder="PLZ eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="street">Straße</label>
+                            <input type="text" class="form-control" id="street" placeholder="Straße eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="houseNumber">Hausnummer</label>
+                            <input type="text" class="form-control" id="houseNumber" placeholder="Hausnummer eingeben">
+                        </div>
+                        <!-- Hier kann der Benutzer ausgewählt werden -->
+                        <div class="form-group">
+                            <label for="selectedUser">Ausgewählter Benutzer</label>
+                            <select class="form-control" id="selectedUser">
+                                <option>Daniel Zajcev</option>
+                                <option>Massl Massl</option>
+                                <option>Max Mustermann</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Benutzer aktualisieren</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Shop-Item-Liste -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    Shop-Item-Liste
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Billoyacht mit Insel für Klimakleber</li>
+                        <li class="list-group-item">Bornheim 385 Ghetto-Bitchgrabbler</li>
+                        <li class="list-group-item">Versunkene Titanic Yacht</li>
+                        <li class="list-group-item">Die nachbebaute Yacht von Jeffrey Bezos</li>
+                        <li class="list-group-item">Luxus Yacht für Schildkrötenliebhaber</li>
+                        <li class="list-group-item">Raumschiff Yacht "Enterprise"</li>
+                        <li class="list-group-item">Yacht des untoten Kapitäns</li>
+                        <li class="list-group-item">Yacht der Superhelden</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Shop-Item-Verwaltungsform -->
+            <div class="card">
+                <div class="card-header">
+                    Shop-Item bearbeiten
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="itemName">Artikelname</label>
+                            <input type="text" class="form-control" id="itemName" placeholder="Artikelname eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="itemPrice">Preis</label>
+                            <input type="text" class="form-control" id="itemPrice" placeholder="Preis eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Beschreibung</label>
+                            <textarea class="form-control" id="description" rows="3" placeholder="Beschreibung eingeben"></textarea>
+                        </div>
+                        <!-- Hier kann das Shop-Item ausgewählt werden -->
+                        <div class="form-group">
+                            <label for="selectedShopItem">Ausgewähltes Shop-Item</label>
+                            <select class="form-control" id="selectedShopItem">
+                                <option>Billoyacht mit Insel für Klimakleber</option>
+                                <option>Bornheim 385 Ghetto-Bitchgrabbler</option>
+                                <option>Versunkene Titanic Yacht</option>
+                                <option>Die nachbebaute Yacht von Jeffrey Bezos</option>
+                                <option>Luxus Yacht für Schildkrötenliebhaber</option>
+                                <option>Raumschiff Yacht "Enterprise"</option>
+                                <option>Yacht des untoten Kapitäns</option>
+                                <option>Yacht der Superhelden</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Shop-Item aktualisieren</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Bestellungen-Liste -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    Bestellungen-Liste
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Bestellung 1</li>
+                        <li class="list-group-item">Bestellung 2</li>
+                        <li class="list-group-item">Bestellung 3</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bestellung-Verwaltungsform -->
+            <div class="card">
+                <div class="card-header">
+                    Bestellung bearbeiten
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="priority">Priorität</label>
+                            <input type="text" class="form-control" id="priority" placeholder="Priorität eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select class="form-control" id="status">
+                                <option>RECEIVED</option>
+                                <option>PROCESSING</option>
+                                <option>SHIPPED</option>
+                                <option>COMPLETED</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="discount">Rabatt</label>
+                            <input type="text" class="form-control" id="discount" placeholder="Rabatt eingeben">
+                        </div>
+                        <!-- Hier kann die Bestellung ausgewählt werden -->
+                        <div class="form-group">
+                            <label for="selectedOrder">Ausgewählte Bestellung</label>
+                            <select class="form-control" id="selectedOrder">
+                                <option>Bestellung 1</option>
+                                <option>Bestellung 2</option>
+                                <option>Bestellung 3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Bestellung aktualisieren</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:include="fragment/footer :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
+</html>
