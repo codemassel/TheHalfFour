@@ -54,7 +54,7 @@
                             </div>
 
                             <div th:if="${session.loggedInUser != null}">
-                                <a class="nav-link btn btn-outline-dark" th:href="@{'/index/adminpanel'}" tabindex="-1">Adminpanel</a>
+                                <a class="nav-link btn btn-outline-dark" th:href="@{/adminpanel}" tabindex="-1">Adminpanel</a>
                             </div>
                             <div th:unless="${session.loggedInUser != null}">
                                 <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1" aria-disabled="true"

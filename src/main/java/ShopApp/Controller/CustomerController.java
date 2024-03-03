@@ -135,6 +135,20 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "*")
+    @GetMapping("/getCustomerById/{id}")
+    public ModelAndView getCustomerByIdJs(Model model, @PathVariable Long id) {
+        Optional<Customer> foundCustomer = customerRepository.findById(id);
+        model.addAttribute("customer", foundCustomer);
+        return new ModelAndView("redirect:/adminpanel");
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping("/updateCustomer")
+    public void updateUser(@RequestBody Customer customer) {
+        customerService.updateCustomer(customer);
+    }
+
     /**
      * Diese Methode kann aus unerklärlichen Gründen nicht vom Frontend aufgerufen werden.
      * Der direkte manuelle Call bspw. durch einen direkten apicall ist möglich.

@@ -28,7 +28,6 @@ public class CustomerService {
      * @return
      */
     public List<Customer> getCustomers(){
-
         return (List<Customer>) customerRepository.findAll();
     }
 
@@ -64,4 +63,14 @@ public class CustomerService {
         }
     }
 
+    public void updateCustomer(Customer customer) {
+        Cities existingCity = citiesRepository.findByZipcode(customer.getZipcode().getZipcode());
+        if (existingCity == null) {
+            Cities newCity = new Cities();
+            newCity.setZipcode(customer.getZipcode().getZipcode());
+            newCity.setCity(customer.getZipcode().getCity());
+            citiesRepository.save(newCity);
+        }
+        customerRepository.save(customer);
+    }
 }

@@ -10,6 +10,7 @@
 <body class="bg-white text-black">
 
 <!-- Navbar -->
+<script type="text/javascript" th:src="@{/js/adminscripts.js}"></script>
 <script type="text/javascript" th:src="@{/js/script.js}"></script>
 
 <div th:include="fragment/header :: header"></div>
@@ -17,73 +18,95 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <!-- Dummy-Benutzerliste -->
+            <!--Benutzerliste -->
             <div class="card mb-4">
                 <div class="card-header">
-                    Dummy-Benutzerliste
+                    Benutzerliste
                 </div>
                 <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">Daniel Zajcev</li>
-                        <li class="list-group-item">Massl Massl</li>
-                        <li class="list-group-item">Max Mustermann</li>
-                    </ul>
+                    <!-- Tabelle außerhalb der Card platziert -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>Email</th>
+                            <th>PLZ</th>
+                            <th>Stadt</th>
+                            <th>Straße</th>
+                            <th>Hausnummer</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Jede Tabellenzeile erhält eine eindeutige ID und einen Event-Listener, der auf das Klicken reagiert -->
+                        <tr th:each="customer : ${customers}" th:id="'userRow_' + ${customer.id}"> <!--onclick="handleTableRowClick('${customer.id}')">-->
+                            <td th:text="${customer.id}"></td>
+                            <td th:text="${customer.firstName}"></td>
+                            <td th:text="${customer.lastName}"></td>
+                            <td th:text="${customer.emailId}"></td>
+                            <td th:text="${customer.zipcode.zipcode}"></td>
+                            <td th:text="${customer.zipcode.city}"></td>
+                            <td th:text="${customer.street}"></td>
+                            <td th:text="${customer.houseNumber}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
             <!-- Benutzerverwaltungsform -->
             <div class="card">
                 <div class="card-header">
                     Benutzer bearbeiten
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label for="selectedUser">Ausgewählter Benutzer</label>
+                            <select class="form-control" id="selectedUser" name="selectedUser" onchange="populateUserData(this.value)">
+                                <!-- Schleife über die customers, um für jeden Benutzer eine Option einzufügen -->
+                                <option th:each="customer : ${customers}" th:value="${customer.id}" th:text="${customer.firstName + ' ' + customer.lastName}"></option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="firstName">Vorname</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Vorname eingeben">
+                            <input type="text" class="form-control" id="firstName" name="firstName">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Nachname</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Nachname eingeben">
+                            <input type="text" class="form-control" id="lastName" name="lastName">
                         </div>
                         <div class="form-group">
                             <label for="emailId">E-Mail-Adresse</label>
-                            <input type="email" class="form-control" id="emailId" placeholder="E-Mail-Adresse eingeben">
+                            <input type="email" class="form-control" id="emailId" name="emailId">
                         </div>
                         <div class="form-group">
                             <label for="zipcode">PLZ</label>
-                            <input type="text" class="form-control" id="zipcode" placeholder="PLZ eingeben">
+                            <input type="text" class="form-control" id="zipcode" name="zipcode">
                         </div>
                         <div class="form-group">
                             <label for="street">Straße</label>
-                            <input type="text" class="form-control" id="street" placeholder="Straße eingeben">
+                            <input type="text" class="form-control" id="street" name="street">
                         </div>
                         <div class="form-group">
                             <label for="houseNumber">Hausnummer</label>
-                            <input type="text" class="form-control" id="houseNumber" placeholder="Hausnummer eingeben">
-                        </div>
-                        <!-- Hier kann der Benutzer ausgewählt werden -->
-                        <div class="form-group">
-                            <label for="selectedUser">Ausgewählter Benutzer</label>
-                            <select class="form-control" id="selectedUser">
-                                <option>Daniel Zajcev</option>
-                                <option>Massl Massl</option>
-                                <option>Max Mustermann</option>
-                            </select>
+                            <input type="text" class="form-control" id="houseNumber" name="houseNumber">
                         </div>
                         <button type="submit" class="btn btn-primary">Benutzer aktualisieren</button>
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
 
-
+<!--
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <!-- Shop-Item-Liste -->
             <div class="card mb-4">
                 <div class="card-header">
                     Shop-Item-Liste
@@ -101,7 +124,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- Shop-Item-Verwaltungsform -->
             <div class="card">
                 <div class="card-header">
                     Shop-Item bearbeiten
@@ -120,7 +142,6 @@
                             <label for="description">Beschreibung</label>
                             <textarea class="form-control" id="description" rows="3" placeholder="Beschreibung eingeben"></textarea>
                         </div>
-                        <!-- Hier kann das Shop-Item ausgewählt werden -->
                         <div class="form-group">
                             <label for="selectedShopItem">Ausgewähltes Shop-Item</label>
                             <select class="form-control" id="selectedShopItem">
@@ -147,7 +168,6 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <!-- Bestellungen-Liste -->
             <div class="card mb-4">
                 <div class="card-header">
                     Bestellungen-Liste
@@ -160,7 +180,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- Bestellung-Verwaltungsform -->
             <div class="card">
                 <div class="card-header">
                     Bestellung bearbeiten
@@ -184,7 +203,6 @@
                             <label for="discount">Rabatt</label>
                             <input type="text" class="form-control" id="discount" placeholder="Rabatt eingeben">
                         </div>
-                        <!-- Hier kann die Bestellung ausgewählt werden -->
                         <div class="form-group">
                             <label for="selectedOrder">Ausgewählte Bestellung</label>
                             <select class="form-control" id="selectedOrder">
@@ -200,6 +218,7 @@
         </div>
     </div>
 </div>
+-->
 
 <div th:include="fragment/footer :: footer"></div>
 
