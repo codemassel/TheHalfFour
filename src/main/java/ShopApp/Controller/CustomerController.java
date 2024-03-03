@@ -156,19 +156,12 @@ public class CustomerController {
             return new ModelAndView("redirect:/index");
         }
     }
-}
-/*
 
-    /*Waren hinzufügen
-    @PostMapping("/createShopItem")
-    public ResponseEntity<ShopItem> createShopItems(@RequestParam String shopItem,@RequestParam long price) {
-        //business logic
-    }
-
-    @GetMapping("/customer")
+    @CrossOrigin(origins = "*")
+    @GetMapping("/customerByFirstName")
     public List<Customer> getCustomersByName(@RequestParam (name="firstName") String firstName, @RequestParam (name = "lastName") String lastName) {
-        return rep.findByFirstNameAndLastName(firstName, lastName);
+        return customerRepository.findByFirstNameAndLastName(firstName, lastName);
     }
-    */
+}
 
 
