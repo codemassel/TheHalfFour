@@ -1,13 +1,14 @@
 // JavaScript-Funktion, die aufgerufen wird, wenn eine Tabellenzeile geklickt wird
 function handleTableRowClick(customerId) {
-    fetch('/getCustomerById/' + customerId)
+    fetch('/index/getCustomerById/' + customerId)
         .then(response => response.json())
         .then(data => {
             // Aktualisiere die Formfelder mit den Benutzerdaten
             document.getElementById("firstName").value = data.firstName;
             document.getElementById("lastName").value = data.lastName;
             document.getElementById("emailId").value = data.emailId;
-            document.getElementById("zipcode").value = data.zipcode;
+            document.getElementById("zipcode").value = data.zipcode.zipcode;
+            document.getElementById("city").value = data.zipcode.city;
             document.getElementById("street").value = data.street;
             document.getElementById("houseNumber").value = data.houseNumber;
         })
@@ -20,7 +21,7 @@ function updateUser() {
     var formData = new FormData(document.getElementById("userForm"));
 
     // Sende die Daten über einen Fetch-POST-Request an den Server
-    fetch('/updateCustomer', {
+    fetch('/index/updateCustomer', {
         method: 'POST',
         body: formData
     })
@@ -49,23 +50,25 @@ function updateFormFields() {
 
     // Formularfelder mit den Daten des ausgewählten Benutzers aktualisieren
     if (selectedUser) {
-        document.getElementById("firstName").value = selectedUser.firstName;
-        document.getElementById("lastName").value = selectedUser.lastName;
-        document.getElementById("emailId").value = selectedUser.emailId;
-        document.getElementById("zipcode").value = selectedUser.zipcode;
-        document.getElementById("street").value = selectedUser.street;
-        document.getElementById("houseNumber").value = selectedUser.houseNumber;
+        document.getElementById("firstName").value = data.firstName;
+        document.getElementById("lastName").value = data.lastName;
+        document.getElementById("emailId").value = data.emailId;
+        document.getElementById("zipcode").value = data.zipcode.zipcode;
+        document.getElementById("city").value = data.zipcode.city;
+        document.getElementById("street").value = data.street;
+        document.getElementById("houseNumber").value = data.houseNumber;
     }
 }
 function populateUserData(userId) {
-    fetch('/getCustomerById/' + userId)
+    fetch('/index/getCustomerById/' + userId)
         .then(response => response.json())
         .then(data => {
             // Daten des Benutzers in die entsprechenden Formularfelder einfügen
             document.getElementById("firstName").value = data.firstName;
             document.getElementById("lastName").value = data.lastName;
             document.getElementById("emailId").value = data.emailId;
-            document.getElementById("zipcode").value = data.zipcode;
+            document.getElementById("zipcode").value = data.zipcode.zipcode;
+            document.getElementById("city").value = data.zipcode.city;
             document.getElementById("street").value = data.street;
             document.getElementById("houseNumber").value = data.houseNumber;
         })
