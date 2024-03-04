@@ -63,14 +63,25 @@ public class CustomerService {
         }
     }
 
-    public void updateCustomer(Customer customer) {
-        Cities existingCity = citiesRepository.findByZipcode(customer.getZipcode().getZipcode());
-        if (existingCity == null) {
-            Cities newCity = new Cities();
-            newCity.setZipcode(customer.getZipcode().getZipcode());
-            newCity.setCity(customer.getZipcode().getCity());
-            citiesRepository.save(newCity);
+    public Customer updateCustomer(Customer customerToUpdate) {
+        System.out.println(customerToUpdate.getFirstName() + " " + customerToUpdate.getId() + " amk hahahahaha");
+        if (!customerRepository.existsById(customerToUpdate.getId())) {
+            throw new IllegalArgumentException("Kunde mit der ID " + customerToUpdate.getId() + " existiert nicht.");
         }
-        customerRepository.save(customer);
+
+        Customer existingCustomer = customerRepository.findById(customerToUpdate.getId()).orElseThrow(() ->
+                new IllegalArgumentException("Kunde mit der ID " + customerToUpdate.getId() + " existiert nicht."));
+
+        Cities city = getOrCreateCityByZipcode(customerToUpdate.getZipcode().getZipcode());
+        city.setCity(customerToUpdate.getZipcode().getCity());
+
+        existingCustomer.setZipcode(city);
+        existingCustomer.setEmailId(customerToUpdate.getEmailId());
+        existingCustomer.setFirstName(customerToUpdate.getFirstName());
+        existingCustomer.setLastName(customerToUpdate.getLastName());
+        existingCustomer.setStreet(customerToUpdate.getStreet());
+        existingCustomer.setHouseNumber(customerToUpdate.getHouseNumber());
+
+        return customerRepository.save(existingCustomer);
     }
 }

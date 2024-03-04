@@ -4,46 +4,46 @@
         <div th:fragment="products">
 
             <div class="container">
-                <div class="row">
-                    <div th:each="ShopItem, itemStat : ${shopItems}" class="col-md-4 mt-5 p-0 m-0">
-                        <div class="card cardcustom text-center custom-background-color">
-                            <a th:href="@{'/yachts/' + ${ShopItem.id}}" class="custom-link">
-                                <div th:if="${ShopItem.id == 1L}" class="card-img-top">
-                                    <img src="/IMG/Yacht1.jpg" alt="Bild Yacht1" class="img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="row text-with-image">
+                    <div class="text-container">
+                        <div class="card-group mt-5">
+                            <div th:each="ShopItem, itemStat : ${shopItems}" class="col-md-4">
+                                <div class="card cardcustom text-center custom-background-color">
+                                    <a th:href="@{'/yachts/' + ${ShopItem.id}}" class="custom-link">
+                                        <div th:if="${ShopItem.id == 1L}" class="card-img-top">
+                                            <img src="/IMG/Yacht1.jpg" alt="Bild Yacht1" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 2L}" class="card-img-top">
+                                            <img src="/IMG/Yacht2.jpg" alt="Bild Yacht2" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 3L}" class="card-img-top">
+                                            <img src="/IMG/Yacht3.jpg" alt="Bild Yacht3" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 4L}" class="card-img-top">
+                                            <img src="/IMG/Yacht4.jpg" alt="Bild Yacht4" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 5L}" class="card-img-top">
+                                            <img src="/IMG/Yacht5.jpg" alt="Bild Yacht5" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 6L}" class="card-img-top">
+                                            <img src="/IMG/Yacht6.jpg" alt="Bild Yacht6" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 7L}" class="card-img-top">
+                                            <img src="/IMG/Yacht7.jpg" alt="Bild Yacht7" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <div th:if="${ShopItem.id == 8L}" class="card-img-top">
+                                            <img src="/IMG/Yacht8.jpg" alt="Bild Yacht8" class="img-fluid" style="width: 100%; object-fit: cover;">
+                                        </div>
+                                        <h5 class="card-title mb-0" th:text="${ShopItem.itemName}">Produktname</h5>
+                                        <p class="card-text text-muted" th:text="${ShopItem.description}"></p>
+                                        <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
+                                    </a>
                                 </div>
-                                <div th:if="${ShopItem.id == 2L}" class="card-img-top">
-                                    <img src="/IMG/Yacht2.jpg" alt="Bild Yacht2" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div th:if="${ShopItem.id == 3L}" class="card-img-top">
-                                    <img src="/IMG/Yacht3.jpg" alt="Bild Yacht3" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div th:if="${ShopItem.id == 4L}" class="card-img-top">
-                                    <img src="/IMG/Yacht4.jpg" alt="Bild Yacht4" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div th:if="${ShopItem.id == 5L}" class="card-img-top">
-                                    <img src="/IMG/Yacht5.jpg" alt="Bild Yacht5" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div th:if="${ShopItem.id == 6L}" class="card-img-top">
-                                    <img src="/IMG/Yacht6.jpg" alt="Bild Yacht6" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div th:if="${ShopItem.id == 7L}" class="card-img-top">
-                                    <img src="/IMG/Yacht7.jpg" alt="Bild Yacht7" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div th:if="${ShopItem.id == 8L}" class="card-img-top">
-                                    <img src="/IMG/Yacht8.jpg" alt="Bild Yacht8" class="img-fluid" style="height: 200px; object-fit: cover;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0" th:text="${ShopItem.itemName}">Produktname</h5>
-                                    <p class="card-text text-muted" th:text="${ShopItem.description}"></p>
-                                    <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
 
             <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
             <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
