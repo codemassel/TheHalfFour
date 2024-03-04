@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="improved junit, cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/AdminPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/adminscripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/customerTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/customerTable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
+    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="adminpanel fixes">
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/TheHalfFour-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
@@ -67,17 +59,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/19mzi/IdeaProjects/TheHalfFour/src/main/resources/templates/fragment",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/19mzi/IdeaProjects/TheHalfFour/src/main/resources/templates/fragment&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ShopApp.Model" />
@@ -253,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709467986667</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="adminpanel fixes">
+      <option name="closed" value="true" />
+      <created>1709480002490</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709480002490</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +285,7 @@
     <MESSAGE value="Added password hashing, request for all yachts, update Yacht entity&#10;&#10;endpoindcall in postman:&#10;/yachts/all" />
     <MESSAGE value="added JUnit test" />
     <MESSAGE value="improved junit, cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved junit, cleanup" />
+    <MESSAGE value="adminpanel fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adminpanel fixes" />
   </component>
 </project>
