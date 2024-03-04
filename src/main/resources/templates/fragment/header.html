@@ -31,7 +31,7 @@
         <div class="filler"></div>
         <nav id="nav1" class="navbar navbar-expand-lg bg-body-tertiary navbar-transparent fixed-navbar">
             <div id="header-div" class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" th:href="@{/index}">
                     <h1 class="custom-text-color" style="margin-top:60px;">YACHTSHOP WINKE</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -57,98 +57,7 @@
                                 <a class="nav-link btn btn-outline-dark" th:href="@{/adminpanel}" tabindex="-1">Adminpanel</a>
                             </div>
                             <div th:unless="${session.loggedInUser != null}">
-                                <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1" aria-disabled="true"
-                                   data-bs-toggle="modal" data-bs-target="#exampleModal">Anmelden</a>
-                            </div>
-
-                            <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                 aria-hidden="true" data-bs-backdrop="false">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <form>
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel1">Registrieren</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel2">Registrieren</h5>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="mb-3">
-                                                    <p>Sind Sie neu hier? Dann registrieren Sie sich doch!</p>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">Abbrechen</button>
-                                                <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1"
-                                                   aria-disabled="true" data-bs-toggle="modal"
-                                                   data-bs-target="#registerUserModal" data-bs-dismiss="modal">Registrieren</a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div th:unless="${session.loggedInUser != null}">
-                                <div class="modal fade" id="registerUserModal" tabindex="-1" aria-labelledby="registerUserModal"
-                                     aria-hidden="true" data-bs-backdrop="false">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <!-- Umändern PHP -->
-                                            <form method="post" th:action="@{/index/register}" th:object="${customer}" class="col card p-3 mb-5">
-                                                <div class="modal-header ps-3">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                </div>
-                                                <div class="container mt-2 mb-3 ps-3">
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <label for="firstname" class="form-label">Vorname</label>
-                                                            <script>console.log("hallo")</script>
-                                                            <input type="text" class="form-control" id="firstName" th:field="*{firstName}">
-                                                            <script>console.log("hallo2")</script>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="lastname" class="form-label">Nachname</label>
-                                                            <input type="text" class="form-control" id="lastName" th:field="*{lastName}">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="zipcode" class="form-label">PLZ</label>
-                                                            <input type="text" class="form-control" id="zipcode" th:field="*{zipcode.zipcode}">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="city" class="form-label">Stadt</label>
-                                                            <input type="text" class="form-control" id="city" th:field="*{zipcode.city}">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="street" class="form-label">Straße</label>
-                                                            <input type="text" class="form-control" id="street" th:field="*{street}">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="houseNumber" class="form-label">Haus-Nr.</label>
-                                                            <input type="text" class="form-control" id="houseNumber" th:field="*{houseNumber}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3 mt-2">
-                                                        <label  class="form-label">Email address</label>
-                                                        <input type="email" class="form-control" id="emailId"
-                                                               aria-describedby="emailHelp" th:field="*{emailId}">
-                                                        <div id="emailHelp" class="form-text">We'll never share your email with
-                                                            anyone else.</div>
-                                                    </div>
-                                                    <div class="mb-3 mt-2">
-                                                        <label class="form-label">Passwort</label>
-                                                        <input type="password" class="form-control" id="password" th:field="*{password}">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary">Registrieren</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a class="nav-link btn btn-outline-dark" th:href="@{/index/registerpage}" tabindex="-1">Anmelden</a>
                             </div>
                         </div>
                     </ul>
@@ -181,19 +90,6 @@
 
         <div th:if="${session.loggedInUser != null}">
 
-        </div>
-
-        <div th:unless="${session.loggedInUser != null}">
-            <h4>You are not logged in</h4>
-            <form action="/index/login" method="get">
-                <label for="email">Data:</label>
-                <input type="text" id="email" name="email">
-
-                <label for="password1">Data:</label>
-                <input type="text" id="password1" name="password">
-
-                <button type="submit">Submit</button>
-            </form>
         </div>
 
     </div>
