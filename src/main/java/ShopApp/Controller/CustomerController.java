@@ -158,7 +158,7 @@ public class CustomerController {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView checkifLoginDataCorrect(HttpServletRequest request, @RequestParam("email") String email, @RequestParam("password") String password) {
+    public ModelAndView checkifLoginDataCorrect(HttpServletRequest request, @RequestParam("emaillogin") String email, @RequestParam("passwordlogin") String password) {
         Customer customers = customerRepository.findByEmailId(email);
         if (customers != null && passwordEncoder.matches(password, customers.getPassword())) {
             HttpSession session = request.getSession();
@@ -175,6 +175,32 @@ public class CustomerController {
     @GetMapping("/customerByFirstName")
     public List<Customer> getCustomersByName(@RequestParam (name="firstName") String firstName, @RequestParam (name = "lastName") String lastName) {
         return customerRepository.findByFirstNameAndLastName(firstName, lastName);
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/agb")
+    public ModelAndView getAgb() {
+        return new ModelAndView("agb");
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/registerpage")
+    public ModelAndView getRegisterpage(Model model) {
+
+        model.addAttribute("customer", new Customer());
+        return new ModelAndView("registerpage");
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/impressum")
+    public ModelAndView getImpressum() {
+        return new ModelAndView("impressum");
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/datenschutz")
+    public ModelAndView getDatenschutz() {
+        return new ModelAndView("datenschutz");
     }
 }
 
