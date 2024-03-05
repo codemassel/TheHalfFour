@@ -13,7 +13,7 @@ public class ShopItemService {
         this.shopItemRepository = shopItemRepository;
     }
 
-    public void updateShopItem(ShopItem shopItemToUpdate) {
+    public ShopItem updateShopItem(ShopItem shopItemToUpdate) {
         if (!shopItemRepository.existsById(shopItemToUpdate.getId())) {
             throw new IllegalArgumentException("Yacht mit der ID " + shopItemToUpdate.getId() + " existiert nicht.");
         }
@@ -25,6 +25,6 @@ public class ShopItemService {
         existingShopItem.setItemPrice(shopItemToUpdate.getItemPrice());
         existingShopItem.setDescription(shopItemToUpdate.getDescription());
 
-        shopItemRepository.save(existingShopItem);
+        return shopItemRepository.save(existingShopItem);
     }
 }

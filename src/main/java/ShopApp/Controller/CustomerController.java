@@ -1,7 +1,6 @@
 package ShopApp.Controller;
 
 import ShopApp.Model.Customer;
-import ShopApp.Model.Orders;
 import ShopApp.Model.ShopItem;
 import ShopApp.Repository.CitiesRepository;
 import ShopApp.Repository.CustomerRepository;
@@ -148,7 +147,7 @@ public class CustomerController {
     public ModelAndView updateUser(Model model, @ModelAttribute Customer customer) {
         customerService.updateCustomer(customer);
 
-        return new ModelAndView("redirect:/adminpanel"); //maybe "index"
+        return new ModelAndView("index"); //vorher "index"
     }
 
     /**
@@ -213,13 +212,16 @@ public class CustomerController {
 
         return new ModelAndView("productpage2");
     }
-
+    /*
     @CrossOrigin(origins = "*")
     @GetMapping("/adminpanel")
     public ModelAndView getAdminPanel(Model model, @ModelAttribute Customer customer, @ModelAttribute Orders order, @ModelAttribute ShopItem shopItem) {
-
+        model.addAttribute("customers", customer);
+        model.addAttribute("orders", customer);
+        model.addAttribute("shopitem", shopItem);
         return new ModelAndView("adminpanel");
     }
+     */
 
 }
 

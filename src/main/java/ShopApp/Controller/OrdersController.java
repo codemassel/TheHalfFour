@@ -75,6 +75,6 @@ public class OrdersController {
     public ModelAndView updateShopitem(Model model, @ModelAttribute Orders order) {
         ordersService.updateOrders(order);
 
-        return new ModelAndView("redirect:/index/adminpanel");
+        return new ModelAndView("index");
     }
 }

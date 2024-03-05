@@ -13,7 +13,7 @@ public class OrdersService {
         this.ordersRepository = ordersRepository;
     }
 
-    public void updateOrders(Orders ordersToUpdate) {
+    public Orders updateOrders(Orders ordersToUpdate) {
         if (!ordersRepository.existsById(ordersToUpdate.getId())) {
             throw new IllegalArgumentException("Order mit der ID " + ordersToUpdate.getId() + " existiert nicht.");
         }
@@ -27,7 +27,7 @@ public class OrdersService {
         existingOrder.setDiscount(ordersToUpdate.getDiscount());
         existingOrder.setCreationDate(ordersToUpdate.getCreationDate());
 
-        ordersRepository.save(existingOrder);
+        return ordersRepository.save(existingOrder);
     }
 
 }
