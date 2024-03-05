@@ -144,8 +144,11 @@ public class CustomerController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/updateCustomer")
-    public void updateUser(@RequestBody Customer customer) {
+    public ModelAndView updateUser(Model model, @ModelAttribute Customer customer) {
+        System.out.println(customer.getFirstName());
         customerService.updateCustomer(customer);
+
+        return new ModelAndView("index");
     }
 
     /**
@@ -200,6 +203,15 @@ public class CustomerController {
     @GetMapping("/datenschutz")
     public ModelAndView getDatenschutz() {
         return new ModelAndView("datenschutz");
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/productpage")
+    public ModelAndView getProduktpage(Model model) {
+        List<ShopItem> shopItems = shopItemRepository.findAll();
+        model.addAttribute("shopItems", shopItems);
+
+        return new ModelAndView("productpage2");
     }
 }
 

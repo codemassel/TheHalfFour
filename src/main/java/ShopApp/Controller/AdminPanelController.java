@@ -23,6 +23,7 @@ public class AdminPanelController {
     public String getAdminPanel(Model model) {
         List<Customer> customers = customerService.getCustomers();
         model.addAttribute("customers", customers);
+        model.addAttribute("customer", new Customer());
         return "adminpanel";
     }
 }
