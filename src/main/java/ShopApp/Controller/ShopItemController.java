@@ -1,5 +1,6 @@
 package ShopApp.Controller;
 
+import ShopApp.Model.Orders;
 import ShopApp.Model.ShopItem;
 import ShopApp.Repository.ShopItemRepository;
 import ShopApp.Service.ShopItemService;
@@ -39,6 +40,7 @@ public class ShopItemController {
         ShopItem shopItem = shopItemRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "ShopItem not found"));
         model.addAttribute("ShopItem", shopItem);
+        model.addAttribute("order", new Orders());
         return new ModelAndView("productpage");
     }
 

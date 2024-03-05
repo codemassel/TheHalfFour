@@ -51,12 +51,14 @@ public class OrdersController {
 
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String createOrder(Model model, @ModelAttribute("orders") Orders orders, @RequestParam Long shopItemId, @RequestParam String emailId) {
+    public ModelAndView createOrder(Model model, @ModelAttribute("orders") Orders orders, @RequestParam("shopItemId") Long shopItemId, @RequestParam("emailId") String emailId) {
 
-        Orders newOrder = new Orders();
+        Orders newOrder = orders;
 
         Customer customer = customerRepository.findByEmailId(emailId);
         ShopItem shopItem = shopItemRepository.findById(shopItemId).orElse(null);;
+
+        System.out.println(emailId + " " + shopItemId);
 
         newOrder.setCustomer(customer);
         newOrder.setShopitems(shopItem);
@@ -67,7 +69,7 @@ public class OrdersController {
 
         ordersRepository.save(orders);
 
-        return "redirect:/index";
+        return new ModelAndView("index");
     }
 
     @CrossOrigin(origins = "*")
