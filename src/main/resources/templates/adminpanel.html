@@ -25,7 +25,6 @@
                     Benutzer
                 </div>
                 <div class="card-body">
-                    <!-- Tabelle außerhalb der Card platziert -->
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -41,7 +40,6 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <!-- Jede Tabellenzeile erhält eine eindeutige ID und einen Event-Listener, der auf das Klicken reagiert -->
                             <tr th:each="customer : ${customers}" th:id="'userRow_' + ${customer.id}" onclick="populateUserData(${customer.id})">
                                 <td th:text="${customer.id}"></td>
                                 <td th:text="${customer.firstName}"></td>
@@ -129,7 +127,6 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <!-- Jede Tabellenzeile erhält eine eindeutige ID und einen Event-Listener, der auf das Klicken reagiert -->
                             <tr th:each="shopitem : ${shopitems}" th:id="'shopitemRow_' + ${shopitem.id}" onclick="populateShopitemData(${shopitem.id})">
                                 <td th:text="${shopitem.id}"></td>
                                 <td th:text="${shopitem.itemName}"></td>
@@ -196,7 +193,6 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <!-- Jede Tabellenzeile erhält eine eindeutige ID und einen Event-Listener, der auf das Klicken reagiert -->
                             <tr th:each="order : ${orders}" th:id="'orderRow_' + ${order.id}" onclick="populateOrderData(${customer.id})">
                                 <td th:text="${order.id}"></td>
                                 <td th:text="${order.customer.firstName + ' ' + order.customer.lastName}"></td>
