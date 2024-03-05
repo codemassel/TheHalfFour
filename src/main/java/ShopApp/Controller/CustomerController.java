@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,26 +28,26 @@ import java.util.Optional;
 @RequestMapping("/index")
 public class CustomerController {
 
-    private CustomerRepository customerRepository;
-    private ShopItemRepository shopItemRepository;
+    private final CustomerRepository customerRepository;
+    private final ShopItemRepository shopItemRepository;
     private final CustomerService customerService;
     private final PasswordEncoder passwordEncoder;
-    @Autowired
-    private HttpSession httpSession;;
+    private final HttpSession httpSession;
 
     public CustomerController(CustomerRepository customerRepository, ShopItemRepository shopItemRepository, CitiesRepository citiesRepository, CustomerService customerService,
-                              CitiesService citiesService, PasswordEncoder passwordEncoder){
+                              CitiesService citiesService, PasswordEncoder passwordEncoder, HttpSession httpSession){
         this.customerRepository = customerRepository;
         this.shopItemRepository = shopItemRepository;
         this.customerService = customerService;
         this.passwordEncoder = passwordEncoder;
+        this.httpSession = httpSession;
     }
 
     /**
      * Gets every Customer
      * Endpoint: ../index/customers
      * @param model
-     * @return
+     * @return String customersTest
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
