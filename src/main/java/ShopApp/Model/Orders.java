@@ -2,6 +2,7 @@ package ShopApp.Model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -35,6 +36,7 @@ public class Orders {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
+    @JsonManagedReference
     @OneToOne
     @JoinColumn(name = "shopitems", referencedColumnName = "id")
     private ShopItem shopitems;

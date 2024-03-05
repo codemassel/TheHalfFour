@@ -47,6 +47,6 @@ public class ShopItemController {
     public ModelAndView updateShopitem(Model model, ShopItem shopitem) {
         shopItemService.updateShopItem(shopitem);
 
-        return new ModelAndView("index");
+        return new ModelAndView("index"); //redirect:/index/adminpanel
     }
 }

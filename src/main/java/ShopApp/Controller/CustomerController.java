@@ -147,7 +147,7 @@ public class CustomerController {
     public ModelAndView updateUser(Model model, @ModelAttribute Customer customer) {
         customerService.updateCustomer(customer);
 
-        return new ModelAndView("index"); //vorher "index"
+        return new ModelAndView("index");
     }
 
     /**
