@@ -44,9 +44,10 @@ public class ShopItemController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/updateShopItem")
-    public ModelAndView updateShopitem(Model model, ShopItem shopitem) {
+    public ModelAndView updateShopitem(Model model, @ModelAttribute ShopItem shopitem) {
+        model.addAttribute("shopItem", shopitem);
         shopItemService.updateShopItem(shopitem);
 
-        return new ModelAndView("index"); //redirect:/index/adminpanel
+        return new ModelAndView("redirect:/adminpanel"); //vorher "index"
     }
 }

@@ -17,9 +17,15 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
+        <!-- Buttons -->
+        <div class="col-md-12 mb-4 text-center">
+            <button type="button" class="btn btn-primary mr-2" onclick="toggleTable('benutzer')">Benutzerverwaltung anzeigen</button>
+            <button type="button" class="btn btn-primary mr-2" onclick="toggleTable('yachten')">Yachtverwaltung anzeigen</button>
+            <button type="button" class="btn btn-primary" onclick="toggleTable('bestellungen')">Bestellungsverwaltung anzeigen</button>
+        </div>
         <!-- 1. card -->
-        <div class="col-md-4">
-            <!--Benutzerliste -->
+        <div class="col-md-12" id="benutzer" style="display: none;">
+            <!-- Benutzerliste -->
             <div class="card mb-4">
                 <div class="card-header">
                     Benutzer
@@ -66,7 +72,6 @@
                         <div class="form-group">
                             <label for="selectedUser">Ausgewählter Benutzer</label>
                             <select class="form-control" id="selectedUser" name="selectedUser" onchange="populateUserData(this.value)">
-                                <!-- Schleife über die customers, um für jeden Benutzer eine Option einzufügen -->
                                 <option th:each="customer : ${customers}" th:value="${customer.id}" th:text="${customer.firstName + ' ' + customer.lastName}"></option>
                             </select>
                         </div>
@@ -100,7 +105,7 @@
                         </div>
                         <div class="form-group">
                             <label for="customerId">ID</label>
-                            <input type="text" class="form-control" id="customerId" th:field="*{id}">
+                            <input type="text" class="form-control" id="customerId" th:field="*{id}" readonly>
                         </div>
                         <button type="submit" class="btn btn-primary">Benutzer aktualisieren</button>
                     </form>
@@ -109,8 +114,9 @@
         </div>
 
         <!-- 2. card -->
-        <div class="col-md-4">
-            <!--Benutzerliste -->
+        <!-- 2. card -->
+        <div class="col-md-12" id="yachten" style="display: none;">
+            <!-- Yachtenliste -->
             <div class="card mb-4">
                 <div class="card-header">
                     Yachten
@@ -145,11 +151,10 @@
                     Yachten bearbeiten
                 </div>
                 <div class="card-body">
-                    <form method="post" th:action="@{/updateShopItem}" th:object="${shopItem}" class="col card p-3 mb-5">
+                    <form method="post" th:action="@{/yachts/updateShopItem}" th:object="${shopItem}" class="col card p-3 mb-5">
                         <div class="form-group">
                             <label for="selectedUser">Ausgewählte Yacht</label>
                             <select class="form-control" id="selectedShopItem" name="selectedShopItem" onchange="populateShopItemData(this.value)">
-                                <!-- Schleife über die customers, um für jeden Benutzer eine Option einzufügen -->
                                 <option th:each="shopItem : ${shopItems}" th:value="${shopItem.id}" th:text="${shopItem.itemName}"></option>
                             </select>
                         </div>
@@ -165,16 +170,19 @@
                             <label for="description">Beschreibung</label>
                             <input type="text" class="form-control" id="description" th:field="*{description}">
                         </div>
+                        <div class="form-group">
+                            <label for="shopItemId">ID</label>
+                            <input type="text" class="form-control" id="shopItemId" th:field="*{id}" readonly>
+                        </div>
                         <button type="submit" class="btn btn-primary">Yacht aktualisieren</button>
                     </form>
                 </div>
             </div>
         </div>
 
-
         <!-- 3. Card -->
-        <div class="col-md-4">
-            <!--Bestellungen -->
+        <div class="col-md-12" id="bestellungen" style="display: none;">
+            <!-- Bestellungen -->
             <div class="card mb-4">
                 <div class="card-header">
                     Bestellungen
@@ -213,11 +221,10 @@
                     Bestellungen bearbeiten
                 </div>
                 <div class="card-body">
-                    <form method="post" th:action="@{/updateOrder}" th:object="${order}" class="col card p-3 mb-5">
+                    <form method="post" th:action="@{/orders/updateOrder}" th:object="${order}" class="col card p-3 mb-5">
                         <div class="form-group">
                             <label for="selectedUser">Ausgewählte Bestellung</label>
                             <select class="form-control" id="selectedOrder" name="selectedOrder" onchange="populateOrderData(this.value)">
-                                <!-- Schleife über die customers, um für jeden Benutzer eine Option einzufügen -->
                                 <option th:each="order : ${orders}" th:value="${order.id}" th:text="${order.customer.firstName + ' ' + order.customer.lastName}"></option>
                             </select>
                         </div>
@@ -241,13 +248,15 @@
                             <label for="creationDate">Bestelldatum</label>
                             <input type="text" class="form-control" id="creationDate" th:field="*{creationDate}">
                         </div>
+                        <div class="form-group">
+                            <label for="orderId">ID</label>
+                            <input type="text" class="form-control" id="orderId" th:field="*{id}" readonly>
+                        </div>
                         <button type="submit" class="btn btn-primary">Bestellung aktualisieren</button>
                     </form>
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 

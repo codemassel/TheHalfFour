@@ -22,19 +22,20 @@ function populateUserData(userId) {
         document.getElementById('customerId').value = customerId;
 }
 
-function populateShopitemData(userId) {
-        var selectedShopitem = document.getElementById('userRow_' + shopitemId);
+function populateShopItemData(shopitemId) {
+        var selectedShopitem = document.getElementById('shopitemRow_' + shopitemId);
 
-        var customerId = selectedShopitem.cells[0].innerText;
+        var shopitemId = selectedShopitem.cells[0].innerText;
         var itemName = selectedShopitem.cells[1].innerText;
         var itemPrice = selectedShopitem.cells[2].innerText;
         var description = selectedShopitem.cells[3].innerText;
         document.getElementById('itemName').value = itemName;
         document.getElementById('itemPrice').value = itemPrice;
         document.getElementById('description').value = description;
+        document.getElementById('shopItemId').value = shopitemId;
 }
 
-function populateOrderData(userId) {
+function populateOrderData(orderId) {
         var selectedUser = document.getElementById('orderRow_' + orderId);
 
         var orderId = selectedUser.cells[0].innerText;
@@ -49,5 +50,14 @@ function populateOrderData(userId) {
         document.getElementById('status').value = status;
         document.getElementById('discount').value = discount;
         document.getElementById('creationDate').value = creationDate;
+        document.getElementById('orderId').value = orderId;
 }
 
+function toggleTable(tableId) {
+        var table = document.getElementById(tableId);
+        if (table.style.display === "none") {
+            table.style.display = "block";
+        } else {
+            table.style.display = "none";
+        }
+}

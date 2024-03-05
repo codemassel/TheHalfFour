@@ -30,16 +30,40 @@
             <p class="card-text">Gewicht: 200 Tonnen"</p>
             <p class="card-text">Ausstattung: Premium-Luxus-Ausstattung</p>
             <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
-            <a href="Order.html" class="btn btn-primary mt-auto">Jetzt bestellen</a>
+            <!-- Formular zum Auslösen der Bestellung -->
+            <form th:action="@{/create}" th:object="${order}" method="post">
+                <!-- Verstecktes Feld zum Übergeben der ShopItemId -->
+                <input type="hidden" th:field="*{shopItemId}" th:value="${ShopItem.id}" />
+                <!-- Verstecktes Feld zum Übergeben der E-Mail-Adresse -->
+                <input type="hidden" th:field="*{emailId}" th:value="${session.loggedInUser.email}" />
+
+                <!-- Button zum Auslösen des Bestellvorgangs -->
+                <button type="submit" class="btn btn-primary mt-auto">Jetzt bestellen</button>
+            </form>
         </div>
     </div>
 </div>
 
 
-
-
-
 <div th:include="fragment/footer :: footer"></div>
+
+<!-- Bestellbestätigungs-Modal -->
+<div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderSuccessModalLabel">Bestellung erfolgreich!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Ihre Bestellung wurde erfolgreich aufgegeben. Vielen Dank!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
