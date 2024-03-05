@@ -31,8 +31,8 @@
         <div class="filler"></div>
         <nav id="nav1" class="navbar navbar-expand-lg bg-body-tertiary navbar-transparent fixed-navbar">
             <div id="header-div" class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="/IMG/Logo.png" alt="Logo">
+                <a class="navbar-brand" th:href="@{/index}">
+                    <h1 class="custom-text-color" style="margin-top:60px;">YACHTSHOP WINKE</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,122 +46,18 @@
                     </ul>
                     <ul class="mb-2 mb-lg-0">
                         <div class="navbar-nav">
-                            <div class="align-items-center justify-content-center"><a class="nav-link" aria-current="page"
-                                                                                      href="customers">Customers</a></div>
-                            <a class="nav-link" href="birthdays.html">Geburtstage</a>
-                            <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1" aria-disabled="true"
-                               data-bs-toggle="modal" data-bs-target="#exampleModal">Anmelden</a>
-                            <!-- Modal -->
-                            <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                 aria-hidden="true" data-bs-backdrop="false">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <!-- Umändern PHP -->
-                                        <form>
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel1">Registrieren</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-                                            <form method="post" th:action="@{/index/login}" th:object="${customer}" class="col card p-3 mb-5">
-                                                <div class="modal-body">
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputEmail1" class="form-label">Email-Adresse</label>
-                                                        <!-- Umändern PHP -->
-                                                        <input type="email" class="form-control" id="exampleInputEmail1" th:field="*{emailId}"
-                                                               aria-describedby="emailHelp">
-                                                        <div id="emailHelp6" class="form-text">Bitte geben Sie ihre Email-Adresse
-                                                            ein.</div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputPassword1" class="form-label">Passwort</label>
-                                                        <!-- Umändern PHP -->
-                                                        <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}">
-                                                        <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <!-- Umändern PHP -->
-                                                    <button type="submit" class="btn btn-primary">Einloggen</button>
-                                                </div>
-                                            </form>
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel2">Registrieren</h5>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="mb-3">
-                                                    <p>Sind Sie neu hier? Dann registrieren Sie sich doch!</p>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">Abbrechen</button>
-                                                <!-- Umändern PHP -->
-                                                <a class="nav-link btn btn-outline-dark" href="signin.html" tabindex="-1"
-                                                   aria-disabled="true" data-bs-toggle="modal"
-                                                   data-bs-target="#registerUserModal" data-bs-dismiss="modal">Registrieren</a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+
+                            <div class="align-items-center justify-content-center">
+                                <a class="nav-link" aria-current="page" th:href="@{/index/productpage}">
+                                    Sortiment
+                                </a>
                             </div>
-                            <div class="modal fade" id="registerUserModal" tabindex="-1" aria-labelledby="registerUserModal"
-                                 aria-hidden="true" data-bs-backdrop="false">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <!-- Umändern PHP -->
-                                        <form method="post" th:action="@{/index/register}" th:object="${customer}" class="col card p-3 mb-5">
-                                            <div class="modal-header ps-3">
-                                                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-                                            <div class="container mt-2 mb-3 ps-3">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="firstname" class="form-label">Vorname</label>
-                                                        <script>console.log("hallo")</script>
-                                                        <input type="text" class="form-control" id="firstName" th:field="*{firstName}">
-                                                        <script>console.log("hallo2")</script>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="lastname" class="form-label">Nachname</label>
-                                                        <input type="text" class="form-control" id="lastName" th:field="*{lastName}">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="zipcode" class="form-label">PLZ</label>
-                                                        <input type="text" class="form-control" id="zipcode" th:field="*{zipcode.zipcode}">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="city" class="form-label">Stadt</label>
-                                                        <input type="text" class="form-control" id="city" th:field="*{zipcode.city}">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="street" class="form-label">Straße</label>
-                                                        <input type="text" class="form-control" id="street" th:field="*{street}">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="houseNumber" class="form-label">Haus-Nr.</label>
-                                                        <input type="text" class="form-control" id="houseNumber" th:field="*{houseNumber}">
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 mt-2">
-                                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                                    <input type="email" class="form-control" id="emailId"
-                                                           aria-describedby="emailHelp" th:field="*{emailId}">
-                                                    <div id="emailHelp" class="form-text">We'll never share your email with
-                                                        anyone else.</div>
-                                                </div>
-                                                <div class="mb-3 mt-2">
-                                                    <label for="exampleInputPassword1" class="form-label">Passwort</label>
-                                                    <input type="password" class="form-control" id="password" th:field="*{password}">
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Registrieren</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+
+                            <div th:if="${session.loggedInUser != null}">
+                                <a class="nav-link btn btn-outline-dark" th:href="@{/adminpanel}" tabindex="-1">Adminpanel</a>
+                            </div>
+                            <div th:unless="${session.loggedInUser != null}">
+                                <a class="nav-link btn btn-outline-dark" th:href="@{/index/registerpage}" tabindex="-1">Anmelden</a>
                             </div>
                         </div>
                     </ul>
@@ -172,25 +68,30 @@
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/landingpage.jpg" class="d-block w-100 fixed-height-image" alt="...">
+                        <img src="/IMG/Yacht1.jpg" class="d-block w-100 fixed-height-image" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/landingpage2.jpg" class="d-block w-100 fixed-height-image" alt="...">
+                        <img src="/IMG/Yacht2.jpg" class="d-block w-100 fixed-height-image" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/landingpage.jpg" class="d-block w-100 fixed-height-image" alt="...">
+                        <img src="/IMG/Yacht3.jpg" class="d-block w-100 fixed-height-image" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/landingpage2.jpg" class="d-block w-100 fixed-height-image" alt="...">
+                        <img src="/IMG/Yacht4.jpg" class="d-block w-100 fixed-height-image" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/landingpage.jpg" class="d-block w-100 fixed-height-image" alt="...">
+                        <img src="/IMG/Yacht5.jpg" class="d-block w-100 fixed-height-image" alt="...">
                     </div>
                 </div>
             </div>
             <div id="triangle1" class="triangle"></div>
             <div id="triangle2" class="triangle"></div>
         </div>
+
+        <div th:if="${session.loggedInUser != null}">
+
+        </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
