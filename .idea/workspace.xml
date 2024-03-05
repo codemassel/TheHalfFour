@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminscripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/adminscripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709662095517</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1709673422600</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709673422600</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
