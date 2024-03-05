@@ -20,5 +20,34 @@ function populateUserData(userId) {
         document.getElementById('street').value = street;
         document.getElementById('houseNumber').value = houseNumber;
         document.getElementById('customerId').value = customerId;
-    }
+}
+
+function populateShopitemData(userId) {
+        var selectedShopitem = document.getElementById('userRow_' + shopitemId);
+
+        var customerId = selectedShopitem.cells[0].innerText;
+        var itemName = selectedShopitem.cells[1].innerText;
+        var itemPrice = selectedShopitem.cells[2].innerText;
+        var description = selectedShopitem.cells[3].innerText;
+        document.getElementById('itemName').value = itemName;
+        document.getElementById('itemPrice').value = itemPrice;
+        document.getElementById('description').value = description;
+}
+
+function populateOrderData(userId) {
+        var selectedUser = document.getElementById('orderRow_' + orderId);
+
+        var orderId = selectedUser.cells[0].innerText;
+        var customer = selectedUser.cells[1].innerText;
+        var priority = selectedUser.cells[2].innerText;
+        var status = selectedUser.cells[3].innerText;
+        var discount = selectedUser.cells[4].innerText;
+        var creationDate = selectedUser.cells[5].innerText;
+
+        document.getElementById('customer').value = customer;
+        document.getElementById('priority').value = priority;
+        document.getElementById('status').value = status;
+        document.getElementById('discount').value = discount;
+        document.getElementById('creationDate').value = creationDate;
+}
 

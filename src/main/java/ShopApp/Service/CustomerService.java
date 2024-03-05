@@ -63,8 +63,7 @@ public class CustomerService {
         }
     }
 
-    public Customer updateCustomer(Customer customerToUpdate) {
-        System.out.println(customerToUpdate.getFirstName() + " " + customerToUpdate.getId() + " amk hahahahaha");
+    public void updateCustomer(Customer customerToUpdate) {
         if (!customerRepository.existsById(customerToUpdate.getId())) {
             throw new IllegalArgumentException("Kunde mit der ID " + customerToUpdate.getId() + " existiert nicht.");
         }
@@ -82,6 +81,6 @@ public class CustomerService {
         existingCustomer.setStreet(customerToUpdate.getStreet());
         existingCustomer.setHouseNumber(customerToUpdate.getHouseNumber());
 
-        return customerRepository.save(existingCustomer);
+        customerRepository.save(existingCustomer);
     }
 }

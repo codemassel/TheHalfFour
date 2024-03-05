@@ -17,11 +17,12 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <!-- 1. card -->
+        <div class="col-md-4">
             <!--Benutzerliste -->
             <div class="card mb-4">
                 <div class="card-header">
-                    Benutzerliste
+                    Benutzer
                 </div>
                 <div class="card-body">
                     <!-- Tabelle außerhalb der Card platziert -->
@@ -107,128 +108,152 @@
                     </form>
                 </div>
             </div>
-
         </div>
-    </div>
-</div>
 
-
-<!--
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+        <!-- 2. card -->
+        <div class="col-md-4">
+            <!--Benutzerliste -->
             <div class="card mb-4">
                 <div class="card-header">
-                    Shop-Item-Liste
+                    Yachten
                 </div>
                 <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">Billoyacht mit Insel für Klimakleber</li>
-                        <li class="list-group-item">Bornheim 385 Ghetto-Bitchgrabbler</li>
-                        <li class="list-group-item">Versunkene Titanic Yacht</li>
-                        <li class="list-group-item">Die nachbebaute Yacht von Jeffrey Bezos</li>
-                        <li class="list-group-item">Luxus Yacht für Schildkrötenliebhaber</li>
-                        <li class="list-group-item">Raumschiff Yacht "Enterprise"</li>
-                        <li class="list-group-item">Yacht des untoten Kapitäns</li>
-                        <li class="list-group-item">Yacht der Superhelden</li>
-                    </ul>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Yacht</th>
+                                <th>Preis</th>
+                                <th>Beschreibung</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Jede Tabellenzeile erhält eine eindeutige ID und einen Event-Listener, der auf das Klicken reagiert -->
+                            <tr th:each="shopitem : ${shopitems}" th:id="'shopitemRow_' + ${shopitem.id}" onclick="populateShopitemData(${shopitem.id})">
+                                <td th:text="${shopitem.id}"></td>
+                                <td th:text="${shopitem.itemName}"></td>
+                                <td th:text="${shopitem.itemPrice}"></td>
+                                <td th:text="${shopitem.description}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+
+            <!-- Warenverwaltungsform -->
             <div class="card">
                 <div class="card-header">
-                    Shop-Item bearbeiten
+                    Yachten bearbeiten
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="post" th:action="@{/updateShopItem}" th:object="${shopitem}" class="col card p-3 mb-5">
                         <div class="form-group">
-                            <label for="itemName">Artikelname</label>
-                            <input type="text" class="form-control" id="itemName" placeholder="Artikelname eingeben">
+                            <label for="selectedUser">Ausgewählte Yacht</label>
+                            <select class="form-control" id="selectedShopItem" name="selectedShopItem" onchange="populateShopItemData(this.value)">
+                                <!-- Schleife über die customers, um für jeden Benutzer eine Option einzufügen -->
+                                <option th:each="shopitem : ${shopitems}" th:value="${shopitem.id}" th:text="${shopitem.itemName}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="itemName">Yacht</label>
+                            <input type="text" class="form-control" id="itemName" th:field="*{itemName}">
                         </div>
                         <div class="form-group">
                             <label for="itemPrice">Preis</label>
-                            <input type="text" class="form-control" id="itemPrice" placeholder="Preis eingeben">
+                            <input type="text" class="form-control" id="itemPrice" th:field="*{itemPrice}">
                         </div>
                         <div class="form-group">
                             <label for="description">Beschreibung</label>
-                            <textarea class="form-control" id="description" rows="3" placeholder="Beschreibung eingeben"></textarea>
+                            <input type="text" class="form-control" id="description" th:field="*{description}">
                         </div>
-                        <div class="form-group">
-                            <label for="selectedShopItem">Ausgewähltes Shop-Item</label>
-                            <select class="form-control" id="selectedShopItem">
-                                <option>Billoyacht mit Insel für Klimakleber</option>
-                                <option>Bornheim 385 Ghetto-Bitchgrabbler</option>
-                                <option>Versunkene Titanic Yacht</option>
-                                <option>Die nachbebaute Yacht von Jeffrey Bezos</option>
-                                <option>Luxus Yacht für Schildkrötenliebhaber</option>
-                                <option>Raumschiff Yacht "Enterprise"</option>
-                                <option>Yacht des untoten Kapitäns</option>
-                                <option>Yacht der Superhelden</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Shop-Item aktualisieren</button>
+                        <button type="submit" class="btn btn-primary">Yacht aktualisieren</button>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 
-
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+        <!-- 3. Card -->
+        <div class="col-md-4">
+            <!--Bestellungen -->
             <div class="card mb-4">
                 <div class="card-header">
-                    Bestellungen-Liste
+                    Bestellungen
                 </div>
                 <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">Bestellung 1</li>
-                        <li class="list-group-item">Bestellung 2</li>
-                        <li class="list-group-item">Bestellung 3</li>
-                    </ul>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Kunde</th>
+                                <th>Priorität</th>
+                                <th>Status</th>
+                                <th>Rabatt</th>
+                                <th>Bestelldatum</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Jede Tabellenzeile erhält eine eindeutige ID und einen Event-Listener, der auf das Klicken reagiert -->
+                            <tr th:each="order : ${orders}" th:id="'orderRow_' + ${order.id}" onclick="populateOrderData(${customer.id})">
+                                <td th:text="${order.id}"></td>
+                                <td th:text="${order.customer.firstName + ' ' + order.customer.lastName}"></td>
+                                <td th:text="${order.priority}"></td>
+                                <td th:text="${order.status}"></td>
+                                <td th:text="${order.discount}"></td>
+                                <td th:text="${order.creationDate}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+
+            <!-- Bestellungensform -->
             <div class="card">
                 <div class="card-header">
-                    Bestellung bearbeiten
+                    Bestellungen bearbeiten
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="post" th:action="@{/updateOrder}" th:object="${order}" class="col card p-3 mb-5">
+                        <div class="form-group">
+                            <label for="selectedUser">Ausgewählte Bestellung</label>
+                            <select class="form-control" id="selectedOrder" name="selectedOrder" onchange="populateOrderData(this.value)">
+                                <!-- Schleife über die customers, um für jeden Benutzer eine Option einzufügen -->
+                                <option th:each="order : ${orders}" th:value="${order.id}" th:text="${order.customer.firstName + ' ' + order.customer.lastName}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer">Kunde</label>
+                            <input type="text" class="form-control" id="customer" th:field="*{customer}">
+                        </div>
                         <div class="form-group">
                             <label for="priority">Priorität</label>
-                            <input type="text" class="form-control" id="priority" placeholder="Priorität eingeben">
+                            <input type="text" class="form-control" id="priority" th:field="*{priority}">
                         </div>
                         <div class="form-group">
                             <label for="status">Status</label>
-                            <select class="form-control" id="status">
-                                <option>RECEIVED</option>
-                                <option>PROCESSING</option>
-                                <option>SHIPPED</option>
-                                <option>COMPLETED</option>
-                            </select>
+                            <input type="text" class="form-control" id="status" th:field="*{status}">
                         </div>
                         <div class="form-group">
                             <label for="discount">Rabatt</label>
-                            <input type="text" class="form-control" id="discount" placeholder="Rabatt eingeben">
+                            <input type="text" class="form-control" id="discount" th:field="*{discount}">
                         </div>
                         <div class="form-group">
-                            <label for="selectedOrder">Ausgewählte Bestellung</label>
-                            <select class="form-control" id="selectedOrder">
-                                <option>Bestellung 1</option>
-                                <option>Bestellung 2</option>
-                                <option>Bestellung 3</option>
-                            </select>
+                            <label for="creationDate">Bestelldatum</label>
+                            <input type="text" class="form-control" id="creationDate" th:field="*{creationDate}">
                         </div>
                         <button type="submit" class="btn btn-primary">Bestellung aktualisieren</button>
                     </form>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
--->
 
 <div th:include="fragment/footer :: footer"></div>
 

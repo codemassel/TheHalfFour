@@ -7,10 +7,12 @@ import ShopApp.Model.Status;
 import ShopApp.Repository.CustomerRepository;
 import ShopApp.Repository.OrdersRepository;
 import ShopApp.Repository.ShopItemRepository;
+import ShopApp.Service.OrdersService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 import java.util.List;
@@ -20,11 +22,17 @@ import java.util.List;
 public class OrdersController {
 
     private final OrdersRepository ordersRepository;
-    private CustomerRepository customerRepository;
-    private ShopItemRepository shopItemRepository;
+    private final CustomerRepository customerRepository;
+    private final ShopItemRepository shopItemRepository;
 
-    public OrdersController(OrdersRepository ordersRepository) {
+    private final OrdersService ordersService;
+
+
+    public OrdersController(OrdersRepository ordersRepository, CustomerRepository customerRepository, ShopItemRepository shopItemRepository, OrdersService ordersService) {
         this.ordersRepository = ordersRepository;
+        this.customerRepository = customerRepository;
+        this.shopItemRepository = shopItemRepository;
+        this.ordersService = ordersService;
     }
 
     @CrossOrigin(origins = "*")
@@ -60,5 +68,13 @@ public class OrdersController {
         ordersRepository.save(orders);
 
         return "redirect:/index";
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping("/updateOrder")
+    public ModelAndView updateShopitem(Model model, @ModelAttribute Orders order) {
+        ordersService.updateOrders(order);
+
+        return new ModelAndView("redirect:/index/adminpanel");
     }
 }

@@ -2,6 +2,7 @@ package ShopApp.Controller;
 
 import ShopApp.Model.ShopItem;
 import ShopApp.Repository.ShopItemRepository;
+import ShopApp.Service.ShopItemService;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
@@ -16,10 +17,12 @@ import java.util.List;
 @RequestMapping("/yachts")
 public class ShopItemController {
 
-    ShopItemRepository shopItemRepository;
+    private final ShopItemRepository shopItemRepository;
+    private final ShopItemService shopItemService;
 
-    public ShopItemController(ShopItemRepository itemRep) {
+    public ShopItemController(ShopItemRepository itemRep, ShopItemService shopItemService) {
         this.shopItemRepository = itemRep;
+        this.shopItemService = shopItemService;
     }
 
     @CrossOrigin(origins = "*")
@@ -37,6 +40,14 @@ public class ShopItemController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "ShopItem not found"));
         model.addAttribute("ShopItem", shopItem);
         return new ModelAndView("productpage");
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping("/updateShopItem")
+    public ModelAndView updateShopitem(Model model, @ModelAttribute ShopItem shopitem) {
+        shopItemService.updateShopItem(shopitem);
+
+        return new ModelAndView("redirect:/index/adminpanel");
     }
 
 
