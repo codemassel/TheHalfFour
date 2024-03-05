@@ -30,14 +30,10 @@
             <p class="card-text">Gewicht: 200 Tonnen"</p>
             <p class="card-text">Ausstattung: Premium-Luxus-Ausstattung</p>
             <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
-            <!-- Formular zum Auslösen der Bestellung -->
-            <form th:action="@{/create}" th:object="${order}" method="post">
-                <!-- Verstecktes Feld zum Übergeben der ShopItemId -->
-                <input type="hidden" th:field="*{shopItemId}" th:value="${ShopItem.id}" />
-                <!-- Verstecktes Feld zum Übergeben der E-Mail-Adresse -->
-                <input type="hidden" th:field="*{emailId}" th:value="${session.loggedInUser.email}" />
+            <form th:action="@{/orders/create}" th:object="${order}" method="post">
+                <input type="text" name="shopItemId" th:value="${ShopItem.id}" />
+                <input type="text" name="emailId" th:value="${session.loggedInUser}" />
 
-                <!-- Button zum Auslösen des Bestellvorgangs -->
                 <button type="submit" class="btn btn-primary mt-auto">Jetzt bestellen</button>
             </form>
         </div>
