@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="cleanup">
+    <list default="true" id="46c4b62b-9886-46e6-ad48-964d67f51118" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/OrdersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminscripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/adminscripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registerpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,26 +44,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
   <component name="ProjectId" id="2V6PVfRCYcKNNyhDQdwfDX7D8ke" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;adminpanel&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/19mzi/IdeaProjects/TheHalfFour/src/main/resources/templates/fragment&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
-  }
-}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ShopApp.Model" />
@@ -333,6 +326,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleine Anpassungen" />

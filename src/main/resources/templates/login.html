@@ -19,13 +19,13 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email-Adresse</label>
             <input type="email" class="form-control" id="exampleInputEmail1" th:field="*{emailId}"
-                   aria-describedby="emailHelp">
+                   aria-describedby="emailHelp" required>
             <div id="emailHelp6" class="form-text">Bitte geben Sie ihre Email-Adresse
                 ein.</div>
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Passwort</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}">
+            <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}" required>
             <div id="emailHelp1" class="form-text">Bitte geben Sie ihr Passwort ein.
             </div>
         </div>

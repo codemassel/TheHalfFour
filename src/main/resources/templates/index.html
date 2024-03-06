@@ -52,7 +52,7 @@
                     <div class="card-body">
                         <h5 class="card-title custom-text-color">Unsere Yachten</h5>
                         <p class="card-text">Entdecken Sie unsere exklusive Auswahl an Yachten, die höchsten Luxus und Komfort bieten. Wir laden Sie ein, die Welt der Luxus-Yachten mit uns zu erkunden.</p>
-                        <a href="Yachten.html" class="btn btn-primary mt-auto">Mehr erfahren</a>
+                        <a th:href="@{/index/productpage}" class="btn btn-primary mt-auto">Mehr erfahren</a>
                     </div>
                 </div>
             </div>
@@ -123,16 +123,13 @@
         </div>
     </div>
     <div class="card cardcustom text-center custom-background-color2">
-        <a href="Yachten.html" class="custom-link">
+        <a th:href="@{/index/productpage}" class="custom-link">
             <div class="card-body">
                 <h5 class="card-title">Jetzt Yachten entdecken!</h5>
             </div>
         </a>
     </div>
 </div>
-
-<div th:include="fragment/products :: products"></div>
-
 <div th:include="fragment/footer :: footer"></div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

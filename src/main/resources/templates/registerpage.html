@@ -28,11 +28,11 @@
                             <div class="row">
                                 <div class="col-6">
                                     <label for="emaillogin" class="form-label">Email</label>
-                                    <input type="text" class="form-control" id="emaillogin" name="emaillogin">
+                                    <input type="text" class="form-control" id="emaillogin" name="emaillogin" required>
                                 </div>
                                 <div class="col-6">
                                     <label for="passwordlogin" class="form-label">Passwort</label>
-                                    <input type="password" class="form-control" id="passwordlogin" name="passwordlogin">
+                                    <input type="password" class="form-control" id="passwordlogin" name="passwordlogin" required>
                                 </div>
                             </div>
                             </br>
@@ -49,37 +49,37 @@
                             <div class="row">
                                 <div class="col-6">
                                     <label for="firstName" class="form-label">Vorname</label>
-                                    <input type="text" class="form-control" id="firstName" th:field="*{firstName}">
+                                    <input type="text" class="form-control" id="firstName" th:field="*{firstName}" required>
                                 </div>
                                 <div class="col-6">
                                     <label for="lastName" class="form-label">Nachname</label>
-                                    <input type="text" class="form-control" id="lastName" th:field="*{lastName}">
+                                    <input type="text" class="form-control" id="lastName" th:field="*{lastName}" required>
                                 </div>
                                 <div class="col-6">
                                     <label for="zipcode" class="form-label">PLZ</label>
-                                    <input type="text" class="form-control" id="zipcode" th:field="*{zipcode.zipcode}">
+                                    <input type="text" class="form-control" id="zipcode" th:field="*{zipcode.zipcode}" pattern="[0-9]{5}" title="Die PLZ muss genau 5 Ziffern enthalten" required>
                                 </div>
                                 <div class="col-6">
                                     <label for="city" class="form-label">Stadt</label>
-                                    <input type="text" class="form-control" id="city" th:field="*{zipcode.city}">
+                                    <input type="text" class="form-control" id="city" th:field="*{zipcode.city}" required>
                                 </div>
                                 <div class="col-6">
                                     <label for="street" class="form-label">Straße</label>
-                                    <input type="text" class="form-control" id="street" th:field="*{street}">
+                                    <input type="text" class="form-control" id="street" th:field="*{street}" required >
                                 </div>
                                 <div class="col-6">
                                     <label for="houseNumber" class="form-label">Haus-Nr.</label>
-                                    <input type="text" class="form-control" id="houseNumber" th:field="*{houseNumber}">
+                                    <input type="text" class="form-control" id="houseNumber" th:field="*{houseNumber}" placeholder ="" required>
                                 </div>
                             </div>
                             <div class="mb-3 mt-2">
                                 <label for="emailId" class="form-label">E-Mail-Adresse</label>
-                                <input type="email" class="form-control" id="emailId" th:field="*{emailId}">
+                                <input type="email" class="form-control" id="emailId" th:field="*{emailId}" required>
                                 <div id="emailHelp" class="form-text">Wir werden Ihre E-Mail mit niemandem teilen.</div>
                             </div>
                             <div class="mb-3 mt-2">
                                 <label for="password" class="form-label">Passwort</label>
-                                <input type="password" class="form-control" id="password" th:field="*{password}">
+                                <input type="password" class="form-control" id="password" th:field="*{password}" required>
                             </div>
                             <button type="submit" class="btn btn-primary">Registrieren</button>
                         </div>
@@ -94,124 +94,6 @@
 
     </div>
 </div>
-
-
-<!--
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card mb-4">
-                <div class="card-header">
-                    Shop-Item-Liste
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">Billoyacht mit Insel für Klimakleber</li>
-                        <li class="list-group-item">Bornheim 385 Ghetto-Bitchgrabbler</li>
-                        <li class="list-group-item">Versunkene Titanic Yacht</li>
-                        <li class="list-group-item">Die nachbebaute Yacht von Jeffrey Bezos</li>
-                        <li class="list-group-item">Luxus Yacht für Schildkrötenliebhaber</li>
-                        <li class="list-group-item">Raumschiff Yacht "Enterprise"</li>
-                        <li class="list-group-item">Yacht des untoten Kapitäns</li>
-                        <li class="list-group-item">Yacht der Superhelden</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Shop-Item bearbeiten
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="itemName">Artikelname</label>
-                            <input type="text" class="form-control" id="itemName" placeholder="Artikelname eingeben">
-                        </div>
-                        <div class="form-group">
-                            <label for="itemPrice">Preis</label>
-                            <input type="text" class="form-control" id="itemPrice" placeholder="Preis eingeben">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Beschreibung</label>
-                            <textarea class="form-control" id="description" rows="3" placeholder="Beschreibung eingeben"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="selectedShopItem">Ausgewähltes Shop-Item</label>
-                            <select class="form-control" id="selectedShopItem">
-                                <option>Billoyacht mit Insel für Klimakleber</option>
-                                <option>Bornheim 385 Ghetto-Bitchgrabbler</option>
-                                <option>Versunkene Titanic Yacht</option>
-                                <option>Die nachbebaute Yacht von Jeffrey Bezos</option>
-                                <option>Luxus Yacht für Schildkrötenliebhaber</option>
-                                <option>Raumschiff Yacht "Enterprise"</option>
-                                <option>Yacht des untoten Kapitäns</option>
-                                <option>Yacht der Superhelden</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Shop-Item aktualisieren</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card mb-4">
-                <div class="card-header">
-                    Bestellungen-Liste
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">Bestellung 1</li>
-                        <li class="list-group-item">Bestellung 2</li>
-                        <li class="list-group-item">Bestellung 3</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Bestellung bearbeiten
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="priority">Priorität</label>
-                            <input type="text" class="form-control" id="priority" placeholder="Priorität eingeben">
-                        </div>
-                        <div class="form-group">
-                            <label for="status">Status</label>
-                            <select class="form-control" id="status">
-                                <option>RECEIVED</option>
-                                <option>PROCESSING</option>
-                                <option>SHIPPED</option>
-                                <option>COMPLETED</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="discount">Rabatt</label>
-                            <input type="text" class="form-control" id="discount" placeholder="Rabatt eingeben">
-                        </div>
-                        <div class="form-group">
-                            <label for="selectedOrder">Ausgewählte Bestellung</label>
-                            <select class="form-control" id="selectedOrder">
-                                <option>Bestellung 1</option>
-                                <option>Bestellung 2</option>
-                                <option>Bestellung 3</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Bestellung aktualisieren</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
 
 <div th:include="fragment/footer :: footer"></div>
 
