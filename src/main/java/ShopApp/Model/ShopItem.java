@@ -9,7 +9,7 @@ public class ShopItem {
         //empty constructor for spring
     }
 
-    public ShopItem(long id, String itemName, String itemPrice, String description,  byte[] image) {
+    public ShopItem(long id, String itemName, String itemPrice, String description,  String image) {
         this.id = id;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
@@ -32,7 +32,7 @@ public class ShopItem {
 
     @Lob
     @Column(name = "image")
-    private byte[] image;
+    private String image;
 
     @Column(name = "isVisible")
     private boolean isVisible;
@@ -69,11 +69,11 @@ public class ShopItem {
         this.description = description;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

@@ -39,8 +39,10 @@ public class ShopItemController {
     public ModelAndView getShopItemById(@PathVariable Long id, Model model) {
         ShopItem shopItem = shopItemRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "ShopItem not found"));
+        String imageData = shopItem.getImage();
         model.addAttribute("ShopItem", shopItem);
         model.addAttribute("order", new Orders());
+        model.addAttribute("imageData", imageData);
         return new ModelAndView("productpage");
     }
 

@@ -15,55 +15,64 @@
 <div th:include="fragment/header :: header"></div>
 
 <div class="container p-0">
-    <br>
-        <div th:if="${session.loggedInUser != null}">
 
-            <div class="card mb-4">
-                <form method="post" th:action="@{/yachts/createShopItem}" th:object="${shopItem}" class="col card p-3 mb-5">
-                    <div class="modal-header ps-3">
-                        <h5 class="modal-title" >Yacht auflisten</h5>
+    <div th:if="${session.loggedInUser != null}">
+
+        <div class="card mb-4">
+            <form method="post" th:action="@{/yachts/createShopItem}" th:object="${shopItem}" class="col card p-3 mb-5">
+                <div class="modal-header ps-3">
+                    <h5 class="modal-title" >Yacht auflisten</h5>
+                </div>
+                <div class="container mt-2 mb-3 ps-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="itemName" class="form-label">Yachtname</label>
+                            <input type="text" class="form-control" id="itemName" th:field="*{itemName}">
+                        </div>
+                        <div class="col-6">
+                            <label for="itemPrice" class="form-label">Preis</label>
+                            <input type="text" class="form-control" id="itemPrice" th:field="*{itemPrice}">
+                        </div>
+                        <div class="col-6">
+                            <label for="description" class="form-label">Beschreibung</label>
+                            <input type="text" class="form-control" id="description" th:field="*{description}">
+                        </div>
+                        <div class="col-6">
+                            <label for="imageUpload" class="form-label">Bild hochladen</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="imageUpload" name="image" accept="image/*" style="display: none;">
+                                <input type="hidden" id="imageBase64" name="imageBase64" th:field="*{image}">
+                                <button class="btn btn-outline-secondary" type="button" id="button-image-upload">
+                                    Durchsuchen
+                                </button>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Yacht auflisten</button>
                     </div>
-                    <div class="container mt-2 mb-3 ps-3">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="itemName" class="form-label">Yachtname</label>
-                                <input type="text" class="form-control" id="itemName" th:field="*{itemName}">
-                            </div>
-                            <div class="col-6">
-                                <label for="itemPrice" class="form-label">Preis</label>
-                                <input type="text" class="form-control" id="itemPrice" th:field="*{itemPrice}">
-                            </div>
-                            <div class="col-6">
-                                <label for="description" class="form-label">Beschreibung</label>
-                                <input type="text" class="form-control" id="description" th:field="*{description}">
-                            </div>
-                            <div class="col-6">
-                                <label for="imageUpload" class="form-label">Bild hochladen</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" readonly placeholder="Bild auswählen oder hierher ziehen" id="file-upload-filename" th:value="*{image}">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-image-upload">
-                                        Durchsuchen
-                                    </button>
-                                    <input type="file" class="form-control" id="imageUpload" name="image" accept="image/*" style="display: none;">
-                                </div>
-                            </div>
-                            <script>
-                                document.getElementById('button-image-upload').onclick = function() {
-                                    document.getElementById('imageUpload').click();
-                                };
+                </div>
+            </form>
 
-                                document.getElementById('imageUpload').onchange = function() {
-                                    document.getElementById('file-upload-filename').value = this.files[0].name;
-                                };
-                            </script>
-                            </br>
-                        <button type="submit" class="btn btn-primary">Yacht auflisten</button>
-                    </div>
-                </form>
+            <script>
+                document.getElementById('button-image-upload').onclick = function() {
+                    document.getElementById('imageUpload').click();
+                };
 
-            </div>
+                document.getElementById('imageUpload').onchange = function() {
+                    var fileInput = this.files[0];
+                    var reader = new FileReader();
 
+                    reader.onload = function(e) {
+                        var base64Image = e.target.result;
+                        document.getElementById('imageBase64').value = base64Image;
+                        document.getElementById('shopItemForm').submit();
+                    };
+
+                    reader.readAsDataURL(fileInput);
+                };
+            </script>
         </div>
+    </div>
 </div>
 
 

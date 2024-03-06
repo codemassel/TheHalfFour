@@ -5,24 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/createproduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ShopItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ShopItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpanel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createproduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/ShopItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Model/ShopItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Service/CustomerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment/products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +63,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "git-widget-placeholder": "adminpanel",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/danie/Desktop/Original/TheHalfFour/src/main/resources/templates",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;adminpanel&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/danie/Desktop/Original/TheHalfFour/src/main/resources/templates&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ShopApp.Model" />
@@ -331,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709672149841</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1709719852292</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709719852292</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

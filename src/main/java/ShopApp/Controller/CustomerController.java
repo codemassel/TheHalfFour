@@ -66,11 +66,24 @@ public class CustomerController {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String createUser(Model model, @ModelAttribute Customer customer) {
-
-        customerService.createCustomer(customer);
-
-        return "redirect:/index";
+    public ModelAndView createUser(Model model, @ModelAttribute Customer customer) {
+        if (customerRepository.findByEmailId(customer.getEmailId()) == null) {
+            try {
+                customerService.createCustomer(customer);
+                model.addAttribute("headerMessage", "Registrierung erfolgreich!");
+                model.addAttribute("messageColor", "green");
+                return new ModelAndView("registerpage");
+            } catch (Exception e) {
+                model.addAttribute("headerMessage", "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.");
+                model.addAttribute("messageColor", "red");
+                return new ModelAndView("registerpage");
+            }
+        }
+        else{
+            model.addAttribute("headerMessage", "Die E-Mail Adresse ist bereits vergeben.");
+            model.addAttribute("messageColor", "red");
+            return new ModelAndView("registerpage");
+        }
     }
 
     /**
@@ -133,8 +146,22 @@ public class CustomerController {
     }
 
     @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    public ModelAndView logoutUser(Model model, HttpServletRequest request) {
+
+        HttpSession session = request.getSession();
+        session.setAttribute("loggedInUser", null);
+        session.setAttribute("isAdmin", null);
+        model.addAttribute("headerMessage", "Sie haben sich erfolgreich abgemeldet!");
+        model.addAttribute("messageColor", "green");
+
+        return new ModelAndView("/index");
+    }
+
+    @CrossOrigin(origins = "*")
     @PostMapping("/updateCustomer")
     public ModelAndView updateUser(Model model, @ModelAttribute Customer customer) {
+
         customerService.updateCustomer(customer);
 
         return new ModelAndView("redirect:/adminpanel");
@@ -149,16 +176,23 @@ public class CustomerController {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView checkifLoginDataCorrect(HttpServletRequest request, @RequestParam("emaillogin") String email, @RequestParam("passwordlogin") String password) {
+    public ModelAndView checkifLoginDataCorrect(Model model, HttpServletRequest request, @RequestParam("emaillogin") String email, @RequestParam("passwordlogin") String password) {
         Customer customers = customerRepository.findByEmailId(email);
         if (customers != null && passwordEncoder.matches(password, customers.getPassword())) {
             HttpSession session = request.getSession();
             session.setAttribute("loggedInUser", customers.getEmailId());
+            if(customers.isAdmin()){
+                session.setAttribute("isAdmin", "true");
+            }
             HttpHeaders headers = new HttpHeaders();
             headers.add("Location", "/index");
-            return new ModelAndView("redirect:/index");
+            model.addAttribute("headerMessage", "Sie haben sich erfolgreich angemeldet.");
+            model.addAttribute("messageColor", "green");
+            return new ModelAndView("index");
         } else {
-            return new ModelAndView("redirect:/index");
+            model.addAttribute("headerMessage", "E-Mail und Passwort stimmen nicht überein. Bitte versuchen Sie es erneut.");
+            model.addAttribute("messageColor", "red");
+            return new ModelAndView("index");
         }
     }
 

@@ -31,8 +31,8 @@
             <p class="card-text">Ausstattung: Premium-Luxus-Ausstattung</p>
             <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
             <form th:if="${session.loggedInUser != null}" th:action="@{/orders/create}" th:object="${order}" method="post">
-                <input type="text" name="shopItemId" th:value="${ShopItem.id}" />
-                <input type="text" name="emailId" th:value="${session.loggedInUser}" />
+                <input type="hidden" name="shopItemId" th:value="${ShopItem.id}" />
+                <input type="hidden" name="emailId" th:value="${session.loggedInUser}" />
 
                 <button type="submit" class="btn btn-primary mt-auto">Jetzt bestellen</button>
             </form>

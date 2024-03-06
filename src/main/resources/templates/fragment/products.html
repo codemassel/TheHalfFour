@@ -35,11 +35,19 @@
                                             <img src="/IMG/Yacht8.jpg" alt="Bild Yacht8" class="img-fluid" style="width: 100%; object-fit: cover;">
                                         </div>
                                         <div th:if="${ShopItem.id >= 9L}" class="card-img-top">
-                                            <img th:if="${ShopItem.image != null}"
-                                                 th:src="'data:image/jpeg;base64,' + ${#strings.bytesToBase64(ShopItem.image)}"
-                                                 alt="Bild Yacht"
-                                                 class="img-fluid"
-                                                 style="width: 100%; object-fit: cover;">
+                                            <div id="imageContainer"></div>
+                                            <script th:inline="javascript">
+                                                var base64Image = /*[[${ShopItem.image}]]*/ '';
+
+                                            // Wenn der Base64-String zu lang ist, kann das Bild über JavaScript geladen werden
+                                            document.addEventListener("DOMContentLoaded", function() {
+                                                var imageContainer = document.getElementById("imageContainer");
+                                                var image = new Image();
+                                                image.src = 'data:image/jpeg;base64,' + base64Image;
+                                                image.alt = "Bild";
+                                                imageContainer.appendChild(image);
+                                            });
+                                            </script>
                                         </div>
                                         <h5 class="card-title mb-0" th:text="${ShopItem.itemName}">Produktname</h5>
                                         <p class="card-text text-muted" th:text="${ShopItem.description}"></p>

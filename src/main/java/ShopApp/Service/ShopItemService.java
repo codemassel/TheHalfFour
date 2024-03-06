@@ -29,7 +29,9 @@ public class ShopItemService {
     }
 
     public ShopItem createShopItem(ShopItem shopItem){
-
+        String imageString = shopItem.getImage();
+        String base64WithoutHeader = imageString.substring(imageString.indexOf(",") + 1);
+        shopItem.setImage(base64WithoutHeader);
         return shopItemRepository.save(shopItem);
     }
 }

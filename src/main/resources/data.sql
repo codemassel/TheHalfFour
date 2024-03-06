@@ -1,6 +1,6 @@
 INSERT INTO CITIES(zipcode, city) VALUES('55385', 'Bornheim');
-INSERT INTO CUSTOMER(first_name, last_name, email_address, password, zipcode, street, house_number, is_admin) VALUES(
-                     'admin', 'admin', 'a@a.a', '$2a$10$CXZHLgFQRajuRY7M.HaDGe3MCa9szz1AOtwch.wRApeVTU6fXUhlK', '55385', 'Auf dem Berg', '1', true);
+INSERT INTO CUSTOMER(first_name, last_name, email_address, password, zipcode, street, house_number, is_admin) VALUES
+('admin', 'admin', 'a@a.a', '$2a$10$CXZHLgFQRajuRY7M.HaDGe3MCa9szz1AOtwch.wRApeVTU6fXUhlK', '55385', 'Auf dem Berg', '1', true);
 INSERT INTO shopitem (item_Name, item_Price, description, is_visible) VALUES
 ('Billoyacht mit Insel für Klimakleber', 70000, 'Für Klimakleber, die ein grünes Herz haben', true),
 ('Bornheim 385 Ghetto-Bitchgrabbler', 5000000, 'Yacht ist Yacht. Wenn ihr einfach nur flexen wollt um heiße Frauen klarzumachen.', true),

@@ -65,8 +65,15 @@ public class OrdersController {
         Date dateNow = new Date();
         newOrder.setCreationDate(dateNow);
 
-        ordersRepository.save(orders);
-
+        try {
+            ordersRepository.save(orders);
+            model.addAttribute("headerMessage", "Die Bestellung wurde erfolgreich aufgegeben.");
+            model.addAttribute("messageColor", "green");
+        }
+        catch(Exception e){
+            model.addAttribute("headerMessage", "Die Bestellung konnte nicht erstellt werden. Bitte versuchen Sie es später erneut.");
+            model.addAttribute("messageColor", "red");
+        }
         return new ModelAndView("index");
     }
 

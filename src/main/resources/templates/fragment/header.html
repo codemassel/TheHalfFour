@@ -53,11 +53,16 @@
                                 </a>
                             </div>
 
-                            <div th:if="${session.loggedInUser != null}">
-                                <a class="nav-link btn btn-outline-dark" th:href="@{/adminpanel}" tabindex="-1">Adminpanel</a>
+                            <div th:if="${session.isAdmin == 'true'}">
+                                <a class="nav-link btn-outline-dark" th:href="@{/adminpanel}" tabindex="-1">Adminpanel</a>
                             </div>
-                            <div th:unless="${session.loggedInUser != null}">
-                                <a class="nav-link btn btn-outline-dark" th:href="@{/index/registerpage}" tabindex="-1">Anmelden</a>
+                            <div th:if="${session.loggedInUser != null}">
+                                <form th:action="@{/index/logout}" method="post">
+                                    <button class="nav-link btn-outline-dark" type="submit" tabindex="-1">Abmelden</button>
+                                </form>
+                            </div>
+                            <div th:if="${session.loggedInUser == null}">
+                                <a class="nav-link btn-outline-dark" th:href="@{/index/registerpage}" tabindex="-1">Anmelden</a>
                             </div>
                         </div>
                     </ul>
@@ -87,6 +92,10 @@
             <div id="triangle1" class="triangle"></div>
             <div id="triangle2" class="triangle"></div>
         </div>
+
+    <div>
+        <h2 class="text-center" th:style="'color:' + ${messageColor}" th:text="${headerMessage}"></h2>
+    </div>
 
         <div th:if="${session.loggedInUser != null}">
 
