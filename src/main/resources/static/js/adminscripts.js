@@ -39,13 +39,15 @@ function populateOrderData(orderId) {
         var selectedUser = document.getElementById('orderRow_' + orderId);
 
         var orderId = selectedUser.cells[0].innerText;
-        var customer = selectedUser.cells[1].innerText;
-        var priority = selectedUser.cells[2].innerText;
-        var status = selectedUser.cells[3].innerText;
-        var discount = selectedUser.cells[4].innerText;
-        var creationDate = selectedUser.cells[5].innerText;
+        var shopitems = selectedUser.cells[1].innerText
+        var customer = selectedUser.cells[2].innerText;
+        var priority = selectedUser.cells[3].innerText;
+        var status = selectedUser.cells[4].innerText;
+        var discount = selectedUser.cells[5].innerText;
+        var creationDate = selectedUser.cells[6].innerText;
 
         document.getElementById('customer').value = customer;
+        document.getElementById('shopitems').value = shopitems;
         document.getElementById('priority').value = priority;
         document.getElementById('status').value = status;
         document.getElementById('discount').value = discount;

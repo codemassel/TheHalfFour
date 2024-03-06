@@ -22,6 +22,7 @@ public class OrdersService {
                 new IllegalArgumentException("Order mit der ID " + ordersToUpdate.getId() + " existiert nicht."));
 
         existingOrder.setCustomer(ordersToUpdate.getCustomer());
+        existingOrder.setShopitems(ordersToUpdate.getShopitems());
         existingOrder.setPriority(ordersToUpdate.getPriority());
         existingOrder.setStatus(ordersToUpdate.getStatus());
         existingOrder.setDiscount(ordersToUpdate.getDiscount());

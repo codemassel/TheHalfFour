@@ -27,10 +27,10 @@
             <p class="card-text text-success">Status: Verfügbar</p>
             <p class="card-text">Farbe: Weiß</p>
             <p class="card-text">Maße: Länge 100m x Breite 20m</p>
-            <p class="card-text">Gewicht: 200 Tonnen"</p>
+            <p class="card-text">Gewicht: 200 Tonnen</p>
             <p class="card-text">Ausstattung: Premium-Luxus-Ausstattung</p>
             <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
-            <form th:action="@{/orders/create}" th:object="${order}" method="post">
+            <form th:if="${session.loggedInUser != null}" th:action="@{/orders/create}" th:object="${order}" method="post">
                 <input type="text" name="shopItemId" th:value="${ShopItem.id}" />
                 <input type="text" name="emailId" th:value="${session.loggedInUser}" />
 
