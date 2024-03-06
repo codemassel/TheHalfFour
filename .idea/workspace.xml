@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c7952e4-1dcc-4b56-a226-0f4feb7e5694" name="Changes" comment="cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/REST-API_gefixed_wie_Drogenkonsumenten.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_03_2024_10_09__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/createproduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/OrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Controller/ShopItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Model/ShopItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ShopItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopApp/Service/ShopItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ShopApp/Controller/OrdersController.class" afterDir="false" />
@@ -59,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "git-widget-placeholder": "adminpanel",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/19mzi/IdeaProjects/TheHalfFour/src/main/resources/templates/fragment",
+    "last_opened_file_path": "C:/Users/danie/Desktop/Original/TheHalfFour/src/main/resources/templates",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -71,11 +77,11 @@
       <recent name="ShopApp.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates" />
       <recent name="C:\Users\19mzi\IdeaProjects\TheHalfFour\src\main\resources\templates\fragment" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\static\IMG" />
       <recent name="C:\Users\danie\Desktop\Original\TheHalfFour\src\main\resources\templates\fragment" />
       <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\css" />
-      <recent name="C:\Users\danie\Desktop\School\TheHalfFour\src\main\resources\static\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/IMG" />
@@ -317,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709649449904</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1709672149841</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1709672149841</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

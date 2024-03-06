@@ -52,4 +52,22 @@ public class ShopItemController {
 
         return new ModelAndView("redirect:/adminpanel"); //vorher "index"
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/createshopitem")
+    public ModelAndView getShopItemPage(Model model) {
+
+        model.addAttribute("shopItem", new ShopItem());
+        return new ModelAndView("createproduct");
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/createShopItem", method = RequestMethod.POST)
+    public ModelAndView createShopItem(Model model, @ModelAttribute("shopItem") ShopItem shopItem) {
+
+        shopItemService.createShopItem(shopItem);
+
+        return new ModelAndView("index");
+    }
+
 }

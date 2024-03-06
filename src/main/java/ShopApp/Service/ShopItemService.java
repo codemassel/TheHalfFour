@@ -27,4 +27,9 @@ public class ShopItemService {
 
         return shopItemRepository.save(existingShopItem);
     }
+
+    public ShopItem createShopItem(ShopItem shopItem){
+
+        return shopItemRepository.save(shopItem);
+    }
 }

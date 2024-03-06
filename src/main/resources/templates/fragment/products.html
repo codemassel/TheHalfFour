@@ -34,6 +34,13 @@
                                         <div th:if="${ShopItem.id == 8L}" class="card-img-top">
                                             <img src="/IMG/Yacht8.jpg" alt="Bild Yacht8" class="img-fluid" style="width: 100%; object-fit: cover;">
                                         </div>
+                                        <div th:if="${ShopItem.id >= 9L}" class="card-img-top">
+                                            <img th:if="${ShopItem.image != null}"
+                                                 th:src="'data:image/jpeg;base64,' + ${#strings.bytesToBase64(ShopItem.image)}"
+                                                 alt="Bild Yacht"
+                                                 class="img-fluid"
+                                                 style="width: 100%; object-fit: cover;">
+                                        </div>
                                         <h5 class="card-title mb-0" th:text="${ShopItem.itemName}">Produktname</h5>
                                         <p class="card-text text-muted" th:text="${ShopItem.description}"></p>
                                         <p class="card-text text-success font-weight-bold" th:text="${ShopItem.itemPrice} + '€'"></p>
@@ -43,6 +50,19 @@
                         </div>
                     </div>
                 </div>
+                <div th:if="${session.loggedInUser != null}">
+                    </br>
+                    </br>
+                    <div class="card cardcustom text-center custom-background-color">
+                        <img src="/IMG/Yacht11.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title custom-text-color">Neue Yacht auflisten</h5>
+                            <p class="card-text"></p>
+                            <a th:href="@{/yachts/createshopitem}" class="btn btn-primary mt-auto">Neue Yacht auflisten</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">

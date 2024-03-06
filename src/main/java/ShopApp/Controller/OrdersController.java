@@ -58,8 +58,6 @@ public class OrdersController {
         Customer customer = customerRepository.findByEmailId(emailId);
         ShopItem shopItem = shopItemRepository.findById(shopItemId).orElse(null);;
 
-        System.out.println(emailId + " " + shopItemId);
-
         newOrder.setCustomer(customer);
         newOrder.setShopitems(shopItem);
         newOrder.setStatus(Status.RECEIVED);

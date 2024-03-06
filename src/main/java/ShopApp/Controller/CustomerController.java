@@ -7,7 +7,6 @@ import ShopApp.Repository.CustomerRepository;
 import ShopApp.Repository.ShopItemRepository;
 import ShopApp.Service.CitiesService;
 import ShopApp.Service.CustomerService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
@@ -70,15 +69,6 @@ public class CustomerController {
     public String createUser(Model model, @ModelAttribute Customer customer) {
 
         customerService.createCustomer(customer);
-
-        // Converts the cities-Object into json and prints it
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            String json = objectMapper.writeValueAsString(customer);
-            System.out.println("JSON-Inhalt: " + json);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         return "redirect:/index";
     }

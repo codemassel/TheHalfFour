@@ -40,7 +40,7 @@ public class CustomerService {
         Cities city = getOrCreateCityByZipcode(customer.getZipcode().getZipcode());
         city.setCity(customer.getZipcode().getCity());
         customer.setZipcode(city);
-
+        customer.setAdmin(false);
         String encodedPassword = passwordEncoder.encode(customer.getPassword());
         customer.setPassword(encodedPassword);
 
