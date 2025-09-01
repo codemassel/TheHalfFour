@@ -1,4 +1,4 @@
-# TheHalfFour – Online Shop Demo
+# TheHalfFour – Online Shop 
 
 Ein kleiner Webshop als Lernprojekt, um Fullstack-Entwicklung mit Java, HTML/CSS und JavaScript zu üben.  
 Das Projekt demonstriert grundlegende Konzepte wie User-Registrierung, Warenkorb-Management und Bestellvorgänge.
@@ -22,6 +22,6 @@ Das Projekt demonstriert grundlegende Konzepte wie User-Registrierung, Warenkorb
 git clone https://github.com/codemassel/TheHalfFour.git
 cd TheHalfFour
 
-# [falls Java-Maven-Setup: build/run]
+# Java-Maven-Setup
 mvn clean install
 mvn spring-boot:run
